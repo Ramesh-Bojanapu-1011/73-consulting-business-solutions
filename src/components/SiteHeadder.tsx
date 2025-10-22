@@ -169,7 +169,7 @@ const SiteHeadder = () => {
                 Blog
               </Link>
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
               >
                 Contact Us
@@ -379,7 +379,7 @@ const SiteHeadder = () => {
               Blog
             </Link>
             <Link
-              href="/contact"
+              href="/contact-us"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
             >
               Contact Us
