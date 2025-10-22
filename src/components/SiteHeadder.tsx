@@ -61,14 +61,14 @@ const SiteHeadder = () => {
   return (
     <header
       ref={rootRef}
-      className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm text-nowrap sticky top-0 shadow-md caret-transparent transition-colors duration-200 z-100"
+      className="bg-white/80 dark:bg-gray-900/80   text-nowrap sticky top-0 shadow-md caret-transparent transition-colors duration-200 z-100"
     >
       <div className=" max-w-screen  mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex   h-16">
           <div className="flex w-full justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <Link href="/">
+              <Link href="/home1">
                 <Image
                   src="https://i.postimg.cc/DwdH9gv8/logo-stackly.png"
                   alt="Site Logo"
