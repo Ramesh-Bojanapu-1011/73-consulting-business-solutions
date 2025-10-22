@@ -253,7 +253,7 @@ const AboutUsPage: React.FC = () => {
               {/* Right: stacked images */}
               <div className="lg:col-span-5 relative">
                 <div className="relative w-full h-full flex items-center justify-center">
-                  <div className="hidden md:block absolute -top-40 right-0 size-64  rounded-lg overflow-hidden shadow-lg">
+                  <div className="hidden min-[769px]:block absolute -top-40 right-0 size-64  rounded-lg overflow-hidden shadow-lg">
                     <Image
                       src="/team/sofia.jpg"
                       alt="Team 1"
@@ -263,7 +263,7 @@ const AboutUsPage: React.FC = () => {
                     />
                   </div>
 
-                  <div className="absolute -top-7 left-14  size-56   bg-white rounded-xl p-2 shadow-lg">
+                  <div className="min-[769px]:absolute -top-7 left-14  size-56   bg-white rounded-xl p-2 shadow-lg">
                     <div className="w-full h-full overflow-hidden rounded-lg border-4 border-white">
                       <Image
                         src="/team/lena.jpg"

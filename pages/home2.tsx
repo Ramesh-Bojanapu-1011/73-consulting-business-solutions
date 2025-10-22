@@ -123,7 +123,10 @@ const Home2 = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((s) => (
-                <div key={s} className="transform hover:-translate-y-1 transition-shadow">
+                <div
+                  key={s}
+                  className="transform hover:-translate-y-1 transition-shadow"
+                >
                   <div className="rounded-xl overflow-hidden bg-white/60 dark:bg-gray-800/50 backdrop-blur-md border border-white/20 dark:border-gray-700">
                     <div className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-indigo-500 to-pink-500" />
                     <div className="p-6 flex items-start gap-4">
@@ -134,7 +137,8 @@ const Home2 = () => {
                       <div>
                         <div className="font-semibold text-indigo-600">{s}</div>
                         <p className="mt-2 text-gray-600 dark:text-gray-300 text-sm">
-                          Short description explaining the value and typical outcomes for this service offering.
+                          Short description explaining the value and typical
+                          outcomes for this service offering.
                         </p>
                       </div>
                     </div>

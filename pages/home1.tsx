@@ -802,7 +802,7 @@ const HomePage = () => {
             </h2>
 
             <div
-              className="mt-10 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 items-center justify-items-center"
+              className="mt-10 grid grid-cols-3 sm:grid-cols-4 min-[769px]:grid-cols-6 gap-8 items-center justify-items-center"
               role="list"
               aria-label="Technology logos"
             >
