@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { ModeToggle } from "./theme/ModeToggle";
 
 const SiteHeadder = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -57,18 +58,22 @@ const SiteHeadder = () => {
   ];
 
   return (
-    <header ref={rootRef} className="bg-white text-nowrap sticky top-0 shadow-sm caret-transparent">
+    <header
+      ref={rootRef}
+      className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm text-nowrap sticky top-0 shadow-md caret-transparent transition-colors duration-200 z-100"
+    >
       <div className=" max-w-screen  mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex   h-16">
           <div className="flex w-full justify-between">
             {/* Logo */}
-            <div className=" flex items-center">
+            <div className="flex items-center space-x-3">
               <Link href="/">
                 <Image
                   src="https://i.postimg.cc/DwdH9gv8/logo-stackly.png"
                   alt="Site Logo"
                   width={100}
                   height={100}
+                  className="rounded-md"
                 />
               </Link>
             </div>
@@ -79,7 +84,7 @@ const SiteHeadder = () => {
               <div className="relative">
                 <button
                   onClick={() => toggleDropdown("home")}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center"
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100 flex items-center relative group"
                   aria-expanded={openDropdown === "home"}
                   aria-haspopup="true"
                 >
@@ -98,12 +103,12 @@ const SiteHeadder = () => {
                 </button>
 
                 {openDropdown === "home" && (
-                  <div className="absolute z-20 mt-2 w-40 bg-white border rounded-md shadow-lg py-1">
+                  <div className="absolute z-20 mt-2 w-40 bg-white dark:bg-gray-800 dark:border-gray-700 border rounded-md shadow-lg py-1 transition-transform duration-150">
                     {homeItems.map((it) => (
                       <Link
                         key={it.href}
                         href={it.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 hover:bg-gray-50"
                       >
                         {it.label}
                       </Link>
@@ -114,7 +119,7 @@ const SiteHeadder = () => {
 
               <Link
                 href="/about"
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100"
+                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
               >
                 About Us
               </Link>
@@ -123,7 +128,7 @@ const SiteHeadder = () => {
               <div className="relative">
                 <button
                   onClick={() => toggleDropdown("services")}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center"
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100 flex items-center relative group"
                   aria-expanded={openDropdown === "services"}
                   aria-haspopup="true"
                 >
@@ -142,12 +147,12 @@ const SiteHeadder = () => {
                 </button>
 
                 {openDropdown === "services" && (
-                  <div className="absolute z-20 mt-2 w-56 bg-white border rounded-md shadow-lg py-1 grid grid-cols-1">
+                  <div className="absolute z-20 mt-2 w-56 bg-white dark:bg-gray-800 dark:border-gray-700 border rounded-md shadow-lg py-1 grid grid-cols-1 transition-transform duration-150">
                     {services.map((s) => (
                       <Link
                         key={s.href}
                         href={s.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 hover:bg-gray-50"
                       >
                         {s.label}
                       </Link>
@@ -158,21 +163,25 @@ const SiteHeadder = () => {
 
               <Link
                 href="/blog"
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100"
+                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
               >
                 Blog
               </Link>
               <Link
                 href="/contact"
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100"
+                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
               >
                 Contact Us
               </Link>
+              {/* Mode toggle */}
+              <div className="ml-3">
+                <ModeToggle />
+              </div>
               {/* Languages */}
               <div className="hidden sm:block relative mr-4">
                 <button
                   onClick={() => toggleDropdown("lang")}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center"
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100 flex items-center relative group"
                   aria-expanded={openDropdown === "lang"}
                   aria-haspopup="true"
                 >
@@ -191,11 +200,11 @@ const SiteHeadder = () => {
                 </button>
 
                 {openDropdown === "lang" && (
-                  <div className="absolute right-0 z-20 mt-2 w-32 bg-white border rounded-md shadow-lg py-1">
+                  <div className="absolute right-0 z-20 mt-2 w-32 bg-white dark:bg-gray-800 dark:border-gray-700 border rounded-md shadow-lg py-1 transition-transform duration-150">
                     {languages.map((l) => (
                       <button
                         key={l.code}
-                        className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                        className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 hover:bg-gray-50"
                       >
                         {l.label}
                       </button>
@@ -208,7 +217,7 @@ const SiteHeadder = () => {
               <div className="hidden sm:block relative">
                 <button
                   onClick={() => toggleDropdown("profile")}
-                  className=" "
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
                   aria-expanded={openDropdown === "profile"}
                   aria-haspopup="true"
                 >
@@ -216,24 +225,24 @@ const SiteHeadder = () => {
                 </button>
 
                 {openDropdown === "profile" && (
-                  <div className="absolute right-0 z-20 mt-2 w-40 bg-white border rounded-md shadow-lg py-1">
+                  <div className="absolute right-0 z-20 mt-2 w-40 bg-white dark:bg-gray-800 dark:border-gray-700 border rounded-md shadow-lg py-1 transition-transform duration-150">
                     {profileActions.map((p) =>
                       p.href ? (
                         <Link
                           key={String(p.href)}
                           href={p.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                          className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 hover:bg-gray-50"
                         >
                           {p.label}
                         </Link>
                       ) : (
                         <button
                           key={String(p.label)}
-                          className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                          className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 hover:bg-gray-50"
                         >
                           {p.label}
                         </button>
-                      )
+                      ),
                     )}
                   </div>
                 )}
@@ -246,7 +255,7 @@ const SiteHeadder = () => {
             <div className="sm:hidden flex items-center">
               <button
                 onClick={() => setMobileOpen((s) => !s)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none bg-white/60 dark:bg-gray-800/60 shadow-sm"
                 aria-expanded={mobileOpen}
               >
                 <span className="sr-only">Open main menu</span>
@@ -287,8 +296,8 @@ const SiteHeadder = () => {
 
       {/* Mobile menu panel */}
       {mobileOpen && (
-        <div className="sm:hidden border-t">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="sm:hidden border-t bg-white/90 dark:bg-gray-900/90 backdrop-blur p-3 rounded-b-lg">
+          <div className="px-2 pt-2 pb-3 space-y-2">
             <div>
               <button
                 onClick={() => toggleDropdown("home-mobile")}
@@ -313,7 +322,7 @@ const SiteHeadder = () => {
                     <Link
                       key={it.href}
                       href={it.href}
-                      className="block px-2 py-1 text-gray-700"
+                      className="block px-2 py-1 text-gray-700 dark:text-gray-200"
                     >
                       {it.label}
                     </Link>
@@ -353,7 +362,7 @@ const SiteHeadder = () => {
                     <Link
                       key={s.href}
                       href={s.href}
-                      className="block px-2 py-1 text-gray-700"
+                      className="block px-2 py-1 text-gray-700 dark:text-gray-200"
                     >
                       {s.label}
                     </Link>
@@ -398,7 +407,7 @@ const SiteHeadder = () => {
                   {languages.map((l) => (
                     <button
                       key={l.code}
-                      className="block px-2 py-1 text-gray-700"
+                      className="block px-2 py-1 text-gray-700 dark:text-gray-200"
                     >
                       {l.label}
                     </button>
@@ -421,18 +430,18 @@ const SiteHeadder = () => {
                       <Link
                         key={String(p.href)}
                         href={p.href}
-                        className="block px-2 py-1 text-gray-700"
+                        className="block px-2 py-1 text-gray-700 dark:text-gray-200"
                       >
                         {p.label}
                       </Link>
                     ) : (
                       <button
                         key={String(p.label)}
-                        className="block px-2 py-1 text-gray-700"
+                        className="block px-2 py-1 text-gray-700 dark:text-gray-200"
                       >
                         {p.label}
                       </button>
-                    )
+                    ),
                   )}
                 </div>
               )}

@@ -1,3 +1,4 @@
+import SiteFooter from "@/components/SiteFooter";
 import SiteHeadder from "@/components/SiteHeadder";
 import { ModeToggle } from "@/components/theme/ModeToggle";
 import Head from "next/head";
@@ -12,6 +13,8 @@ export default function Home() {
       </Head>
       <div className=" ">
         <SiteHeadder />
+         
+        <SiteFooter />
       </div>
     </>
   );
