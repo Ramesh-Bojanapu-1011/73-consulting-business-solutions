@@ -205,7 +205,7 @@ const HomePage = () => {
 
                 <div className="mt-8">
                   <Link
-                    href="/about"
+                    href="/about-us"
                     className="inline-flex items-center gap-2 px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md"
                   >
                     Discover More →
