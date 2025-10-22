@@ -32,6 +32,7 @@ const SiteHeadder = () => {
   ];
 
   const services = [
+    { href: "/services", label: "All Services" },
     { href: "/strategy-&-planning", label: "Strategy & Planning" },
     { href: "/digital-transformation", label: "Digital Transformation" },
     { href: "/operations-optimization", label: "Operations Optimization" },
@@ -47,9 +48,9 @@ const SiteHeadder = () => {
   ];
 
   const languages = [
-    { code: "en", label: "en" },
-    { code: "ar", label: "ar" },
-    { code: "he", label: "he" },
+    { code: "en", label: "English" },
+    { code: "ar", label: "Arabic" },
+    { code: "he", label: "Herbew" },
   ];
 
   const profileActions = [
@@ -200,7 +201,7 @@ const SiteHeadder = () => {
                 </button>
 
                 {openDropdown === "lang" && (
-                  <div className="absolute right-0 z-20 mt-2 w-32 bg-white dark:bg-gray-800 dark:border-gray-700 border rounded-md shadow-lg py-1 transition-transform duration-150">
+                  <div className="absolute right-0 z-20 mt-2 w-32 bg-white dark:bg-gray-800 dark:border-gray-700 border rounded-md shadow-lg py-1 transition-transform duration-150 flex flex-col">
                     {languages.map((l) => (
                       <button
                         key={l.code}

@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <div className=" ">
         <SiteHeadder />
-         
+
         <SiteFooter />
       </div>
     </>

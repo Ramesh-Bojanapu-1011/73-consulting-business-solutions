@@ -1,7 +1,7 @@
 import React from "react";
 
-const strategyPlanning = () => {
+const strategyAndPlanningPage = () => {
   return <div>strategy-&-Planning</div>;
 };
 
-export default strategyPlanning;
+export default strategyAndPlanningPage;
