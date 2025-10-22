@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:is(.dark *));
 
-
 h1 {
   @apply text-4xl font-bold;
 }
@@ -25,8 +24,6 @@ h5 {
 h6 {
   @apply text-base font-semibold;
 }
-
- 
 
 @media (min-width: 640px) {
   h1 {

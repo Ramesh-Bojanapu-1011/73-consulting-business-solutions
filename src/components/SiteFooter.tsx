@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const SiteFooter = (props: Props) => {
-  return (
-    <div>SiteFooter</div>
-  )
-}
+  return <div>SiteFooter</div>;
+};
 
-export default SiteFooter
+export default SiteFooter;
