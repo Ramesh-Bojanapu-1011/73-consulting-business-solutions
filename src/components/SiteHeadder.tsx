@@ -2,10 +2,44 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ModeToggle } from "./theme/ModeToggle";
+import React from "react";
 
 const SiteHeadder = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [currentUser, setCurrentUser] =
+    useState({
+      firstName: "",
+      lastName: "",
+      email: "",
+      loginTime: "",
+      logoutTime: "",
+      registerTime: "",
+      role: "",
+    }) || null;
+
+  React.useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("Current_User") || "null");
+    setCurrentUser(user);
+  }, []);
+  console.log("Current User:", currentUser);
+
+  function handleLogout(): void {
+    // Clear user session data (e.g., tokens, user info)
+    if (typeof window !== "undefined") {
+      const users = JSON.parse(localStorage.getItem("All_Users") || "[]");
+      const userLogin = JSON.parse(
+        localStorage.getItem("Current_User") || "null",
+      );
+      const user = users.find((u: any) => u.email === userLogin?.email);
+      if (user) {
+        user.logoutTime = new Date().toISOString();
+        localStorage.setItem("All_Users", JSON.stringify(users));
+      }
+      localStorage.removeItem("Current_User");
+      window.location.href = "/auth";
+    }
+  }
 
   const toggleDropdown = (key: string) => {
     setOpenDropdown((prev) => (prev === key ? null : key));
@@ -222,7 +256,19 @@ const SiteHeadder = () => {
                   aria-expanded={openDropdown === "profile"}
                   aria-haspopup="true"
                 >
-                  Open user menu
+                  {currentUser ? (
+                    <>
+                      {currentUser.role != "admin" ? (
+                        <>
+                          {currentUser.firstName} {currentUser.lastName}
+                        </>
+                      ) : (
+                        <>AD</>
+                      )}
+                    </>
+                  ) : (
+                    "AD"
+                  )}
                 </button>
 
                 {openDropdown === "profile" && (
@@ -239,6 +285,7 @@ const SiteHeadder = () => {
                       ) : (
                         <button
                           key={String(p.label)}
+                          onClick={() => handleLogout()}
                           className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 hover:bg-gray-50"
                         >
                           {p.label}
@@ -422,7 +469,22 @@ const SiteHeadder = () => {
                 onClick={() => toggleDropdown("profile-mobile")}
                 className="w-full flex justify-between items-center px-3 py-2 text-left text-gray-700 rounded-md hover:bg-gray-50"
               >
-                <span>Profile</span>
+                <span>
+                  {" "}
+                  {currentUser ? (
+                    <>
+                      {currentUser.role != "admin" ? (
+                        <>
+                          {currentUser.firstName} {currentUser.lastName}
+                        </>
+                      ) : (
+                        <>AD</>
+                      )}
+                    </>
+                  ) : (
+                    "AD"
+                  )}
+                </span>
               </button>
               {openDropdown === "profile-mobile" && (
                 <div className="mt-1 pl-4">
@@ -438,6 +500,7 @@ const SiteHeadder = () => {
                     ) : (
                       <button
                         key={String(p.label)}
+                        onClick={() => handleLogout()}
                         className="block px-2 py-1 text-gray-700 dark:text-gray-200"
                       >
                         {p.label}

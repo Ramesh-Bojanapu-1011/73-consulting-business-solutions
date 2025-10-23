@@ -23,8 +23,9 @@ const SiteFooter = (props: Props) => {
   const quickLinks = [
     { href: "/", label: "Home" },
     { href: "/about-us", label: "About Us" },
+    { href: "/services", label: "Services" },
     { href: "/blog", label: "Blog" },
-    { href: "/contact-us", label: "Contact" },
+    { href: "/contact-us", label: "Contact Us" },
   ];
 
   return (
