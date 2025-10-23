@@ -3,9 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { ModeToggle } from "./theme/ModeToggle";
 import React from "react";
+import i18n from "@/i18n";
+import router from "next/router";
 
 const SiteHeadder = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [lang, setLang] = useState("");
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [currentUser, setCurrentUser] =
     useState({
@@ -22,7 +25,6 @@ const SiteHeadder = () => {
     const user = JSON.parse(localStorage.getItem("Current_User") || "null");
     setCurrentUser(user);
   }, []);
-  console.log("Current User:", currentUser);
 
   function handleLogout(): void {
     // Clear user session data (e.g., tokens, user info)
@@ -88,9 +90,63 @@ const SiteHeadder = () => {
   ];
 
   const profileActions = [
-    { href: "/profile", label: "Profile" },
+    { href: "/admin-dashboard", label: "Admindashbord" },
     { action: "logout", label: "Logout" },
   ];
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedLang = localStorage.getItem("selectedLanguage");
+      setLang(savedLang || "");
+
+      if (savedLang == "en") {
+        document.documentElement.dir = "ltr";
+      } else {
+        document.documentElement.dir = "rtl";
+      }
+    }
+  }, []);
+  console.log("Selected Language:", i18n.language);
+  // Restore language from localStorage on mount and on route change
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      const setLangFromStorage = () => {
+        if (lang.trim() !== "") {
+          if (lang === "en" && i18n.language !== "en")
+            i18n.changeLanguage("en");
+          else if (lang === "ar" && i18n.language !== "ar")
+            i18n.changeLanguage("ar");
+          else if (lang === "he" && i18n.language !== "he")
+            i18n.changeLanguage("he");
+        }
+      };
+      setLangFromStorage();
+
+      // Listen for route changes to re-apply language
+      const handleRouteChange = () => {
+        setLangFromStorage();
+      };
+      router.events.on("routeChangeComplete", handleRouteChange);
+      return () => {
+        router.events.off("routeChangeComplete", handleRouteChange);
+      };
+    }
+  }, [router.events, i18n.language]);
+  const handleLanguageChange = (langLabel: string) => {
+    // setSelectedLanguage(langLabel);
+    const langObj = languages.find((l) => l.code === langLabel);
+    if (langObj) {
+      localStorage.setItem("selectedLanguage", langObj.code);
+      setLang(langObj.code);
+      if (langObj.code === "en") {
+        document.documentElement.dir = "ltr";
+      } else {
+        document.documentElement.dir = "rtl";
+      }
+      i18n.changeLanguage(langObj.code);
+    }
+    setOpenDropdown(null); // Close language dropdown after selection
+  };
 
   return (
     <header
@@ -239,6 +295,7 @@ const SiteHeadder = () => {
                     {languages.map((l) => (
                       <button
                         key={l.code}
+                        onClick={() => handleLanguageChange(l.code)}
                         className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 hover:bg-gray-50"
                       >
                         {l.label}
@@ -272,21 +329,31 @@ const SiteHeadder = () => {
                 </button>
 
                 {openDropdown === "profile" && (
-                  <div className="absolute right-0 z-20 mt-2 w-40 bg-white dark:bg-gray-800 dark:border-gray-700 border rounded-md shadow-lg py-1 transition-transform duration-150">
+                  <div
+                    className={`absolute ${
+                      i18n.language == "en" ? "right-0" : "left-0"
+                    } z-20 mt-2 w-40 bg-white dark:bg-gray-800 dark:border-gray-700 border rounded-md shadow-lg py-1 transition-transform duration-150`}
+                  >
                     {profileActions.map((p) =>
                       p.href ? (
-                        <Link
-                          key={String(p.href)}
-                          href={p.href}
-                          className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 hover:bg-gray-50"
-                        >
-                          {p.label}
-                        </Link>
+                        <>
+                          {currentUser &&
+                            currentUser.role === "admin" &&
+                            window.location.pathname != "/admin-dashboard" && (
+                              <Link
+                                key={String(p.href)}
+                                href={p.href}
+                                className="block w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 hover:bg-gray-50"
+                              >
+                                {p.label}
+                              </Link>
+                            )}
+                        </>
                       ) : (
                         <button
                           key={String(p.label)}
                           onClick={() => handleLogout()}
-                          className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 hover:bg-gray-50"
+                          className="block px-4 w-full py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 hover:bg-gray-50"
                         >
                           {p.label}
                         </button>
@@ -455,6 +522,7 @@ const SiteHeadder = () => {
                   {languages.map((l) => (
                     <button
                       key={l.code}
+                      onClick={() => handleLanguageChange(l.code)}
                       className="block px-2 py-1 text-gray-700 dark:text-gray-200"
                     >
                       {l.label}
@@ -490,13 +558,19 @@ const SiteHeadder = () => {
                 <div className="mt-1 pl-4">
                   {profileActions.map((p) =>
                     p.href ? (
-                      <Link
-                        key={String(p.href)}
-                        href={p.href}
-                        className="block px-2 py-1 text-gray-700 dark:text-gray-200"
-                      >
-                        {p.label}
-                      </Link>
+                      <>
+                        {currentUser &&
+                          currentUser.role === "admin" &&
+                          window.location.pathname != "/admin-dashboard" && (
+                            <Link
+                              key={String(p.href)}
+                              href={p.href}
+                              className="block w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 hover:bg-gray-50"
+                            >
+                              {p.label}
+                            </Link>
+                          )}
+                      </>
                     ) : (
                       <button
                         key={String(p.label)}
