@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import Head from "next/head";
 import AOS from "aos";
-import "aos/dist/aos.css";
+
 import SiteHeadder from "@/components/SiteHeadder";
 import SiteFooter from "@/components/SiteFooter";
 import Image from "next/image";

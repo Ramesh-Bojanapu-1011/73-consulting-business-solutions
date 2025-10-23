@@ -3,7 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import AOS from "aos";
-import "aos/dist/aos.css";
 
 import SiteHeadder from "@/components/SiteHeadder";
 import SiteFooter from "@/components/SiteFooter";

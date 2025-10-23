@@ -1,10 +1,20 @@
 "use client";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
+import React from "react";
 
 export function ModeToggle() {
   const { setTheme, theme } = useTheme();
   const isDark = theme === "dark";
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <button
