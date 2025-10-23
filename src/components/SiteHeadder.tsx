@@ -61,7 +61,7 @@ const SiteHeadder = () => {
   return (
     <header
       ref={rootRef}
-      className="bg-white/80 dark:bg-gray-900/80   text-nowrap sticky top-0 shadow-md caret-transparent transition-colors duration-200 z-100"
+      className="bg-white dark:bg-gray-900  text-nowrap sticky top-0 shadow-md caret-transparent transition-colors duration-200 z-100"
     >
       <div className=" max-w-screen  mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex   h-16">
