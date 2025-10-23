@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ModeToggle } from "./theme/ModeToggle";
 import React from "react";
-import i18n from "@/i18n";
+import i18n from "../i18n";
+import { useTranslation } from "react-i18next";
 import router from "next/router";
 
 const SiteHeadder = () => {
@@ -21,6 +22,8 @@ const SiteHeadder = () => {
       role: "",
     }) || null;
 
+  const { t } = useTranslation();
+
   React.useEffect(() => {
     const user = JSON.parse(localStorage.getItem("Current_User") || "null");
     setCurrentUser(user);
@@ -31,7 +34,7 @@ const SiteHeadder = () => {
     if (typeof window !== "undefined") {
       const users = JSON.parse(localStorage.getItem("All_Users") || "[]");
       const userLogin = JSON.parse(
-        localStorage.getItem("Current_User") || "null"
+        localStorage.getItem("Current_User") || "null",
       );
       const user = users.find((u: any) => u.email === userLogin?.email);
       if (user) {
@@ -63,38 +66,38 @@ const SiteHeadder = () => {
   }, []);
 
   const homeItems = [
-    { href: "/home1", label: i18n.t("header.home1") },
-    { href: "/home2", label: i18n.t("header.home2") },
+    { href: "/home1", label: t("header.home1") },
+    { href: "/home2", label: t("header.home2") },
   ];
 
   const services = [
-    { href: "/services", label: i18n.t("header.allServices") },
-    { href: "/strategy-&-planning", label: i18n.t("header.strategy") },
+    { href: "/services", label: t("header.allServices") },
+    { href: "/strategy-&-planning", label: t("header.strategy") },
     {
       href: "/digital-transformation",
-      label: i18n.t("header.digitalTransformation"),
+      label: t("header.digitalTransformation"),
     },
-    { href: "/operations-optimization", label: i18n.t("header.operations") },
-    { href: "/finance-advisory", label: i18n.t("header.finance") },
+    { href: "/operations-optimization", label: t("header.operations") },
+    { href: "/finance-advisory", label: t("header.finance") },
     {
       href: "/hr-&-organizational-design",
-      label: i18n.t("header.hr"),
+      label: t("header.hr"),
     },
     {
       href: "/technology-&-it-consulting",
-      label: i18n.t("header.technology"),
+      label: t("header.technology"),
     },
   ];
 
   const languages = [
-    { code: "en", label: i18n.t("header.english") },
-    { code: "ar", label: i18n.t("header.arabic") },
-    { code: "he", label: i18n.t("header.hebrew") },
+    { code: "en", label: t("header.english") },
+    { code: "ar", label: t("header.arabic") },
+    { code: "he", label: t("header.hebrew") },
   ];
 
   const profileActions = [
-    { href: "/admin-dashboard", label: i18n.t("header.admindashboard") },
-    { action: "logout", label: i18n.t("header.logout") },
+    { href: "/admin-dashboard", label: t("header.admindashboard") },
+    { action: "logout", label: t("header.logout") },
   ];
 
   React.useEffect(() => {
@@ -373,7 +376,7 @@ const SiteHeadder = () => {
                         >
                           {p.label}
                         </button>
-                      )
+                      ),
                     )}
                   </div>
                 )}
@@ -599,7 +602,7 @@ const SiteHeadder = () => {
                       >
                         {p.label}
                       </button>
-                    )
+                    ),
                   )}
                 </div>
               )}
