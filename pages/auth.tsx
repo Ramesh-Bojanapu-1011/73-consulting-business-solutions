@@ -56,7 +56,7 @@ const AuthPage: React.FC = () => {
       if (view === "login") {
         const users = getAllUsers();
         const user = users.find(
-          (u: any) => u.email === email && u.password === password,
+          (u: any) => u.email === email && u.password === password
         );
         if (!user) {
           setMessage("Invalid credentials.");
@@ -89,7 +89,7 @@ const AuthPage: React.FC = () => {
       });
       const data = await res.json();
       setMessage(
-        data.message || "If your email exists you will receive a link",
+        data.message || "If your email exists you will receive a link"
       );
     } catch (err) {
       setMessage("Network error");
@@ -273,8 +273,8 @@ const AuthPage: React.FC = () => {
                         {loading
                           ? "Please wait"
                           : view === "register"
-                            ? "Register"
-                            : "Login"}
+                          ? "Register"
+                          : "Login"}
                       </button>
                     </div>
                   </div>
