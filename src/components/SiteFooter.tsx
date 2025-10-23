@@ -1,31 +1,36 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 type Props = {};
 
 const SiteFooter = (props: Props) => {
+  const { t } = useTranslation();
   const services = [
-    { href: "/strategy-&-planning", label: "Strategy & Planning" },
-    { href: "/digital-transformation", label: "Digital Transformation" },
-    { href: "/operations-optimization", label: "Operations Optimization" },
-    { href: "/finance-advisory", label: "Financial Advisory" },
+    { href: "/strategy-&-planning", label: t("header.strategy") },
+    {
+      href: "/digital-transformation",
+      label: t("header.digitalTransformation"),
+    },
+    { href: "/operations-optimization", label: t("header.operations") },
+    { href: "/finance-advisory", label: t("header.finance") },
     {
       href: "/hr-&-organizational-design",
-      label: "HR & Organizational Design",
+      label: t("header.hr"),
     },
     {
       href: "/technology-&-it-consulting",
-      label: "Technology & IT Consulting",
+      label: t("header.technology"),
     },
   ];
 
   const quickLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about-us", label: "About Us" },
-    { href: "/services", label: "Services" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact-us", label: "Contact Us" },
+    { href: "/", label: t("footer.home") },
+    { href: "/about-us", label: t("footer.about") },
+    { href: "/services", label: t("footer.services") },
+    { href: "/blog", label: t("footer.blog") },
+    { href: "/contact-us", label: t("footer.contact") },
   ];
 
   return (
@@ -37,7 +42,7 @@ const SiteFooter = (props: Props) => {
             <div className=" ">
               <Image
                 src="https://i.postimg.cc/DwdH9gv8/logo-stackly.png"
-                alt="Site Logo"
+                alt={t("footer.companyTitle")}
                 width={100}
                 height={100}
                 className="rounded-md"
@@ -45,11 +50,10 @@ const SiteFooter = (props: Props) => {
             </div>
             <div>
               <div className="text-lg font-semibold text-gray-900 dark:text-white">
-                Consulting / Business Solutions
+                {t("footer.companyTitle")}
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-300">
-                Strategize. Transform. Grow your business with expert consulting
-                across operations, finance, and technology.
+                {t("footer.companyTagline")}
               </div>
             </div>
           </div>
@@ -57,7 +61,7 @@ const SiteFooter = (props: Props) => {
           {/* Quick links */}
           <div>
             <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">
-              Quick Links
+              {t("footer.quickLinksTitle")}
             </h4>
             <div className="h-0.5 w-10 mb-3 rounded bg-linear-to-r from-indigo-500 to-pink-500" />
             <ul className="space-y-2">
@@ -77,7 +81,7 @@ const SiteFooter = (props: Props) => {
           {/* Services (same as header) */}
           <div>
             <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">
-              Services
+              {t("footer.servicesTitle")}
             </h4>
             <div className="h-0.5 w-10 mb-3 rounded bg-linear-to-r from-indigo-500 to-pink-500" />
             <ul className="space-y-2">
@@ -97,7 +101,7 @@ const SiteFooter = (props: Props) => {
           {/* Contact */}
           <div>
             <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">
-              Contact Us
+              {t("footer.contactTitle")}
             </h4>
             <div className="h-0.5 w-10 mb-3 rounded bg-linear-to-r from-indigo-500 to-pink-500" />
             <address className="not-italic text-sm text-gray-700 dark:text-gray-200 space-y-2">
@@ -126,8 +130,7 @@ const SiteFooter = (props: Props) => {
         </div>
 
         <div className="mt-8 border-t border-gray-200 dark:border-gray-800 pt-6 text-center text-sm text-gray-500 dark:text-gray-400">
-          © {new Date().getFullYear()} Consulting / Business Solutions — All
-          rights reserved.
+          {t("footer.copyright", { year: new Date().getFullYear() })}
         </div>
       </div>
     </footer>

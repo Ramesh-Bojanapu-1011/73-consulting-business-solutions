@@ -23,4 +23,18 @@
 		"logout": "התנתק",
 		"admindashboard": "לוח מנהל"
 	}
+,
+	"footer": {
+		"companyTitle": "ייעוץ / פתרונות עסקיים",
+		"companyTagline": "תתכנן. תתמיר. תגדיל את העסק שלך עם ייעוץ מומחה בתפעול, כספים וטכנולוגיה.",
+		"quickLinksTitle": "קישורים מהירים",
+		"servicesTitle": "שירותים",
+		"contactTitle": "צור קשר",
+		"home": "בית",
+		"about": "עלינו",
+		"services": "שירותים",
+		"blog": "בלוג",
+		"contact": "צור קשר",
+		"copyright": "© {{year}} ייעוץ / פתרונות עסקיים — כל הזכויות שמורות."
+	}
 }

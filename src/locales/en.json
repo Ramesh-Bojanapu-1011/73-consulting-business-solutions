@@ -23,4 +23,18 @@
 		"logout": "Logout",
 		"admindashboard": "Admin Dashboard"
 	}
+,
+	"footer": {
+		"companyTitle": "Consulting / Business Solutions",
+		"companyTagline": "Strategize. Transform. Grow your business with expert consulting across operations, finance, and technology.",
+		"quickLinksTitle": "Quick Links",
+		"servicesTitle": "Services",
+		"contactTitle": "Contact Us",
+		"home": "Home",
+		"about": "About Us",
+		"services": "Services",
+		"blog": "Blog",
+		"contact": "Contact Us",
+		"copyright": "© {{year}} Consulting / Business Solutions — All rights reserved."
+	}
 }
