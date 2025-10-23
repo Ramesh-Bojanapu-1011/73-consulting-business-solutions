@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Image from "next/image";
 
 type Mode = "user" | "admin";
 type UserView = "login" | "register" | "forgot";
@@ -128,7 +129,16 @@ const AuthPage: React.FC = () => {
         <title>Auth — Enkonix</title>
       </Head>
 
-      <div className="max-w-3xl w-full bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden">
+      <div className="max-w-3xl w-full bg-white dark:bg-gray-800 shadow-2xl rounded-lg overflow-hidden">
+        <div className="p-6">
+          <Image
+            src="https://i.postimg.cc/DwdH9gv8/logo-stackly.png"
+            alt="Site Logo"
+            width={120}
+            height={120}
+            className="rounded-md mx-auto"
+          />
+        </div>
         <div className="p-6 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between">
           <div>
             <h3 className="text-xl font-bold">Sign in / Register</h3>
