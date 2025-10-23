@@ -9,29 +9,31 @@ const Post: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Aligning strategy with execution — Insights</title>
+        <title>
+          Building data-driven decision making in mid-market firms — Insights
+        </title>
         <meta
           name="description"
-          content="How to translate high-level strategy into quarterly priorities, decision frameworks and measurable outcomes."
+          content="How mid-market firms can build repeatable data-driven decision processes without excessive cost or complexity."
         />
       </Head>
 
       <SiteHeadder />
 
-      <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <main className="min-h-screen caret-transparent bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         {/* Hero */}
-        <section className="py-20 bg-linear-to-r from-indigo-600 to-pink-500 text-white">
+        <section className="py-20 bg-linear-to-r from-sky-600 to-indigo-700 text-white">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold">
-              Aligning strategy with execution: a practical playbook
+              Building data-driven decision making in mid-market firms
             </h1>
             <p className="mt-4 text-lg max-w-2xl mx-auto">
-              How to translate high-level strategy into quarterly priorities,
-              decision frameworks and measurable outcomes.
+              Practical, low-friction approaches to get reliable insights into
+              customers, costs and growth — without a big data org.
             </p>
 
             <div className="mt-6 text-sm opacity-90">
-              Jane Miller • Sep 10, 2025 • 8 min read
+              Enkonix • Oct 23, 2025 • 7 min read
             </div>
           </div>
         </section>
@@ -41,8 +43,8 @@ const Post: React.FC = () => {
           <div className="lg:col-span-2">
             <article className="prose prose-lg dark:prose-invert bg-white dark:bg-gray-800 rounded-xl p-8 shadow">
               <Image
-                src="/blog/strategy-execution-hero.jpg"
-                alt="Strategy"
+                src="/blog/data-decision-hero.jpg"
+                alt="Data-driven decisions"
                 width={1200}
                 height={520}
                 className="rounded-md mb-6 object-cover w-full h-64"
@@ -50,111 +52,113 @@ const Post: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
                 <div>
-                  <span className="inline-block mr-3">Sep 10, 2025</span>
+                  <span className="inline-block mr-3">Oct 23, 2025</span>
                   <span className="inline-block">•</span>
-                  <span className="inline-block ml-3">8 min read</span>
+                  <span className="inline-block ml-3">7 min read</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="flex gap-2">
-                    <span className="inline-block px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">
-                      Strategy
+                    <span className="inline-block px-2 py-1 bg-sky-100 text-sky-700 text-xs rounded-full">
+                      Data
                     </span>
-                    <span className="inline-block px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">
-                      Execution
+                    <span className="inline-block px-2 py-1 bg-sky-100 text-sky-700 text-xs rounded-full">
+                      Operations
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-lg border border-gray-100 dark:border-gray-700 bg-indigo-50 dark:bg-gray-800/40 p-4 mb-6">
-                <div className="font-semibold text-indigo-700 dark:text-indigo-300">
-                  Quick summary
+              <div className="rounded-lg border border-gray-100 dark:border-gray-700 bg-sky-50 dark:bg-gray-800/40 p-4 mb-6">
+                <div className="font-semibold text-sky-700 dark:text-sky-300">
+                  In short
                 </div>
                 <div className="text-sm text-gray-700 dark:text-gray-300 mt-2">
-                  A compact playbook to convert strategy into measurable
-                  quarterly outcomes — focus on decisions, rapid assessment, and
-                  fast feedback loops.
+                  Start small: pick a repeatable decision, instrument the right
+                  signal, assign an owner and iterate. This creates momentum
+                  without heavy upfront investment.
                 </div>
               </div>
 
               <p className="lead">
-                Many organisations struggle to convert strategy into tangible
-                outcomes because work often stops at vision-setting. This
-                playbook gives a short, practical approach you can use
-                immediately.
+                Mid-market firms don't need a data science factory to make
+                better decisions. The goal is repeatability: consistent signals,
+                simple metrics and clear ownership.
               </p>
 
               <blockquote className="border-l-4 pl-4 italic text-lg text-gray-700 dark:text-gray-300 my-6">
-                “Focus on one strategic decision at a time — it forces clarity
-                and aligns effort.”
+                “Reliable data + clear ownership = faster, less risky
+                decisions.”
               </blockquote>
 
+              <h5 className="text-lg font-semibold">
+                Five steps to get started
+              </h5>
               <ol className="list-decimal pl-6 space-y-6">
                 <li>
                   <p className="text-lg font-semibold">
-                    Start with the decision
+                    Pick a high-value decision
                   </p>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
-                    Identify the single decision that will change the trajectory
-                    of your business and make success metrics explicit.
+                    Find a recurring decision that impacts revenue, cost or
+                    retention and that your teams make often — for example,
+                    campaign budget allocation or pricing changes.
                   </p>
                 </li>
 
                 <li>
                   <p className="text-lg font-semibold">
-                    Snapshot the current state
+                    Define a single metric
                   </p>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
-                    Run a 2–4 week rapid assessment: interviews, data pulls and
-                    dependency mapping.
+                    Agree on one clear metric that represents success for the
+                    decision. Keep it simple and measurable.
                   </p>
                 </li>
 
                 <li>
                   <p className="text-lg font-semibold">
-                    Design a focused roadmap
+                    Instrument minimal, accurate data
                   </p>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
-                    Choose 3–5 quarterly objectives, assign owners, and link
-                    each objective to a measurable outcome.
+                    Collect only what's necessary, add validation rules and make
+                    the data accessible to the team that acts on it.
                   </p>
                 </li>
 
                 <li>
                   <p className="text-lg font-semibold">
-                    Establish fast feedback loops
+                    Create a weekly feedback loop
                   </p>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
-                    Instrument early and track weekly signals so you can iterate
-                    quickly.
+                    Deliver short dashboards or alerts focused on the metric,
+                    trend and a suggested action — not a long report.
                   </p>
                 </li>
 
                 <li>
                   <p className="text-lg font-semibold">
-                    Organise governance for speed
+                    Turn outcomes into templates
                   </p>
                   <p className="text-sm text-gray-700 dark:text-gray-300">
-                    Use short tactical cadences and time-boxed decision points
-                    to maintain momentum.
+                    When a pattern works, create a template pipeline, dashboard
+                    and runbook so other teams can reuse the approach.
                   </p>
                 </li>
               </ol>
 
               <div className="mt-6">
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  If you'd like, we can adapt this playbook to your context —
-                  book a short discovery call to run a tailored rapid
-                  assessment.
+                  We can help map your first three decisions and deliver a 6–8
+                  week pilot that demonstrates impact and builds capability.
                 </p>
               </div>
 
               <div className="mt-8">
                 <Link
                   href="/contact-us"
-                  className="inline-block px-5 py-3 bg-indigo-600 text-white rounded-md"
+                  className="inline-block px-5 py-3 bg-sky-600 text-white rounded-md"
                 >
-                  Book a discovery call
+                  Start a pilot
                 </Link>
               </div>
 
@@ -167,7 +171,7 @@ const Post: React.FC = () => {
                 <div>
                   <Link
                     href="/blog"
-                    className="text-sm text-indigo-600 hover:underline"
+                    className="text-sm text-sky-600 hover:underline"
                   >
                     See all insights
                   </Link>
@@ -179,28 +183,26 @@ const Post: React.FC = () => {
           <aside className="lg:col-span-1">
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center text-white font-semibold">
-                  JM
+                <div className="w-12 h-12 rounded-full bg-sky-600 flex items-center justify-center text-white font-semibold">
+                  EA
                 </div>
                 <div>
-                  <div className="font-semibold">Jane Miller</div>
-                  <div className="text-sm text-gray-500">
-                    Author • Principal Consultant
-                  </div>
+                  <div className="font-semibold">Enkonix Advisors</div>
+                  <div className="text-sm text-gray-500">Data & Insights</div>
                 </div>
               </div>
 
               <div className="mt-4 text-sm text-gray-600 dark:text-gray-300">
-                Jane leads strategy and operational transformation engagements
-                with a focus on measurable outcomes and fast delivery.
+                Practical help to build measurement, analytics and operational
+                ownership so insights become decisions.
               </div>
 
               <div className="mt-6">
                 <Link
                   href="/contact-us"
-                  className="inline-block px-4 py-2 bg-indigo-600 text-white rounded-md"
+                  className="inline-block px-4 py-2 bg-sky-600 text-white rounded-md"
                 >
-                  Work with Jane
+                  Talk to an expert
                 </Link>
               </div>
             </div>
