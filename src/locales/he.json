@@ -1,1 +1,26 @@
-{}
+{
+	"header": {
+		"home": "בית",
+		"home1": "בית 1",
+		"home2": "בית 2",
+		"about": "עלינו",
+		"services": "שירותים",
+		"allServices": "כל השירותים",
+		"strategy": "אסטרטגיה ותכנון",
+		"digitalTransformation": "טרנספורמציה דיגיטלית",
+		"operations": "אופטימיזציה של תפעול",
+		"finance": "ייעוץ פיננסי",
+		"hr": "משאבי אנוש ועיצוב ארגוני",
+		"technology": "טכנולוגיה וייעוץ IT",
+		"blog": "בלוג",
+		"contact": "צור קשר",
+		"language": "שפה",
+		"english": "אנגלית",
+		"arabic": "ערבית",
+		"hebrew": "עברית",
+		"profile": "פרופיל",
+		"admin": "מנהל",
+		"logout": "התנתק",
+		"admindashboard": "לוח מנהל"
+	}
+}

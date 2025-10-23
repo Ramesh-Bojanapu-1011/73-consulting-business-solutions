@@ -31,7 +31,7 @@ const SiteHeadder = () => {
     if (typeof window !== "undefined") {
       const users = JSON.parse(localStorage.getItem("All_Users") || "[]");
       const userLogin = JSON.parse(
-        localStorage.getItem("Current_User") || "null",
+        localStorage.getItem("Current_User") || "null"
       );
       const user = users.find((u: any) => u.email === userLogin?.email);
       if (user) {
@@ -63,35 +63,38 @@ const SiteHeadder = () => {
   }, []);
 
   const homeItems = [
-    { href: "/home1", label: "Home 1" },
-    { href: "/home2", label: "Home 2" },
+    { href: "/home1", label: i18n.t("header.home1") },
+    { href: "/home2", label: i18n.t("header.home2") },
   ];
 
   const services = [
-    { href: "/services", label: "All Services" },
-    { href: "/strategy-&-planning", label: "Strategy & Planning" },
-    { href: "/digital-transformation", label: "Digital Transformation" },
-    { href: "/operations-optimization", label: "Operations Optimization" },
-    { href: "/finance-advisory", label: "Financial Advisory" },
+    { href: "/services", label: i18n.t("header.allServices") },
+    { href: "/strategy-&-planning", label: i18n.t("header.strategy") },
+    {
+      href: "/digital-transformation",
+      label: i18n.t("header.digitalTransformation"),
+    },
+    { href: "/operations-optimization", label: i18n.t("header.operations") },
+    { href: "/finance-advisory", label: i18n.t("header.finance") },
     {
       href: "/hr-&-organizational-design",
-      label: "HR & Organizational Design",
+      label: i18n.t("header.hr"),
     },
     {
       href: "/technology-&-it-consulting",
-      label: "Technology & IT Consulting",
+      label: i18n.t("header.technology"),
     },
   ];
 
   const languages = [
-    { code: "en", label: "English" },
-    { code: "ar", label: "Arabic" },
-    { code: "he", label: "Herbew" },
+    { code: "en", label: i18n.t("header.english") },
+    { code: "ar", label: i18n.t("header.arabic") },
+    { code: "he", label: i18n.t("header.hebrew") },
   ];
 
   const profileActions = [
-    { href: "/admin-dashboard", label: "Admindashbord" },
-    { action: "logout", label: "Logout" },
+    { href: "/admin-dashboard", label: i18n.t("header.admindashboard") },
+    { action: "logout", label: i18n.t("header.logout") },
   ];
 
   React.useEffect(() => {
@@ -179,7 +182,7 @@ const SiteHeadder = () => {
                   aria-expanded={openDropdown === "home"}
                   aria-haspopup="true"
                 >
-                  Home
+                  {i18n.t("header.home")}
                   <svg
                     className="ml-1 h-4 w-4 text-gray-500"
                     viewBox="0 0 20 20"
@@ -212,7 +215,7 @@ const SiteHeadder = () => {
                 href="/about-us"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
               >
-                About Us
+                {i18n.t("header.about")}
               </Link>
 
               {/* Services dropdown */}
@@ -223,7 +226,7 @@ const SiteHeadder = () => {
                   aria-expanded={openDropdown === "services"}
                   aria-haspopup="true"
                 >
-                  Services
+                  {i18n.t("header.services")}
                   <svg
                     className="ml-1 h-4 w-4 text-gray-500"
                     viewBox="0 0 20 20"
@@ -256,13 +259,13 @@ const SiteHeadder = () => {
                 href="/blog"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
               >
-                Blog
+                {i18n.t("header.blog")}
               </Link>
               <Link
                 href="/contact-us"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
               >
-                Contact Us
+                {i18n.t("header.contact")}
               </Link>
               {/* Mode toggle */}
               <div className="ml-3">
@@ -276,7 +279,7 @@ const SiteHeadder = () => {
                   aria-expanded={openDropdown === "lang"}
                   aria-haspopup="true"
                 >
-                  Language
+                  {i18n.t("header.language")}
                   <svg
                     className="ml-1 h-4 w-4 text-gray-500"
                     viewBox="0 0 20 20"
@@ -309,23 +312,36 @@ const SiteHeadder = () => {
               <div className="hidden sm:block relative">
                 <button
                   onClick={() => toggleDropdown("profile")}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
+                  className="flex items-center   rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
                   aria-expanded={openDropdown === "profile"}
                   aria-haspopup="true"
                 >
-                  {currentUser ? (
-                    <>
-                      {currentUser.role != "admin" ? (
-                        <>
-                          {currentUser.firstName} {currentUser.lastName}
-                        </>
-                      ) : (
-                        <>AD</>
-                      )}
-                    </>
-                  ) : (
-                    "AD"
-                  )}
+                  {/* Avatar circle with initials */}
+                  <span
+                    aria-hidden
+                    className="flex h-10 w-20 items-center px-4 justify-between rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 text-sm font-semibold"
+                  >
+                    {currentUser
+                      ? currentUser.role != "admin"
+                        ? `${currentUser.firstName.charAt(0)}${
+                            currentUser.lastName?.charAt(0) || ""
+                          }`.toUpperCase()
+                        : "AD"
+                      : "AD"}
+                    {/* caret */}
+                    <svg
+                      className="  h-4 w-4 text-gray-500"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.1 1.02l-4.25 4.657a.75.75 0 01-1.08 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
                 </button>
 
                 {openDropdown === "profile" && (
@@ -357,7 +373,7 @@ const SiteHeadder = () => {
                         >
                           {p.label}
                         </button>
-                      ),
+                      )
                     )}
                   </div>
                 )}
@@ -418,7 +434,7 @@ const SiteHeadder = () => {
                 onClick={() => toggleDropdown("home-mobile")}
                 className="w-full flex justify-between items-center px-3 py-2 text-left text-gray-700 rounded-md hover:bg-gray-50"
               >
-                <span>Home</span>
+                <span>{i18n.t("header.home")}</span>
                 <svg
                   className="h-4 w-4"
                   viewBox="0 0 20 20"
@@ -450,7 +466,7 @@ const SiteHeadder = () => {
               href="/about-us"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
             >
-              About Us
+              {i18n.t("header.about")}
             </Link>
 
             <div>
@@ -458,7 +474,7 @@ const SiteHeadder = () => {
                 onClick={() => toggleDropdown("services-mobile")}
                 className="w-full flex justify-between items-center px-3 py-2 text-left text-gray-700 rounded-md hover:bg-gray-50"
               >
-                <span>Services</span>
+                <span>{i18n.t("header.services")}</span>
                 <svg
                   className="h-4 w-4"
                   viewBox="0 0 20 20"
@@ -490,13 +506,13 @@ const SiteHeadder = () => {
               href="/blog"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
             >
-              Blog
+              {i18n.t("header.blog")}
             </Link>
             <Link
               href="/contact-us"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
             >
-              Contact Us
+              {i18n.t("header.contact")}
             </Link>
 
             <div>
@@ -504,7 +520,7 @@ const SiteHeadder = () => {
                 onClick={() => toggleDropdown("lang-mobile")}
                 className="w-full flex justify-between items-center px-3 py-2 text-left text-gray-700 rounded-md hover:bg-gray-50"
               >
-                <span>Language</span>
+                <span>{i18n.t("header.language")}</span>
                 <svg
                   className="h-4 w-4"
                   viewBox="0 0 20 20"
@@ -537,22 +553,26 @@ const SiteHeadder = () => {
                 onClick={() => toggleDropdown("profile-mobile")}
                 className="w-full flex justify-between items-center px-3 py-2 text-left text-gray-700 rounded-md hover:bg-gray-50"
               >
-                <span>
-                  {" "}
-                  {currentUser ? (
-                    <>
-                      {currentUser.role != "admin" ? (
-                        <>
-                          {currentUser.firstName} {currentUser.lastName}
-                        </>
-                      ) : (
-                        <>AD</>
-                      )}
-                    </>
-                  ) : (
-                    "AD"
-                  )}
-                </span>
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 text-sm font-semibold">
+                    {currentUser && currentUser.firstName
+                      ? `${currentUser.firstName.charAt(0)}${
+                          currentUser.lastName?.charAt(0) || ""
+                        }`.toUpperCase()
+                      : "AD"}
+                  </span>
+                </div>
+                <svg
+                  className="h-4 w-4"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.1 1.02l-4.25 4.657a.75.75 0 01-1.08 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                    clipRule="evenodd"
+                  />
+                </svg>
               </button>
               {openDropdown === "profile-mobile" && (
                 <div className="mt-1 pl-4">
@@ -579,7 +599,7 @@ const SiteHeadder = () => {
                       >
                         {p.label}
                       </button>
-                    ),
+                    )
                   )}
                 </div>
               )}
