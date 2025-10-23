@@ -100,44 +100,41 @@ const SiteHeadder = () => {
     { action: "logout", label: t("header.logout") },
   ];
 
+  // On mount restore language directly from localStorage and apply it immediately.
   React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      const savedLang = localStorage.getItem("selectedLanguage");
-      setLang(savedLang || "");
+    if (typeof window === "undefined") return;
 
-      if (savedLang == "en") {
-        document.documentElement.dir = "ltr";
-      } else {
-        document.documentElement.dir = "rtl";
+    const applyLang = (code: string | null) => {
+      const c = code || "en";
+      setLang(c);
+      // set direction: default to ltr for english, rtl for others
+      document.documentElement.dir = c === "en" ? "ltr" : "rtl";
+      if (i18n.language !== c) {
+        i18n.changeLanguage(c);
       }
-    }
-  }, []);
-  console.log("Selected Language:", i18n.language);
-  // Restore language from localStorage on mount and on route change
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      const setLangFromStorage = () => {
-        if (lang.trim() !== "") {
-          if (lang === "en" && i18n.language !== "en")
-            i18n.changeLanguage("en");
-          else if (lang === "ar" && i18n.language !== "ar")
-            i18n.changeLanguage("ar");
-          else if (lang === "he" && i18n.language !== "he")
-            i18n.changeLanguage("he");
-        }
-      };
-      setLangFromStorage();
+    };
 
-      // Listen for route changes to re-apply language
-      const handleRouteChange = () => {
-        setLangFromStorage();
-      };
-      router.events.on("routeChangeComplete", handleRouteChange);
-      return () => {
-        router.events.off("routeChangeComplete", handleRouteChange);
-      };
+    try {
+      const saved = localStorage.getItem("selectedLanguage");
+      applyLang(saved);
+    } catch (err) {
+      // fallback to english
+      applyLang("en");
     }
-  }, [router.events, i18n.language]);
+
+    // Ensure language is re-applied after route changes (in case other code altered it)
+    const handleRouteChange = () => {
+      try {
+        const saved = localStorage.getItem("selectedLanguage");
+        applyLang(saved);
+      } catch (e) {
+        applyLang("en");
+      }
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => router.events.off("routeChangeComplete", handleRouteChange);
+  }, [router.events]);
   const handleLanguageChange = (langLabel: string) => {
     // setSelectedLanguage(langLabel);
     const langObj = languages.find((l) => l.code === langLabel);

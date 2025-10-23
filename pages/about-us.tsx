@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import Head from "next/head";
 import AOS from "aos";
+import { useTranslation } from "react-i18next";
 
 import SiteHeadder from "@/components/SiteHeadder";
 import SiteFooter from "@/components/SiteFooter";
@@ -40,14 +41,13 @@ const AboutUsPage: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
-        <title>About Us — Consulting / Business Solutions</title>
-        <meta
-          name="description"
-          content="We deliver strategy, transformation and measurable results for businesses of all sizes."
-        />
+        <title>{t("about.title")} — Consulting / Business Solutions</title>
+        <meta name="description" content={t("about.description")} />
       </Head>
 
       <SiteHeadder />
@@ -57,13 +57,10 @@ const AboutUsPage: React.FC = () => {
         <section className="py-24 min-h-screen bg-linear-to-r from-indigo-600 to-pink-500 text-white flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold">
-              Consulting that delivers measurable outcomes
+              {t("about.heroTitle")}
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg">
-              We combine strategy, analytics and engineering to accelerate
-              transformation and deliver sustainable growth. Our teams focus on
-              clarity, speed and measurable impact so leadership can act with
-              confidence.
+              {t("about.heroParagraph")}
             </p>
 
             <div className="mt-8 flex justify-center gap-4">
@@ -110,18 +107,16 @@ const AboutUsPage: React.FC = () => {
               {/* Right: content */}
               <div className="lg:col-span-6">
                 <p className="text-sm text-indigo-600 font-medium">
-                  Our Introduction
+                  {t("about.introBadge")}
                 </p>
                 <h2
                   id="mission"
                   className="mt-3 text-3xl md:text-4xl font-extrabold leading-tight"
                 >
-                  High-velocity route to commercial achievement.
+                  {t("about.missionHeading")}
                 </h2>
                 <p className="mt-4 text-gray-700 dark:text-gray-300">
-                  We partner with leadership to prioritise, pilot and scale
-                  initiatives that deliver measurable improvements in cost,
-                  customer experience and operational resilience.
+                  {t("about.missionParagraph")}
                 </p>
 
                 <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
@@ -149,7 +144,7 @@ const AboutUsPage: React.FC = () => {
                     href="/contact-us"
                     className="inline-flex items-center gap-3 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-5 py-3 rounded-full shadow"
                   >
-                    More about
+                    {t("about.moreAbout")}
                   </a>
                 </div>
               </div>
@@ -170,11 +165,10 @@ const AboutUsPage: React.FC = () => {
                   id="impact"
                   className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-6"
                 >
-                  Providing IT solutions & services for startups
+                  {t("about.impactHeading")}
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-xl">
-                  We design pragmatic solutions that help early-stage teams
-                  scale faster — from product strategy to delivery and support.
+                  {t("about.impactParagraph")}
                 </p>
 
                 <div className="space-y-4">

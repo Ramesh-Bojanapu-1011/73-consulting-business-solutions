@@ -4,16 +4,18 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import AOS from "aos";
 
 const HomePage = () => {
   React.useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>Home — Consulting / Business Solutions</title>
+        <title>{t("home1.title")} — Consulting / Business Solutions</title>
       </Head>
 
       <SiteHeadder />
@@ -26,19 +28,15 @@ const HomePage = () => {
               {/* Left: copy */}
               <div className="order-2 lg:order-1 text-left">
                 <span className="inline-block bg-white/10 text-white text-sm font-medium px-3 py-1 rounded-md">
-                  Our Integrated IT Solutions
+                  {t("home1.subtitleBadge")}
                 </span>
 
                 <h1 className="mt-6 text-4xl md:text-6xl font-extrabold leading-tight">
-                  Revolutionizing Your
-                  <br /> Business with Cutting
-                  <br /> Edge IT Solutions
+                  {t("home1.title")}
                 </h1>
 
                 <p className="mt-6 text-lg text-white/85 max-w-xl">
-                  Welcome to our IT solution website, your stop for technology
-                  needs. We offer innovative solutions tailored to your business
-                  to help you scale and compete.
+                  {t("home1.heroParagraph")}
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
@@ -47,7 +45,7 @@ const HomePage = () => {
                     href="/contact-us"
                     className="inline-flex items-center gap-3 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg shadow"
                   >
-                    Free Consultation
+                    {t("home1.freeConsultation")}
                     <span className="inline-block bg-white/20 p-2 rounded-full">
                       ↗
                     </span>
@@ -58,7 +56,7 @@ const HomePage = () => {
                     href="/services"
                     className="inline-flex items-center gap-3 px-6 py-3 bg-white text-gray-800 rounded-lg shadow"
                   >
-                    Discover Now
+                    {t("home1.discoverNow")}
                     <span className="inline-block bg-orange-100 text-orange-600 p-2 rounded-full">
                       ↗
                     </span>
@@ -126,7 +124,6 @@ const HomePage = () => {
                           className="w-6 h-6 text-white"
                           viewBox="0 0 24 24"
                           fill="none"
-                          stroke="currentColor"
                         >
                           <path
                             strokeWidth="1.5"
@@ -135,9 +132,11 @@ const HomePage = () => {
                         </svg>
                       </div>
                       <div>
-                        <div className="text-xl font-bold">24/7 Support</div>
+                        <div className="text-xl font-bold">
+                          {t("home1.badge.title")}
+                        </div>
                         <div className="text-sm">
-                          TechXen Technology & IT Solution
+                          {t("home1.badge.subtitle")}
                         </div>
                       </div>
                     </div>
@@ -159,38 +158,34 @@ const HomePage = () => {
                       strokeWidth="1.5"
                     />
                   </svg>
-                  About Our Company
+                  {t("home1.aboutBadge")}
                 </div>
 
                 <h3
                   data-aos="zoom-in-left"
                   className="text-3xl font-extrabold text-gray-900 dark:text-white"
                 >
-                  Discover Our Story Empowering Business Through Innovation
+                  {t("home1.aboutHeading")}
                 </h3>
 
                 <p
                   data-aos="zoom-in-left"
                   className="mt-4 text-gray-600 dark:text-gray-300 max-w-prose"
                 >
-                  TechXen is a pioneering force in the realm of technology and
-                  IT solutions, dedicated to revolutionising the way businesses
-                  thrive in the digital age. Our approach is rooted in
-                  collaboration, transparency, and a relentless pursuit of
-                  excellence.
+                  {t("home1.aboutParagraph")}
                 </p>
 
                 {(() => {
                   const bullets = [
-                    "Dramatically re-engineer value added IT systems.",
-                    "Highlight any unique selling points or differentiators.",
-                    "Incorporate visuals such as team photos shots.",
+                    t("home1.about.bullets.1"),
+                    t("home1.about.bullets.2"),
+                    t("home1.about.bullets.3"),
                   ];
 
                   return (
                     <ul className="mt-6 space-y-3">
-                      {bullets.map((b) => (
-                        <li key={b} className="flex items-start gap-3">
+                      {bullets.map((b, i) => (
+                        <li key={i} className="flex items-start gap-3">
                           <span className="shrink-0 mt-1 w-6 h-6 bg-indigo-600 text-white rounded-full flex items-center justify-center">
                             ✓
                           </span>
@@ -208,7 +203,7 @@ const HomePage = () => {
                     href="/about-us"
                     className="inline-flex items-center gap-2 px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md"
                   >
-                    Discover More →
+                    {t("home1.discoverMore")} →
                   </Link>
                 </div>
               </div>
@@ -223,31 +218,29 @@ const HomePage = () => {
               {/* Left: copy */}
               <div className="order-2 lg:order-1">
                 <span className="inline-block text-sm font-medium text-indigo-300 dark:text-indigo-600 mb-4">
-                  Best IT Solution
+                  {t("home1.strategy.badge")}
                 </span>
 
                 <h2 className="mt-2 text-3xl md:text-4xl font-extrabold leading-tight">
-                  Let's Elevate Your Business with Strategic IT Solutions
+                  {t("home1.strategy.title")}
                 </h2>
 
                 <p className="mt-4 text-indigo-200 dark:text-gray-600 max-w-lg">
-                  At TechXen, we design flexible IT solutions to address your
-                  specific challenges and goals — from secure networks to
-                  managed services that let you focus on your core business.
+                  {t("home1.strategy.paragraph")}
                 </p>
 
                 <div className="mt-8 space-y-6">
                   {[
                     {
-                      title: "Network Infrastructure Solutions",
-                      desc: "Build a reliable and secure network infrastructure that supports your business operations.",
+                      titleKey: "home1.strategy.items.0.title",
+                      descKey: "home1.strategy.items.0.desc",
                     },
                     {
-                      title: "Managed IT Services",
-                      desc: "Focus on core business activities while we manage your IT needs with proactive support.",
+                      titleKey: "home1.strategy.items.1.title",
+                      descKey: "home1.strategy.items.1.desc",
                     },
                   ].map((s) => (
-                    <div key={s.title} className="flex items-start gap-4">
+                    <div key={s.titleKey} className="flex items-start gap-4">
                       <div className="shrink-0 w-10 h-10 bg-indigo-700 text-white rounded-full flex items-center justify-center dark:bg-indigo-50 dark:text-indigo-600">
                         <svg
                           className="w-5 h-5 text-current"
@@ -263,10 +256,10 @@ const HomePage = () => {
                       </div>
                       <div>
                         <div className="font-semibold text-white dark:text-gray-900">
-                          {s.title}
+                          {t(s.titleKey)}
                         </div>
                         <div className="text-indigo-200 dark:text-gray-600 text-sm">
-                          {s.desc}
+                          {t(s.descKey)}
                         </div>
                       </div>
                     </div>
@@ -278,7 +271,7 @@ const HomePage = () => {
                     href="/services"
                     className="inline-block px-5 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-full"
                   >
-                    Discover More
+                    {t("home1.strategy.cta")}
                   </Link>
                 </div>
               </div>
@@ -348,32 +341,22 @@ const HomePage = () => {
               {/* Right: text content */}
               <div>
                 <div className="text-sm font-medium text-indigo-600 mb-3">
-                  Why Choose Us
+                  {t("home1.why.badge")}
                 </div>
                 <h3 className="text-3xl font-extrabold text-gray-900 dark:text-white">
-                  We Create Result-Oriented Dynamic Applications
+                  {t("home1.why.title")}
                 </h3>
                 <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-prose">
-                  Over 25 years working in IT services developing software
-                  applications and mobile apps for clients all over the world.
+                  {t("home1.why.paragraph")}
                 </p>
 
                 <div className="mt-6 space-y-6">
                   {[
-                    {
-                      title: "First Growing Process",
-                      desc: "At vero eos et accusamus et iusto odio praesentium.",
-                    },
-                    {
-                      title: "Clean code",
-                      desc: "At vero eos et accusamus et iusto odio praesentium.",
-                    },
-                    {
-                      title: "Well Documentation",
-                      desc: "At vero eos et accusamus et iusto odio praesentium.",
-                    },
-                  ].map((f) => (
-                    <div key={f.title} className="flex items-start gap-4">
+                    "home1.why.items.0",
+                    "home1.why.items.1",
+                    "home1.why.items.2",
+                  ].map((key) => (
+                    <div key={key} className="flex items-start gap-4">
                       <div className="shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center text-indigo-600">
                         {/* icon placeholder */}
                         <svg
@@ -390,10 +373,10 @@ const HomePage = () => {
                       </div>
                       <div>
                         <div className="font-semibold text-gray-900 dark:text-white">
-                          {f.title}
+                          {t(`${key}.title`)}
                         </div>
                         <div className="text-sm text-gray-600 dark:text-gray-300">
-                          {f.desc}
+                          {t(`${key}.desc`)}
                         </div>
                       </div>
                     </div>
@@ -405,7 +388,7 @@ const HomePage = () => {
                     href="/services"
                     className="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md"
                   >
-                    Discover More
+                    {t("home1.why.cta")}
                   </Link>
                 </div>
               </div>
@@ -418,21 +401,20 @@ const HomePage = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-10">
               <div className="text-sm font-medium text-orange-500">
-                WORK FOR ANY INDUSTRY
+                {t("home1.workForIndustry")}
               </div>
               <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">
-                Best Solutions, For All Organizations
+                {t("home1.solutionsHeading")}
               </h2>
               <p className="mt-3 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                We deliver industry-focused services to help businesses scale,
-                modernize and transform.
+                {t("home1.solutionsParagraph")}
               </p>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
               {[
                 {
-                  label: "Software",
+                  label: t("home1.industries.software"),
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -460,7 +442,7 @@ const HomePage = () => {
                   ),
                 },
                 {
-                  label: "Fintech",
+                  label: t("home1.industries.fintech"),
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -507,7 +489,7 @@ const HomePage = () => {
                   ),
                 },
                 {
-                  label: "Healthcare",
+                  label: t("home1.industries.healthcare"),
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -533,7 +515,7 @@ const HomePage = () => {
                   ),
                 },
                 {
-                  label: "Data Mining",
+                  label: t("home1.industries.dataMining"),
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -553,7 +535,7 @@ const HomePage = () => {
                   ),
                 },
                 {
-                  label: "Machine learning",
+                  label: t("home1.industries.machineLearning"),
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -572,7 +554,7 @@ const HomePage = () => {
                 },
 
                 {
-                  label: "Medical",
+                  label: t("home1.industries.medical"),
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -598,7 +580,7 @@ const HomePage = () => {
                   ),
                 },
                 {
-                  label: "Entertainment",
+                  label: t("home1.industries.entertainment"),
                   icon: (
                     <>
                       <svg
@@ -624,7 +606,7 @@ const HomePage = () => {
                   ),
                 },
                 {
-                  label: "AI",
+                  label: t("home1.industries.ai"),
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -649,7 +631,7 @@ const HomePage = () => {
                   ),
                 },
                 {
-                  label: "Manufacturing",
+                  label: t("home1.industries.manufacturing"),
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -677,7 +659,7 @@ const HomePage = () => {
                   ),
                 },
                 {
-                  label: "Logistics",
+                  label: t("home1.industries.logistics"),
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -794,17 +776,17 @@ const HomePage = () => {
         <section className="py-16   dark:bg-gray-900">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <div className="text-sm font-medium text-orange-500">
-              TECHNOLOGY INDEX
+              {t("home1.tech.badge")}
             </div>
             <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">
-              What Technology We Are Using
-              <br /> For Our Valued Customers
+              {t("home1.tech.headingLine1")}
+              <br /> {t("home1.tech.headingLine2")}
             </h2>
 
             <div
               className="mt-10 grid grid-cols-3 sm:grid-cols-4 min-[769px]:grid-cols-6 gap-8 items-center justify-items-center"
               role="list"
-              aria-label="Technology logos"
+              aria-label={t("home1.tech.ariaLabel")}
             >
               {[
                 // java

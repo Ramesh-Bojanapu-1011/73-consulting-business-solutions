@@ -35,5 +35,154 @@
     "blog": "Blog",
     "contact": "Contact Us",
     "copyright": "© {{year}} Consulting / Business Solutions — All rights reserved."
+  },
+  "home1": {
+    "title": "Revolutionizing Your Business with Cutting Edge IT Solutions",
+    "subtitleBadge": "Our Integrated IT Solutions",
+    "heroParagraph": "Welcome to our IT solution website, your stop for technology needs. We offer innovative solutions tailored to your business to help you scale and compete.",
+    "freeConsultation": "Free Consultation",
+    "discoverNow": "Discover Now",
+    "about": {
+      "bullets": {
+        "1": "Dramatically re-engineer value added IT systems.",
+        "2": "Highlight any unique selling points or differentiators.",
+        "3": "Incorporate visuals such as team photos and case studies."
+      }
+    },
+    "badge": {
+      "title": "24/7 Support",
+      "subtitle": "TechXen Technology & IT Solution"
+    },
+    "strategy": {
+      "badge": "Best IT Solution",
+      "title": "Let's Elevate Your Business with Strategic IT Solutions",
+      "paragraph": "At TechXen, we design flexible IT solutions to address your specific challenges and goals — from secure networks to managed services that let you focus on your core business.",
+      "items": [
+        {
+          "title": "Network Infrastructure Solutions",
+          "desc": "Build a reliable and secure network infrastructure that supports your business operations."
+        },
+        {
+          "title": "Managed IT Services",
+          "desc": "Focus on core business activities while we manage your IT needs with proactive support."
+        }
+      ],
+      "cta": "Discover More"
+    },
+    "aboutBadge": "About Our Company",
+    "aboutHeading": "Discover Our Story Empowering Business Through Innovation",
+    "aboutParagraph": "TechXen is a pioneering force in the realm of technology and IT solutions, dedicated to revolutionising the way businesses thrive in the digital age.",
+    "discoverMore": "Discover More",
+    "workForIndustry": "WORK FOR ANY INDUSTRY",
+    "solutionsHeading": "Best Solutions, For All Organizations",
+    "solutionsParagraph": "We deliver industry-focused services to help businesses scale, modernize and transform.",
+    "industries": {
+      "software": "Software",
+      "fintech": "Fintech",
+      "healthcare": "Healthcare",
+      "dataMining": "Data Mining",
+      "machineLearning": "Machine learning",
+      "medical": "Medical",
+      "entertainment": "Entertainment",
+      "ai": "AI",
+      "manufacturing": "Manufacturing",
+      "logistics": "Logistics"
+    },
+
+    "why": {
+      "badge": "Why Choose Us",
+      "title": "We Create Result-Oriented Dynamic Applications",
+      "paragraph": "Over 25 years working in IT services developing software applications and mobile apps for clients all over the world.",
+      "items": [
+        {
+          "title": "First Growing Process",
+          "desc": "At vero eos et accusamus et iusto odio praesentium."
+        },
+        {
+          "title": "Clean code",
+          "desc": "At vero eos et accusamus et iusto odio praesentium."
+        },
+        {
+          "title": "Well Documentation",
+          "desc": "At vero eos et accusamus et iusto odio praesentium."
+        }
+      ],
+      "cta": "Discover More"
+    },
+    "tech": {
+      "badge": "TECHNOLOGY INDEX",
+      "headingLine1": "What Technology We Are Using",
+      "headingLine2": "For Our Valued Customers",
+      "ariaLabel": "Technology logos"
+    }
+  },
+  "index": {
+    "title": "Consulting / Business Solutions",
+    "description": "Consulting and business transformation services",
+    "heading": "Consulting & Business Solutions",
+    "subheading": "We help organizations transform operations, modernize technology, and accelerate growth.",
+    "cta": "Get started"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We deliver strategy, transformation and measurable results for businesses of all sizes.",
+    "heroTitle": "Consulting that delivers measurable outcomes",
+    "heroParagraph": "We combine strategy, analytics and engineering to accelerate transformation and deliver sustainable growth. Our teams focus on clarity, speed and measurable impact so leadership can act with confidence.",
+    "introBadge": "Our Introduction",
+    "missionHeading": "High-velocity route to commercial achievement.",
+    "missionParagraph": "We partner with leadership to prioritise, pilot and scale initiatives that deliver measurable improvements in cost, customer experience and operational resilience.",
+    "moreAbout": "More about",
+    "impactHeading": "Providing IT solutions & services for startups",
+    "impactParagraph": "We design pragmatic solutions that help early-stage teams scale faster — from product strategy to delivery and support."
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "End-to-end consulting and delivery across strategy, cloud, analytics and operations.",
+    "gridHeading": "What we do",
+    "approach": {
+      "heading": "Our approach",
+      "paragraph": "We combine strategy, analytics and engineering to deliver measurable outcomes. Our engagements are structured to deliver value quickly while building the capability to sustain change.",
+      "features": {
+        "1": {
+          "title": "Diagnose & prioritise",
+          "body": "Rapid assessments to identify the highest-impact opportunities and align leadership on outcomes."
+        },
+        "2": {
+          "title": "Deliver & scale",
+          "body": "Cross-functional squads deliver MVPs and scale capabilities through tooling and automation."
+        },
+        "3": {
+          "title": "Embed & sustain",
+          "body": "Build capability through training, playbooks and governance to lock in benefits."
+        }
+      }
+    },
+    "bookDiscovery": "Book a discovery call",
+    "items": {
+      "strategy": {
+        "title": "Strategy & Planning",
+        "short": "Align leadership on high-impact priorities, roadmaps and measurable KPIs to drive strategic growth."
+      },
+      "digitalTransformation": {
+        "title": "Digital Transformation",
+        "short": "Modernise platforms and migrate to cloud-native architectures that reduce risk and enable scale."
+      },
+      "operations": {
+        "title": "Operations Optimization",
+        "short": "Streamline processes, reduce cost and improve throughput through targeted operational improvements."
+      },
+      "finance": {
+        "title": "Financial Advisory",
+        "short": "Deliver actionable finance transformation, forecasting and commercial due diligence support."
+      },
+      "hr": {
+        "title": "HR & Organizational Design",
+        "short": "Align organisation design, roles and governance to support strategic priorities and ways of working."
+      },
+      "technology": {
+        "title": "Technology & IT Consulting",
+        "short": "Architect, build and secure platforms with pragmatic engineering and ops practices."
+      }
+    }
   }
 }

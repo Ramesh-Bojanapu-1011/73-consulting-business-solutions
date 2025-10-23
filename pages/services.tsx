@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import AOS from "aos";
 
@@ -39,6 +40,8 @@ const ServicesPage: React.FC = () => {
       if (intervalId) clearInterval(intervalId);
     };
   }, []);
+
+  const { t } = useTranslation();
 
   // compute index from scroll position
   const onScroll = React.useCallback(() => {
@@ -97,50 +100,38 @@ const ServicesPage: React.FC = () => {
   const services = [
     {
       slug: "strategy-&-planning",
-      title: "Strategy & Planning",
-      short:
-        "Align leadership on high-impact priorities, roadmaps and measurable KPIs to drive strategic growth.",
-
+      title: t("services.items.strategy.title"),
+      short: t("services.items.strategy.short"),
       image: "/services/business-strategy.jpg",
     },
     {
       slug: "digital-transformation",
-      title: "Digital Transformation",
-      short:
-        "Modernise platforms and migrate to cloud-native architectures that reduce risk and enable scale.",
-
+      title: t("services.items.digitalTransformation.title"),
+      short: t("services.items.digitalTransformation.short"),
       image: "/services/technology-cloud.jpg",
     },
     {
       slug: "operations-optimization",
-      title: "Operations Optimization",
-      short:
-        "Streamline processes, reduce cost and improve throughput through targeted operational improvements.",
-
+      title: t("services.items.operations.title"),
+      short: t("services.items.operations.short"),
       image: "/services/finance-ops.jpg",
     },
     {
       slug: "finance-advisory",
-      title: "Financial Advisory",
-      short:
-        "Deliver actionable finance transformation, forecasting and commercial due diligence support.",
-
+      title: t("services.items.finance.title"),
+      short: t("services.items.finance.short"),
       image: "/services/customer-experience.jpg",
     },
     {
       slug: "hr-&-organizational-design",
-      title: "HR & Organizational Design",
-      short:
-        "Align organisation design, roles and governance to support strategic priorities and ways of working.",
-
+      title: t("services.items.hr.title"),
+      short: t("services.items.hr.short"),
       image: "/services/data-analytics.jpg",
     },
     {
       slug: "technology-&-it-consulting",
-      title: "Technology & IT Consulting",
-      short:
-        "Architect, build and secure platforms with pragmatic engineering and ops practices.",
-
+      title: t("services.items.technology.title"),
+      short: t("services.items.technology.short"),
       image: "/services/change-management.jpg",
     },
   ];
@@ -261,11 +252,10 @@ const ServicesPage: React.FC = () => {
         <section className="py-20 min-h-screen flex items-center justify-center bg-linear-to-r from-indigo-600 to-pink-500 text-white">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold">
-              Our Services
+              {t("services.title")}
             </h1>
             <p className="mt-4 max-w-2xl mx-auto">
-              End-to-end consulting and delivery across strategy, cloud,
-              analytics and operations.
+              {t("services.description")}
             </p>
           </div>
         </section>
@@ -273,7 +263,9 @@ const ServicesPage: React.FC = () => {
         {/* Services grid (6) */}
         <section className="py-16">
           <div className="  mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold  text-center mb-6">What we do</h2>
+            <h2 className="text-2xl font-bold  text-center mb-6">
+              {t("services.gridHeading")}
+            </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((s, index) => (
@@ -327,11 +319,11 @@ const ServicesPage: React.FC = () => {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div data-aos="fade-up">
-                <h2 className="text-3xl font-extrabold mb-4">Our approach</h2>
+                <h2 className="text-3xl font-extrabold mb-4">
+                  {t("services.approach.heading")}
+                </h2>
                 <p className="text-gray-700 dark:text-gray-300 mb-6">
-                  We combine strategy, analytics and engineering to deliver
-                  measurable outcomes. Our engagements are structured to deliver
-                  value quickly while building the capability to sustain change.
+                  {t("services.approach.paragraph")}
                 </p>
 
                 <ul className="space-y-4">
@@ -343,9 +335,11 @@ const ServicesPage: React.FC = () => {
                         </div>
                       </div>
                       <div className="ml-4">
-                        <h4 className="font-semibold">{f.title}</h4>
+                        <h4 className="font-semibold">
+                          {t(`services.approach.features.${f.id}.title`)}
+                        </h4>
                         <p className="text-sm text-gray-600 dark:text-gray-300">
-                          {f.body}
+                          {t(`services.approach.features.${f.id}.body`)}
                         </p>
                       </div>
                     </li>
@@ -357,7 +351,7 @@ const ServicesPage: React.FC = () => {
                     href="/contact-us"
                     className="inline-block px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md shadow"
                   >
-                    Book a discovery call
+                    {t("services.bookDiscovery")}
                   </Link>
                 </div>
               </div>
