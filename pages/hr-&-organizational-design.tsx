@@ -5,7 +5,7 @@ import Image from "next/image";
 import SiteHeadder from "@/components/SiteHeadder";
 import SiteFooter from "@/components/SiteFooter";
 
-const StrategyAndPlanning: React.FC = () => {
+const HROrganizationalDesign: React.FC = () => {
   // simple in-file counter component
   const Counter: React.FC<{
     to: number;
@@ -53,10 +53,10 @@ const StrategyAndPlanning: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Strategy & Planning — Enkonix Insights</title>
+        <title>HR & Organizational design — Enkonix Insights</title>
         <meta
           name="description"
-          content="Strategy and planning services: how we help mid-market firms align strategy, portfolios and delivery to accelerate outcomes."
+          content="HR and organizational design: align structure, roles and capabilities to strategy so teams can deliver with clarity and ownership."
         />
       </Head>
 
@@ -67,18 +67,18 @@ const StrategyAndPlanning: React.FC = () => {
         <section className="py-20 min-h-screen flex justify-center items-center bg-linear-to-r from-indigo-600 to-pink-500 text-white">
           <div className="max-w-5xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold">
-              Strategy & Planning
+              HR & organizational design that unlocks performance
             </h1>
             <p className="mt-4 text-lg max-w-3xl mx-auto">
-              Align strategy, delivery and budgets so your organisation
-              consistently converts intent into measurable outcomes.
+              Align structure, roles and decision rights so teams move faster,
+              reduce handoffs and own outcomes.
             </p>
             <div className="mt-6">
               <Link
                 href="/contact-us"
                 className="inline-block px-5 py-3 bg-white text-indigo-700 rounded-md font-semibold"
               >
-                Book a strategy call
+                Book a financial review
               </Link>
             </div>
           </div>
@@ -89,20 +89,20 @@ const StrategyAndPlanning: React.FC = () => {
           <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl font-semibold">
-                Overview & common challenges
+                Common people & structure problems
               </h2>
               <p className="mt-4 text-gray-700 dark:text-gray-300">
-                Mid-market firms often struggle with unclear priorities,
-                fragmented data and governance, and difficulty turning strategy
-                into a predictable delivery rhythm. We help teams simplify the
-                problem and create repeatable patterns.
+                Organisations often struggle with unclear roles, duplicated
+                responsibilities and slow decision-making. We help design simple
+                structures and operating models that reduce friction and improve
+                accountability.
               </p>
 
-              <ul className="mt-6 space-y-3   text-gray-600 dark:text-gray-400">
-                <li>• Conflicting priorities across functions</li>
-                <li>• Lack of measurable outcomes tied to strategy</li>
-                <li>• Governance that slows decisions</li>
-                <li>• Delivery teams disconnected from strategic intent</li>
+              <ul className="mt-6 space-y-3 text-gray-600 dark:text-gray-400">
+                <li>• Overlapping roles and unclear decision rights</li>
+                <li>• Slow hiring and uneven capability distribution</li>
+                <li>• Missing performance metrics tied to outcomes</li>
+                <li>• Change fatigue from large, unfocused reorganisations</li>
               </ul>
             </div>
 
@@ -124,11 +124,11 @@ const StrategyAndPlanning: React.FC = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <h3 className="text-2xl font-semibold">
-                  Our approach — practical & measurable
+                  How we design organisations
                 </h3>
                 <p className="mt-3 text-gray-700 dark:text-gray-300">
-                  We run focused discovery, create lightweight decision
-                  frameworks and deliver fast pilots that embed new behaviours.
+                  We map current-state behaviours, design minimal changes to
+                  structure, and pilot new team models so improvements stick.
                 </p>
 
                 <div className="mt-8 grid sm:grid-cols-3 gap-4">
@@ -139,8 +139,8 @@ const StrategyAndPlanning: React.FC = () => {
                     <div>
                       <div className="font-semibold">Discover</div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Rapid interviews and data checks to find high-impact
-                        decisions.
+                        Rapid people & process discovery to identify high-impact
+                        role and workflow changes.
                       </div>
                     </div>
                   </div>
@@ -152,8 +152,8 @@ const StrategyAndPlanning: React.FC = () => {
                     <div>
                       <div className="font-semibold">Define</div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Clear metrics, owners and acceptance criteria for each
-                        decision.
+                        Clear role descriptions, accountability and performance
+                        metrics so teams can own outcomes.
                       </div>
                     </div>
                   </div>
@@ -165,8 +165,8 @@ const StrategyAndPlanning: React.FC = () => {
                     <div>
                       <div className="font-semibold">Deliver</div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Short pilots that prove value and create reusable
-                        templates.
+                        Short pilots that validate new team structures and hand
+                        back repeatable processes.
                       </div>
                     </div>
                   </div>
@@ -174,20 +174,20 @@ const StrategyAndPlanning: React.FC = () => {
 
                 <div className="mt-8">
                   <div className="text-sm text-gray-600 dark:text-gray-400">
-                    How a typical engagement looks
+                    Typical engagement phases
                   </div>
                   <div className="mt-4 flex items-center gap-6 overflow-auto">
                     <div className="shrink-0 text-center">
                       <div className="text-xs text-gray-500">Week 1</div>
-                      <div className="font-semibold">Discovery</div>
+                      <div className="font-semibold">People discovery</div>
                     </div>
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Week 2–4</div>
-                      <div className="font-semibold">Prototype</div>
+                      <div className="text-xs text-gray-500">Weeks 2–4</div>
+                      <div className="font-semibold">Design & pilot</div>
                     </div>
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Week 5–8</div>
-                      <div className="font-semibold">Pilot</div>
+                      <div className="text-xs text-gray-500">Weeks 5–8</div>
+                      <div className="font-semibold">Pilot & measure</div>
                     </div>
                     <div className="shrink-0 text-center">
                       <div className="text-xs text-gray-500">Week 9+</div>
@@ -198,8 +198,9 @@ const StrategyAndPlanning: React.FC = () => {
 
                 <div className="mt-6">
                   <blockquote className="border-l-4 pl-4 italic text-gray-700 dark:text-gray-300">
-                    “We landed a single decision model that reduced monthly
-                    forecasting effort by 50%.” — Retail Director
+                    “We reduced cross-team handoffs and decisions became faster
+                    — the new structure was simpler and easier to run.” — Head
+                    of People
                   </blockquote>
                 </div>
               </div>
@@ -225,21 +226,21 @@ const StrategyAndPlanning: React.FC = () => {
             {/* Stats row */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
-                <Counter to={50} suffix="%" />
+                <Counter to={25} suffix="%" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Avg. reduction in decision time
+                  Reduction in cross-team handoffs
                 </div>
               </div>
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
-                <Counter to={8} suffix="w" />
+                <Counter to={12} suffix="w" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Pilot to payback (typical)
+                  Time to a piloted team model
                 </div>
               </div>
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
-                <Counter to={3} suffix="x" />
+                <Counter to={40} suffix="%" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Faster time-to-value vs projects
+                  Improvement in decision velocity (typical)
                 </div>
               </div>
             </div>
@@ -248,40 +249,42 @@ const StrategyAndPlanning: React.FC = () => {
             <div className="mt-8 grid md:grid-cols-2 gap-6">
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Strategy articulation</div>
+                  <div className="font-semibold">Organisational design</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Facilitated workshops to align leaders, set measurable
-                    themes and a clear 90-day plan.
+                    Define clear roles, reporting lines and decision rights.
                   </div>
                 </div>
               </div>
 
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Portfolio prioritisation</div>
+                  <div className="font-semibold">
+                    Talent & capability mapping
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Scoring and trade-off frameworks to prioritise initiatives
-                    by value and risk.
+                    Map skills, gaps and target hiring profiles for key teams.
                   </div>
                 </div>
               </div>
 
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Decision ops & governance</div>
+                  <div className="font-semibold">
+                    Operating model & processes
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Design simple governance with clear owners and time-boxed
-                    escalation.
+                    Create simple operating rhythms and handbooks for teams.
                   </div>
                 </div>
               </div>
 
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Execution coaching</div>
+                  <div className="font-semibold">
+                    Change & adoption coaching
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Embed coaches to help teams convert priorities into
-                    measurable outcomes.
+                    Help leaders embed new responsibilities and feedback loops.
                   </div>
                 </div>
               </div>
@@ -291,12 +294,12 @@ const StrategyAndPlanning: React.FC = () => {
               <div className="md:col-span-2 rounded-lg p-6 bg-white dark:bg-gray-800 shadow">
                 <div className="font-semibold">Client testimonial</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-3">
-                  “Enkonix helped us align our leadership, focus on the right
-                  metrics and cut decision time by half — the pilot paid for
-                  itself in 8 weeks.”
+                  “We simplified roles, removed duplicated work and leaders
+                  became clearer about decisions — the result was faster
+                  delivery.”
                 </div>
                 <div className="mt-4 text-sm font-semibold">
-                  — Head of Product, Retailer
+                  — Head of People
                 </div>
               </div>
 
@@ -321,22 +324,22 @@ const StrategyAndPlanning: React.FC = () => {
             <div className="mt-6 grid md:grid-cols-3 gap-6">
               {[
                 {
-                  img: "/clients/retail-season.jpg",
-                  alt: "Retail seasonal planning",
-                  title: "Retail chain — seasonal planning",
-                  desc: "Reduced planning cycle by 40% and improved forecast accuracy with a single decision model for inventory and promotions.",
+                  img: "/clients/hr-structure.jpg",
+                  alt: "Organisational redesign",
+                  title: "Tech scale-up — organisational redesign",
+                  desc: "Reworked reporting lines and cut decision latency for product teams.",
                 },
                 {
-                  img: "/clients/saas-roadmap.jpg",
-                  alt: "SaaS roadmap",
-                  title: "SaaS provider — prioritised roadmap",
-                  desc: "Reprioritised product backlog to focus on revenue-driving experiments and reduced time-to-value for customers.",
+                  img: "/clients/hr-talent.jpg",
+                  alt: "Talent mapping",
+                  title: "Retail — talent & capability mapping",
+                  desc: "Mapped capability gaps and created targeted hiring plans.",
                 },
                 {
-                  img: "/clients/manufacturing-efficiency.jpg",
-                  alt: "Manufacturing efficiency",
-                  title: "Manufacturer — faster planning cycles",
-                  desc: "Shortened planning cycles and improved cross-functional alignment, unlocking faster response to demand changes.",
+                  img: "/clients/hr-change.jpg",
+                  alt: "Change adoption",
+                  title: "Logistics — change & adoption",
+                  desc: "Piloted a new operating rhythm and embedded leader routines.",
                 },
               ].map((c) => (
                 <article
@@ -400,4 +403,4 @@ const StrategyAndPlanning: React.FC = () => {
   );
 };
 
-export default StrategyAndPlanning;
+export default HROrganizationalDesign;

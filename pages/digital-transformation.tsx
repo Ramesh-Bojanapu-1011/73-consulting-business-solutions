@@ -36,7 +36,7 @@ const DigitalTransformation: React.FC = () => {
             }
           });
         },
-        { threshold: 0.3 }
+        { threshold: 0.3 },
       );
 
       obs.observe(el);
@@ -70,7 +70,9 @@ const DigitalTransformation: React.FC = () => {
               Digital transformation that actually delivers
             </h1>
             <p className="mt-4 text-lg max-w-3xl mx-auto">
-              Practical cloud adoption, stronger data foundations and repeatable delivery patterns so mid-market firms convert investment into measurable value.
+              Practical cloud adoption, stronger data foundations and repeatable
+              delivery patterns so mid-market firms convert investment into
+              measurable value.
             </p>
             <div className="mt-6">
               <Link
@@ -87,20 +89,26 @@ const DigitalTransformation: React.FC = () => {
         <section className="py-16">
           <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-2xl font-semibold">Why digital transformation stalls</h2>
+              <h2 className="text-2xl font-semibold">
+                Why digital transformation stalls
+              </h2>
               <p className="mt-4 text-gray-700 dark:text-gray-300">
                 Transformation projects often fail to deliver because teams
-                chase technology without clear outcomes, lack data that
-                supports decisions, or adopt cloud patterns that aren't
-                aligned to business priorities. We focus on the smallest
-                changes that unlock predictable, measurable value.
+                chase technology without clear outcomes, lack data that supports
+                decisions, or adopt cloud patterns that aren't aligned to
+                business priorities. We focus on the smallest changes that
+                unlock predictable, measurable value.
               </p>
 
               <ul className="mt-6 space-y-3 text-gray-600 dark:text-gray-400">
-                <li>• Technology-first roadmaps with no clear business metrics</li>
+                <li>
+                  • Technology-first roadmaps with no clear business metrics
+                </li>
                 <li>• Data scattered across teams and systems</li>
                 <li>• Siloed delivery that doesn't embed operational change</li>
-                <li>• Premature scale without an effective pilot and feedback loop</li>
+                <li>
+                  • Premature scale without an effective pilot and feedback loop
+                </li>
               </ul>
             </div>
 
@@ -121,11 +129,13 @@ const DigitalTransformation: React.FC = () => {
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
-                <h3 className="text-2xl font-semibold">How we make transformation stick</h3>
+                <h3 className="text-2xl font-semibold">
+                  How we make transformation stick
+                </h3>
                 <p className="mt-3 text-gray-700 dark:text-gray-300">
                   We combine outcome-focused discovery, pragmatic engineering
-                  patterns and short pilots to prove value quickly. That
-                  creates the case and capability to scale safely.
+                  patterns and short pilots to prove value quickly. That creates
+                  the case and capability to scale safely.
                 </p>
 
                 <div className="mt-8 grid sm:grid-cols-3 gap-4">
@@ -136,8 +146,8 @@ const DigitalTransformation: React.FC = () => {
                     <div>
                       <div className="font-semibold">Discover</div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Targeted discovery to identify high-impact use
-                        cases and the smallest viable changes.
+                        Targeted discovery to identify high-impact use cases and
+                        the smallest viable changes.
                       </div>
                     </div>
                   </div>
@@ -149,8 +159,8 @@ const DigitalTransformation: React.FC = () => {
                     <div>
                       <div className="font-semibold">Define</div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Clear success metrics, owners and acceptance
-                        criteria so pilots can be evaluated objectively.
+                        Clear success metrics, owners and acceptance criteria so
+                        pilots can be evaluated objectively.
                       </div>
                     </div>
                   </div>
@@ -162,15 +172,15 @@ const DigitalTransformation: React.FC = () => {
                     <div>
                       <div className="font-semibold">Deliver</div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Short, measurable pilots that validate value and
-                        create reusable delivery patterns.
+                        Short, measurable pilots that validate value and create
+                        reusable delivery patterns.
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8">
-                    <div className="text-sm text-gray-600 dark:text-gray-400">
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
                     Typical engagement phases
                   </div>
                   <div className="mt-4 flex items-center gap-6 overflow-auto">
@@ -194,10 +204,10 @@ const DigitalTransformation: React.FC = () => {
                 </div>
 
                 <div className="mt-6">
-                    <blockquote className="border-l-4 pl-4 italic text-gray-700 dark:text-gray-300">
-                    “The pilot proved out our assumptions and within two
-                    months we were already seeing a measurable uplift in
-                    customer retention.” — CTO, SaaS provider
+                  <blockquote className="border-l-4 pl-4 italic text-gray-700 dark:text-gray-300">
+                    “The pilot proved out our assumptions and within two months
+                    we were already seeing a measurable uplift in customer
+                    retention.” — CTO, SaaS provider
                   </blockquote>
                 </div>
               </div>
@@ -266,7 +276,9 @@ const DigitalTransformation: React.FC = () => {
 
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Delivery & platform engineering</div>
+                  <div className="font-semibold">
+                    Delivery & platform engineering
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                     Implement repeatable platform patterns and CI/CD to make
                     pilots low-cost and safe to run.
@@ -276,7 +288,9 @@ const DigitalTransformation: React.FC = () => {
 
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Change & adoption coaching</div>
+                  <div className="font-semibold">
+                    Change & adoption coaching
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                     Practical coaching to ensure new ways of working stick.
                   </div>
@@ -288,9 +302,9 @@ const DigitalTransformation: React.FC = () => {
               <div className="md:col-span-2 rounded-lg p-6 bg-white dark:bg-gray-800 shadow">
                 <div className="font-semibold">Client testimonial</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-3">
-                  “Enkonix helped us run a lightweight pilot, prove the
-                  business case and scale a platform pattern that reduced
-                  time-to-onboard by 40%.”
+                  “Enkonix helped us run a lightweight pilot, prove the business
+                  case and scale a platform pattern that reduced time-to-onboard
+                  by 40%.”
                 </div>
                 <div className="mt-4 text-sm font-semibold">— CTO, Fintech</div>
               </div>

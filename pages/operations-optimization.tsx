@@ -36,7 +36,7 @@ const OperationsOptimization: React.FC = () => {
             }
           });
         },
-        { threshold: 0.3 }
+        { threshold: 0.3 },
       );
 
       obs.observe(el);

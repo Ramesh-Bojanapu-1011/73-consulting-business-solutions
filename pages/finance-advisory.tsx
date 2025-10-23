@@ -36,7 +36,7 @@ const FinancialAdvisory: React.FC = () => {
             }
           });
         },
-        { threshold: 0.3 }
+        { threshold: 0.3 },
       );
 
       obs.observe(el);
@@ -70,7 +70,9 @@ const FinancialAdvisory: React.FC = () => {
               Financial advisory for growth and resilience
             </h1>
             <p className="mt-4 text-lg max-w-3xl mx-auto">
-              Practical FP&A, cashflow modelling and cost-to-value analysis tailored to mid-market businesses to improve profitability and forecasting.
+              Practical FP&A, cashflow modelling and cost-to-value analysis
+              tailored to mid-market businesses to improve profitability and
+              forecasting.
             </p>
             <div className="mt-6">
               <Link
@@ -87,7 +89,9 @@ const FinancialAdvisory: React.FC = () => {
         <section className="py-16">
           <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-2xl font-semibold">Where finance teams need pragmatic help</h2>
+              <h2 className="text-2xl font-semibold">
+                Where finance teams need pragmatic help
+              </h2>
               <p className="mt-4 text-gray-700 dark:text-gray-300">
                 Finance leaders often lack timely insight into product or
                 operational value, spend too much time on manual models, and
@@ -98,8 +102,12 @@ const FinancialAdvisory: React.FC = () => {
 
               <ul className="mt-6 space-y-3 text-gray-600 dark:text-gray-400">
                 <li>• Manual forecasting and slow close cycles</li>
-                <li>• Limited visibility into cost-to-serve and unit economics</li>
-                <li>• Difficulty aligning finance to product and ops decisions</li>
+                <li>
+                  • Limited visibility into cost-to-serve and unit economics
+                </li>
+                <li>
+                  • Difficulty aligning finance to product and ops decisions
+                </li>
                 <li>• Ad-hoc scenario planning without reusable models</li>
               </ul>
             </div>
@@ -121,11 +129,13 @@ const FinancialAdvisory: React.FC = () => {
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
-                <h3 className="text-2xl font-semibold">How our advisory helps</h3>
+                <h3 className="text-2xl font-semibold">
+                  How our advisory helps
+                </h3>
                 <p className="mt-3 text-gray-700 dark:text-gray-300">
                   We focus on models and processes that finance teams can
-                  operate and hand over: fast-value pilots, repeatable
-                  FP&A templates and clear decision-support for leadership.
+                  operate and hand over: fast-value pilots, repeatable FP&A
+                  templates and clear decision-support for leadership.
                 </p>
 
                 <div className="mt-8 grid sm:grid-cols-3 gap-4">
@@ -136,8 +146,8 @@ const FinancialAdvisory: React.FC = () => {
                     <div>
                       <div className="font-semibold">Discover</div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Rapid financial discovery to prioritise high-impact
-                        cost and revenue levers.
+                        Rapid financial discovery to prioritise high-impact cost
+                        and revenue levers.
                       </div>
                     </div>
                   </div>
@@ -170,7 +180,7 @@ const FinancialAdvisory: React.FC = () => {
                 </div>
 
                 <div className="mt-8">
-                    <div className="text-sm text-gray-600 dark:text-gray-400">
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
                     Typical engagement phases
                   </div>
                   <div className="mt-4 flex items-center gap-6 overflow-auto">
@@ -194,10 +204,10 @@ const FinancialAdvisory: React.FC = () => {
                 </div>
 
                 <div className="mt-6">
-                    <blockquote className="border-l-4 pl-4 italic text-gray-700 dark:text-gray-300">
-                    “The scenarios helped the board see the impact of
-                    pricing changes and we reallocated budget to the highest
-                    ROI experiments.” — CFO, Marketplace
+                  <blockquote className="border-l-4 pl-4 italic text-gray-700 dark:text-gray-300">
+                    “The scenarios helped the board see the impact of pricing
+                    changes and we reallocated budget to the highest ROI
+                    experiments.” — CFO, Marketplace
                   </blockquote>
                 </div>
               </div>
@@ -257,7 +267,8 @@ const FinancialAdvisory: React.FC = () => {
                 <div className="border-l-4 border-indigo-600 p-6">
                   <div className="font-semibold">Unit economics & pricing</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Understand margins at the customer, product and channel level.
+                    Understand margins at the customer, product and channel
+                    level.
                   </div>
                 </div>
               </div>
@@ -273,7 +284,9 @@ const FinancialAdvisory: React.FC = () => {
 
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Finance handover & training</div>
+                  <div className="font-semibold">
+                    Finance handover & training
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                     Upskill finance teams and handover sustainable models.
                   </div>
@@ -289,7 +302,9 @@ const FinancialAdvisory: React.FC = () => {
                   reallocate budget — we saw early margin improvements within
                   the quarter.”
                 </div>
-                <div className="mt-4 text-sm font-semibold">— CFO, Marketplace</div>
+                <div className="mt-4 text-sm font-semibold">
+                  — CFO, Marketplace
+                </div>
               </div>
 
               <div className="rounded-lg p-6 bg-white dark:bg-gray-800 border flex flex-col items-center justify-center">
