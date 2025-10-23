@@ -96,7 +96,7 @@ const ServicesPage: React.FC = () => {
 
   const services = [
     {
-      slug: "strategy-&-Planning",
+      slug: "strategy-&-planning",
       title: "Strategy & Planning",
       short:
         "Align leadership on high-impact priorities, roadmaps and measurable KPIs to drive strategic growth.",
