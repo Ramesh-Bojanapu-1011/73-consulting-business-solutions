@@ -70,7 +70,7 @@ const HomePage = () => {
                   <div className="absolute inset-0 rounded-2xl bg-white/10 blur-xl transform -translate-x-6 -translate-y-6" />
                   <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
                     <Image
-                      src="/hero-team.jpg"
+                      src="/home1_hero_img.jpg"
                       alt="Team working"
                       width={500}
                       height={500}
@@ -108,7 +108,7 @@ const HomePage = () => {
                 <div className="relative w-full max-w-md lg:max-w-lg">
                   <div className="rounded-2xl overflow-hidden shadow-lg">
                     <Image
-                      src="/hero-team.jpg"
+                      src="/team_collaboration.jpg"
                       alt="Team collaboration"
                       width={700}
                       height={700}
@@ -282,7 +282,7 @@ const HomePage = () => {
                   <div className="bg-linear-to-br from-indigo-800 to-indigo-700 dark:from-indigo-50 dark:to-indigo-100 rounded-2xl p-4 relative overflow-hidden">
                     <div className="rounded-xl overflow-hidden shadow-2xl relative">
                       <Image
-                        src="/hero-team.jpg"
+                        src="/team-at-work.jpg"
                         alt="Team at work"
                         width={900}
                         height={600}
@@ -292,26 +292,7 @@ const HomePage = () => {
                     </div>
                   </div>
 
-                  {/* small decorative thumbnails using theme borders */}
-                  <div className="absolute -left-6 -top-6 w-28 h-20 rounded-lg overflow-hidden border-4 border-indigo-700 dark:border-indigo-300 bg-neutral-50">
-                    <Image
-                      src="/hero-team.jpg"
-                      alt="thumb"
-                      width={200}
-                      height={140}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  <div className="absolute -right-6 -bottom-6 w-28 h-20 rounded-lg overflow-hidden border-4 border-pink-500 dark:border-pink-300 bg-neutral-50">
-                    <Image
-                      src="/hero-team.jpg"
-                      alt="thumb2"
-                      width={200}
-                      height={140}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                   
                 </div>
               </div>
             </div>
@@ -326,7 +307,7 @@ const HomePage = () => {
               <div className="flex justify-center lg:justify-start">
                 <div className="relative w-[360px] h-[360px] rounded-full overflow-hidden shadow-2xl">
                   <Image
-                    src="/hero-team.jpg"
+                    src="https://i.pinimg.com/736x/c8/07/13/c8071302df79009045b0f415911c37ed.jpg"
                     alt="team"
                     fill
                     style={{ objectFit: "cover" }}
@@ -1169,7 +1150,7 @@ const HomePage = () => {
                 // oracle
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width={382.09}
+                  width={100}
                   height={50}
                   viewBox="0 0 512 67"
                 >
