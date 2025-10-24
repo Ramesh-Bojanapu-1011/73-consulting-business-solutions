@@ -404,6 +404,84 @@
       "button": "Book a discovery call"
     }
   },
+  "contact": {
+    "title": "Contact us",
+    "description": "Get in touch — book a discovery call, request a proposal, or find our offices.",
+    "hero": {
+      "title": "Let’s talk about your next transformation",
+      "paragraph": "Book a short discovery call and we’ll sketch a practical plan to reduce risk and deliver value fast.",
+      "bookDiscovery": "Book a discovery",
+      "seeServices": "See services",
+      "testimonial": {
+        "quote": "This software simplifies the website building process, making it a breeze to manage our online presence.",
+        "name": "John Smith",
+        "role": "Founder & CEO"
+      }
+    },
+    "form": {
+      "intro": "Have a question or feedback? Fill out the form below, and we'll get back to you as soon as possible.",
+      "namePlaceholder": "Full name",
+      "emailPlaceholder": "Your email",
+      "subjectPlaceholder": "Subject",
+      "messagePlaceholder": "Your message..",
+      "consent": "I agree to being contacted about my enquiry.",
+      "submit": "Send message"
+    },
+    "otherWays": {
+      "heading": "Other ways to reach us"
+    },
+    "cards": {
+      "visit": {
+        "title": "Visit us",
+        "subtitle": "Don Valley, Toronto, CA",
+        "linkText": "View on maps"
+      },
+      "phone": {
+        "title": "Phone",
+        "subtitle": "+87 765338763653",
+        "linkText": "Call us"
+      },
+      "mail": {
+        "title": "Mail",
+        "subtitle": "info@stackly.com",
+        "linkText": "Send mail"
+      }
+    },
+    "faq": {
+      "badge": "Help Center",
+      "heading": "Frequently asked",
+      "paragraph": "Answers to common questions about working with us, our process, and how we run engagements. If you can't find what you're looking for, reach out and we'll help.",
+      "learnMore": "Learn more",
+      "items": {
+        "1": {
+          "q": "What is business consulting ?",
+          "a": "We help organisations solve strategy, operations and technology challenges with pragmatic plans and delivery support."
+        },
+        "2": {
+          "q": "Why wouldn't I just hire my own animator ?",
+          "a": "Bringing in specialists reduces ramp time and gives access to domain experience across similar projects — often proving more cost-effective."
+        },
+        "3": {
+          "q": "How does the firm ensure data privacy?",
+          "a": "We follow industry best practices, contractual protections and secure hosting — and can adapt controls to your compliance needs."
+        },
+        "4": {
+          "q": "Can I use this to create and sell a product ?",
+          "a": "Yes. We work with product teams to design, build and operationalise products for external customers."
+        }
+      }
+    },
+    "success": {
+      "title": "Message sent",
+      "paragraph": "Thank you for your message — we'll get back to you within 1–2 business days.",
+      "close": "Close"
+    },
+    "cta": {
+      "heading": "Ready to get started?",
+      "paragraph": "Book a discovery call and we’ll prepare a short plan that outlines next steps and quick wins.",
+      "button": "Book discovery"
+    }
+  },
   "blog": {
     "title": "Insights",
     "description": "Articles and thinking on strategy, cloud, analytics and operations for business leaders.",

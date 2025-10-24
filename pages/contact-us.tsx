@@ -4,12 +4,14 @@ import SiteHeadder from "@/components/SiteHeadder";
 import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const ContactUs: React.FC = () => {
   const formRef = React.useRef<HTMLFormElement | null>(null);
   const modalRef = React.useRef<HTMLDivElement | null>(null);
   const timerRef = React.useRef<number | null>(null);
   const [success, setSuccess] = React.useState(false);
+  const { t } = useTranslation();
 
   const closeModal = React.useCallback(() => {
     setSuccess(false);
@@ -79,11 +81,8 @@ const ContactUs: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Contact us — Enkonix Insights</title>
-        <meta
-          name="description"
-          content="Get in touch with Enkonix — book a discovery call, request a proposal or find our offices."
-        />
+        <title>{t("contact.title")}</title>
+        <meta name="description" content={t("contact.description")} />
       </Head>
 
       <SiteHeadder />
@@ -93,24 +92,23 @@ const ContactUs: React.FC = () => {
         <section className="py-20 min-h-screen flex justify-center items-center bg-linear-to-r from-indigo-600 to-pink-500 text-white">
           <div className="max-w-5xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold">
-              Let’s talk about your next transformation
+              {t("contact.hero.title")}
             </h1>
             <p className="mt-4 text-lg max-w-3xl mx-auto">
-              Book a short discovery call and we’ll sketch a practical plan to
-              reduce risk and deliver value fast.
+              {t("contact.hero.paragraph")}
             </p>
             <div className="mt-6 flex items-center justify-center gap-4">
               <a
                 href="#form"
                 className="inline-block px-6 py-3 bg-white text-indigo-700 rounded-md font-semibold"
               >
-                Book a discovery
+                {t("contact.hero.bookDiscovery")}
               </a>
               <Link
                 href="/services"
                 className="inline-block px-6 py-3 border border-white/30 rounded-md text-white"
               >
-                See services
+                {t("contact.hero.seeServices")}
               </Link>
             </div>
           </div>
@@ -133,13 +131,14 @@ const ContactUs: React.FC = () => {
 
                   <div className="absolute left-6 bottom-6 right-6 text-white">
                     <div className="text-lg font-semibold drop-shadow">
-                      “This software simplifies the website building process,
-                      making it a breeze to manage our online presence.”
+                      {t("contact.hero.testimonial.quote")}
                     </div>
                     <div className="mt-3 font-semibold drop-shadow">
-                      John Smith
+                      {t("contact.hero.testimonial.name")}
                     </div>
-                    <div className="text-sm drop-shadow">Founder & CEO</div>
+                    <div className="text-sm drop-shadow">
+                      {t("contact.hero.testimonial.role")}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -148,8 +147,7 @@ const ContactUs: React.FC = () => {
               <div>
                 <div className="rounded-lg p-6 bg-white dark:bg-gray-800 shadow">
                   <div className="text-gray-700 dark:text-gray-300">
-                    Have a question or feedback? Fill out the form below, and
-                    we'll get back to you as soon as possible.
+                    {t("contact.form.intro")}
                   </div>
                   {/* success modal handled at page root */}
 
@@ -164,13 +162,13 @@ const ContactUs: React.FC = () => {
                       <input
                         type="text"
                         name="name"
-                        placeholder="Full name"
+                        placeholder={t("contact.form.namePlaceholder")}
                         className="w-full rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                       />
                       <input
                         type="email"
                         name="email"
-                        placeholder="Your email"
+                        placeholder={t("contact.form.emailPlaceholder")}
                         className="w-full rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                       />
                     </div>
@@ -178,13 +176,13 @@ const ContactUs: React.FC = () => {
                     <input
                       type="text"
                       name="subject"
-                      placeholder="Subject"
+                      placeholder={t("contact.form.subjectPlaceholder")}
                       className="w-full rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                     />
 
                     <textarea
                       name="message"
-                      placeholder="Your message.."
+                      placeholder={t("contact.form.messagePlaceholder")}
                       className="w-full rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-3 py-2 h-40 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                     ></textarea>
 
@@ -199,12 +197,12 @@ const ContactUs: React.FC = () => {
                         htmlFor="consent"
                         className="text-sm text-gray-600 dark:text-gray-400"
                       >
-                        I agree to being contacted about my enquiry.
+                        {t("contact.form.consent")}
                       </label>
                     </div>
 
                     <button className="w-full bg-linear-to-r from-indigo-600 to-blue-900 text-white py-3 rounded-lg font-semibold shadow-md hover:opacity-95 transition">
-                      Send message
+                      {t("contact.form.submit")}
                     </button>
                   </form>
                 </div>
@@ -216,14 +214,14 @@ const ContactUs: React.FC = () => {
         {/* Other ways to reach us */}
         <section className="py-16 ">
           <div className="max-w-6xl mx-auto px-6">
-            <h3 className="text-xl font-semibold">Other ways to reach us</h3>
+            <h3 className="text-xl font-semibold">{t("contact.otherWays.heading")}</h3>
 
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
               {[
                 {
-                  title: "Visit us",
-                  subtitle: "Don Valley, Toronto, CA",
-                  linkText: "View on maps",
+                  title: t("contact.cards.visit.title"),
+                  subtitle: t("contact.cards.visit.subtitle"),
+                  linkText: t("contact.cards.visit.linkText"),
 
                   icon: (
                     <>
@@ -258,9 +256,9 @@ const ContactUs: React.FC = () => {
                   ),
                 },
                 {
-                  title: "Phone",
-                  subtitle: "+87 765338763653",
-                  linkText: "Call us",
+                  title: t("contact.cards.phone.title"),
+                  subtitle: t("contact.cards.phone.subtitle"),
+                  linkText: t("contact.cards.phone.linkText"),
 
                   icon: (
                     <>
@@ -294,9 +292,9 @@ const ContactUs: React.FC = () => {
                   ),
                 },
                 {
-                  title: "Mail",
-                  subtitle: "info@stackly.com",
-                  linkText: "Send mail",
+                  title: t("contact.cards.mail.title"),
+                  subtitle: t("contact.cards.mail.subtitle"),
+                  linkText: t("contact.cards.mail.linkText"),
 
                   icon: (
                     <>
@@ -359,9 +357,7 @@ const ContactUs: React.FC = () => {
 
                   <div className="flex-1">
                     <div className="font-semibold text-lg">{c.title}</div>
-                    <div className="ml-4 flex shrink-0 self-center">
-                      {c.subtitle}
-                    </div>
+                    <div className="ml-4 flex shrink-0 self-center">{c.subtitle}</div>
                   </div>
                 </div>
               ))}
@@ -377,25 +373,19 @@ const ContactUs: React.FC = () => {
               <div>
                 <div className="inline-flex items-center gap-3 px-3 py-1 rounded-full bg-white dark:bg-gray-900 shadow-sm">
                   <div className="w-2 h-2 rounded-full bg-black dark:bg-white" />
-                  <div className="text-sm font-medium">Help Center</div>
+                  <div className="text-sm font-medium">{t("contact.faq.badge")}</div>
                 </div>
 
-                <h2 className="mt-6 text-4xl font-extrabold leading-tight">
-                  Frequently asked
-                </h2>
+                <h2 className="mt-6 text-4xl font-extrabold leading-tight">{t("contact.faq.heading")}</h2>
 
-                <p className="mt-4 text-gray-700 dark:text-gray-300 max-w-lg">
-                  Answers to common questions about working with us, our
-                  process, and how we run engagements. If you can't find what
-                  you're looking for, reach out and we'll help.
-                </p>
+                <p className="mt-4 text-gray-700 dark:text-gray-300 max-w-lg">{t("contact.faq.paragraph")}</p>
 
                 <div className="mt-8">
                   <a
                     href="#form"
                     className="inline-flex items-center gap-3 px-5 py-3 bg-indigo-700 text-white rounded-md shadow"
                   >
-                    Learn more
+                    {t("contact.faq.learnMore")}
                     <span className="text-xl">→</span>
                   </a>
                 </div>
@@ -406,20 +396,20 @@ const ContactUs: React.FC = () => {
                 <div className="space-y-4">
                   {[
                     {
-                      q: "What is business consulting ?",
-                      a: "We help organisations solve strategy, operations and technology challenges with pragmatic plans and delivery support.",
+                      q: t("contact.faq.items.1.q"),
+                      a: t("contact.faq.items.1.a"),
                     },
                     {
-                      q: "Why wouldn't I just hire my own animator ?",
-                      a: "Bringing in specialists reduces ramp time and gives access to domain experience across similar projects — often proving more cost-effective.",
+                      q: t("contact.faq.items.2.q"),
+                      a: t("contact.faq.items.2.a"),
                     },
                     {
-                      q: "How Does variuem Ensure Data Privacy ?",
-                      a: "We follow industry best practices, contractual protections and secure hosting — and can adapt controls to your compliance needs.",
+                      q: t("contact.faq.items.3.q"),
+                      a: t("contact.faq.items.3.a"),
                     },
                     {
-                      q: "Can I use this to create and sell a product ?",
-                      a: "Yes. We work with product teams to design, build and operationalise products for external customers.",
+                      q: t("contact.faq.items.4.q"),
+                      a: t("contact.faq.items.4.a"),
                     },
                   ].map((item, idx) => (
                     <details
@@ -482,7 +472,7 @@ const ContactUs: React.FC = () => {
           >
             <div className="fixed inset-0 bg-black/40" onClick={closeModal} />
 
-            <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg max-w-md w-full p-6 mx-auto">
+              <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg max-w-md w-full p-6 mx-auto">
               <button
                 onClick={closeModal}
                 aria-label="Close"
@@ -491,18 +481,15 @@ const ContactUs: React.FC = () => {
                 ×
               </button>
 
-              <h3 className="text-lg font-semibold">Message sent</h3>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-                Thank you for your message — we'll get back to you within 1–2
-                business days.
-              </p>
+              <h3 className="text-lg font-semibold">{t("contact.success.title")}</h3>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{t("contact.success.paragraph")}</p>
 
               <div className="mt-4 text-right">
                 <button
                   onClick={closeModal}
                   className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded"
                 >
-                  Close
+                  {t("contact.success.close")}
                 </button>
               </div>
             </div>
@@ -512,19 +499,14 @@ const ContactUs: React.FC = () => {
         {/* Bottom CTA */}
         <section className="py-20 bg-indigo-700 text-white">
           <div className="max-w-6xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-extrabold">
-              Ready to get started?
-            </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-indigo-100">
-              Book a discovery call and we’ll prepare a short plan that outlines
-              next steps and quick wins.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-extrabold">{t("contact.cta.heading")}</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-indigo-100">{t("contact.cta.paragraph")}</p>
             <div className="mt-8">
               <a
                 href="#form"
                 className="inline-block px-6 py-3 bg-white text-indigo-700 rounded-md font-semibold"
               >
-                Book discovery
+                {t("contact.cta.button")}
               </a>
             </div>
           </div>
