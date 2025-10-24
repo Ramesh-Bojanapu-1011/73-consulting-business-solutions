@@ -191,7 +191,110 @@
     "missionParagraph": "We partner with leadership to prioritise, pilot and scale initiatives that deliver measurable improvements in cost, customer experience and operational resilience.",
     "moreAbout": "More about",
     "impactHeading": "Providing IT solutions & services for startups",
-    "impactParagraph": "We design pragmatic solutions that help early-stage teams scale faster — from product strategy to delivery and support."
+    "impactParagraph": "We design pragmatic solutions that help early-stage teams scale faster — from product strategy to delivery and support.",
+    "mission": {
+      "left": [
+        "Research & strategic planning",
+        "Marketing communications",
+        "Qualitative & quantitative research"
+      ],
+      "right": ["Communications audit", "Competitive analysis"]
+    },
+    "features": [
+      {
+        "title": "Quality Solution for Business",
+        "desc": "Each demo built with Teba will look different. Customize almost anything in the appearance of your project."
+      },
+      {
+        "title": "Amazing Expert Teams",
+        "desc": "Highly experienced teams to help you deliver faster with fewer risks and better outcomes."
+      },
+      {
+        "title": "Urgent Support For Clients",
+        "desc": "Round-the-clock support for urgent issues so your operations stay running."
+      }
+    ],
+    "servicesSnapshotHeading": "Services snapshot",
+    "servicesSnapshot": [
+      {
+        "title": "Business Strategy",
+        "desc": "Strategic planning, M&A diligence and transformation roadmaps that align leadership and execution."
+      },
+      {
+        "title": "Technology & Cloud",
+        "desc": "Cloud-native platform builds, secure migrations and data strategy to unlock analytics and automation."
+      },
+      {
+        "title": "Finance & Ops",
+        "desc": "Working capital optimisation, FP&A transformation and process automation to improve margins."
+      }
+    ],
+    "teamHeading": "Meet our experts",
+    "teamParagraph": "Seasoned consultants, operators and engineers who partner with clients to design, deliver and sustain change. We bring domain experience, technical depth and practical delivery skills.",
+    "team": {
+      "members": [
+        {
+          "name": "John Smith",
+          "role": "Founder & CEO"
+        },
+        {
+          "name": "Alice Johnson",
+          "role": "Strategy Lead"
+        },
+        {
+          "name": "Raj Patel",
+          "role": "Cloud Architect"
+        },
+        {
+          "name": "Carlos Mendes",
+          "role": "Operations Specialist"
+        },
+        {
+          "name": "Maya Lopez",
+          "role": "Change Management"
+        },
+        {
+          "name": "Omar Haddad",
+          "role": "Data & Analytics"
+        },
+        {
+          "name": "Sofia Petrova",
+          "role": "Customer Experience"
+        },
+        {
+          "name": "Kenji Watanabe",
+          "role": "IT Architecture"
+        }
+      ]
+    },
+    "testimonialsHeading": "What clients say",
+    "testimonials": [
+      {
+        "quote": "Their pragmatic approach reduced our operating costs and improved fulfilment times — delivered on time and on budget.",
+        "name": "Sara Williams",
+        "role": "COO, RetailCo"
+      },
+      {
+        "quote": "A fast, disciplined team that balanced strategy with execution — they made measurable improvements within months.",
+        "name": "Michael Chen",
+        "role": "Head of Technology, FinBank"
+      },
+      {
+        "quote": "They helped us prioritize the right initiatives and build internal capability so improvements stuck.",
+        "name": "Priya Nair",
+        "role": "VP Product, SaaSify"
+      },
+      {
+        "quote": "Clear governance, strong delivery and measurable outcomes — a truly collaborative partnership.",
+        "name": "Liam O'Connor",
+        "role": "CFO, LogisticsX"
+      }
+    ],
+    "contact": {
+      "heading": "Let's work together",
+      "paragraph": "If you're ready to explore how we can help your organisation, reach out for a complimentary discovery conversation.",
+      "button": "Book a discovery call"
+    }
   },
   "services": {
     "title": "Our Services",

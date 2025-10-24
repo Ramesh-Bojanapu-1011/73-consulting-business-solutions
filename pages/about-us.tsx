@@ -12,15 +12,6 @@ const AboutUsPage: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const pausedRef = useRef(false);
 
-  // mission feature lists (rendered with map)
-  const missionLeft = [
-    "Research & strategic planning",
-    "Marketing communications",
-    "Qualitative & quantitative research",
-  ];
-
-  const missionRight = ["Communications audit", "Competitive analysis"];
-
   React.useEffect(() => {
     AOS.init({ duration: 800 });
 
@@ -42,6 +33,72 @@ const AboutUsPage: React.FC = () => {
   }, []);
 
   const { t } = useTranslation();
+
+  // translation-driven content
+  const missionLeftList = t("about.mission.left", {
+    returnObjects: true,
+  }) as string[];
+  const missionRightList = t("about.mission.right", {
+    returnObjects: true,
+  }) as string[];
+
+  const features = t("about.features", { returnObjects: true }) as
+    | Array<{ title: string; desc: string }>
+    | undefined;
+
+  const servicesSnapshot = t("about.servicesSnapshot", {
+    returnObjects: true,
+  }) as Array<{ title: string; desc: string }> | undefined;
+
+  const serviceIcons = [
+    <svg
+      className="w-8 h-8 text-indigo-600"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 2l3 6 6 .5-4.5 3.5L19 20l-7-4-7 4 2.5-8.0L4 8.5 10 8 12 2z"
+        fill="currentColor"
+      />
+    </svg>,
+    <svg
+      className="w-8 h-8 text-indigo-600"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M20 17.58A5.5 5.5 0 0014.5 12H13v-1a4 4 0 10-8 0v1H6.5A4.5 4.5 0 0011 18h9a1 1 0 000-2h0z"
+        fill="currentColor"
+      />
+    </svg>,
+    <svg
+      className="w-8 h-8 text-indigo-600"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 1v22M5 7h14M7 12h10M9 17h6"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>,
+  ];
+
+  const teamHeading = t("about.teamHeading");
+  const teamParagraph = t("about.teamParagraph");
+
+  const testimonials = t("about.testimonials", { returnObjects: true }) as
+    | Array<{ quote: string; name: string; role: string }>
+    | undefined;
+
+  const contactHeading = t("about.contact.heading");
+  const contactParagraph = t("about.contact.paragraph");
+  const contactButton = t("about.contact.button");
 
   return (
     <>
@@ -68,7 +125,7 @@ const AboutUsPage: React.FC = () => {
                 href="/contact-us"
                 className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow"
               >
-                Schedule a free consultation
+                {t("about.cta.schedule")}
               </Link>
             </div>
           </div>
@@ -121,7 +178,7 @@ const AboutUsPage: React.FC = () => {
 
                 <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
                   <ul className="space-y-2">
-                    {missionLeft.map((item) => (
+                    {(missionLeftList || []).map((item) => (
                       <li key={item} className="flex items-start gap-2">
                         <span className="text-indigo-600">+</span>
                         {item}
@@ -130,7 +187,7 @@ const AboutUsPage: React.FC = () => {
                   </ul>
 
                   <ul className="space-y-2">
-                    {missionRight.map((item) => (
+                    {(missionRightList || []).map((item) => (
                       <li key={item} className="flex items-start gap-2">
                         <span className="text-indigo-600">+</span>
                         {item}
@@ -172,63 +229,54 @@ const AboutUsPage: React.FC = () => {
                 </p>
 
                 <div className="space-y-4">
-                  {[
-                    {
-                      title: "Quality Solution for Business",
-                      desc: "Each demo built with Teba will look different. Customize almost anything in the appearance of your",
-                      icon: (
-                        <svg
-                          className="w-6 h-6 text-indigo-600"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12 2l2 5h5l-4 3 2 5-5-3-5 3 2-5-4-3h5l2-5z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      ),
-                    },
-                    {
-                      title: "Amazing Expert Teams",
-                      desc: "Highly experienced teams to help you deliver faster with fewer risks and better outcomes.",
-                      icon: (
-                        <svg
-                          className="w-6 h-6 text-indigo-600"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12 12a4 4 0 100-8 4 4 0 000 8zm-8 9a8 8 0 0116 0H4z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      ),
-                    },
-                    {
-                      title: "Urgent Support For Clients",
-                      desc: "Round-the-clock support for urgent issues so your operations stay running.",
-                      icon: (
-                        <svg
-                          className="w-6 h-6 text-indigo-600"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11h3v2h-5V7h2v6z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      ),
-                    },
-                  ].map((f) => (
-                    <div key={f.title} className="flex items-start gap-4">
+                  {(features || []).map((f, idx) => (
+                    <div
+                      key={`${f.title}-${idx}`}
+                      className="flex items-start gap-4"
+                    >
                       <div className="shrink-0">
                         <div className="w-14 h-14 bg-white rounded-lg shadow flex items-center justify-center">
-                          {f.icon}
+                          {/* keep decorative icons by index to preserve visual design */}
+                          {
+                            [
+                              <svg
+                                key={0}
+                                className="w-6 h-6 text-indigo-600"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M12 2l2 5h5l-4 3 2 5-5-3-5 3 2-5-4-3h5l2-5z"
+                                  fill="currentColor"
+                                />
+                              </svg>,
+                              <svg
+                                key={1}
+                                className="w-6 h-6 text-indigo-600"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M12 12a4 4 0 100-8 4 4 0 000 8zm-8 9a8 8 0 0116 0H4z"
+                                  fill="currentColor"
+                                />
+                              </svg>,
+                              <svg
+                                key={2}
+                                className="w-6 h-6 text-indigo-600"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11h3v2h-5V7h2v6z"
+                                  fill="currentColor"
+                                />
+                              </svg>,
+                            ][idx % 3]
+                          }
                         </div>
                       </div>
                       <div>
@@ -278,72 +326,19 @@ const AboutUsPage: React.FC = () => {
         <section className="py-16" aria-labelledby="services">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 id="services" className="text-2xl font-bold mb-6">
-              Services snapshot
+              {t("about.servicesSnapshotHeading")}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Business Strategy",
-                  desc: "Strategic planning, M&A diligence and transformation roadmaps that align leadership and execution.",
-                  icon: (
-                    <svg
-                      className="w-8 h-8 text-indigo-600"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 2l3 6 6 .5-4.5 3.5L19 20l-7-4-7 4 2.5-8.0L4 8.5 10 8 12 2z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  ),
-                },
-                {
-                  title: "Technology & Cloud",
-                  desc: "Cloud-native platform builds, secure migrations and data strategy to unlock analytics and automation.",
-                  icon: (
-                    <svg
-                      className="w-8 h-8 text-indigo-600"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M20 17.58A5.5 5.5 0 0014.5 12H13v-1a4 4 0 10-8 0v1H6.5A4.5 4.5 0 0011 18h9a1 1 0 000-2h0z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  ),
-                },
-                {
-                  title: "Finance & Ops",
-                  desc: "Working capital optimisation, FP&A transformation and process automation to improve margins.",
-                  icon: (
-                    <svg
-                      className="w-8 h-8 text-indigo-600"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 1v22M5 7h14M7 12h10M9 17h6"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  ),
-                },
-              ].map((s) => (
+              {(servicesSnapshot || []).map((s, idx) => (
                 <div
-                  key={s.title}
+                  key={`${s.title}-${idx}`}
                   className="p-6 bg-white/60 dark:bg-gray-800/60 rounded-lg border hover:shadow-lg transition-transform transform hover:-translate-y-1 hover:border-indigo-400"
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <div className="flex items-center justify-center w-12 h-12 rounded-md bg-linear-to-br from-indigo-50 to-pink-50 dark:from-indigo-700/30 dark:to-pink-600/20">
-                      <div className="w-8 h-8">{s.icon}</div>
+                      <div className="w-8 h-8">
+                        {serviceIcons[idx % serviceIcons.length]}
+                      </div>
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">{s.title}</h3>
@@ -362,12 +357,10 @@ const AboutUsPage: React.FC = () => {
         <section className="py-16 " aria-labelledby="team" data-aos="fade-up">
           <div className="max-w-7xl mx-auto px-4 text-center sm:px-6 lg:px-8">
             <h2 id="team" className="text-2xl font-bold mb-6">
-              Meet our experts
+              {teamHeading}
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              Seasoned consultants, operators and engineers who partner with
-              clients to design, deliver and sustain change. We bring domain
-              experience, technical depth and practical delivery skills.
+              {teamParagraph}
             </p>
 
             {/* Carousel */}
@@ -415,43 +408,43 @@ const AboutUsPage: React.FC = () => {
               >
                 {[
                   {
-                    name: "Aisha Khan",
-                    role: "Strategy Lead",
+                    name: "about.team.members.0.name",
+                    role: "about.team.members.0.role",
                     img: "/team/aisha.jpg",
                   },
                   {
-                    name: "Rahul Mehta",
-                    role: "Tech Transformation",
+                    name: "about.team.members.1.name",
+                    role: "about.team.members.1.role",
                     img: "/team/rahul.jpg",
                   },
                   {
-                    name: "Lena Smith",
-                    role: "Operations",
+                    name: "about.team.members.2.name",
+                    role: "about.team.members.2.role",
                     img: "/team/lena.jpg",
                   },
                   {
-                    name: "Carlos Ruiz",
-                    role: "Finance",
+                    name: "about.team.members.3.name",
+                    role: "about.team.members.3.role",
                     img: "/team/carlos.jpg",
                   },
                   {
-                    name: "Maya Lopez",
-                    role: "Change Management",
+                    name: "about.team.members.4.name",
+                    role: "about.team.members.4.role",
                     img: "/team/maya.jpg",
                   },
                   {
-                    name: "Omar Haddad",
-                    role: "Data & Analytics",
+                    name: "about.team.members.5.name",
+                    role: "about.team.members.5.role",
                     img: "/team/omar.jpg",
                   },
                   {
-                    name: "Sofia Petrova",
-                    role: "Customer Experience",
+                    name: "about.team.members.6.name",
+                    role: "about.team.members.6.role",
                     img: "/team/sofia.jpg",
                   },
                   {
-                    name: "Kenji Watanabe",
-                    role: "IT Architecture",
+                    name: "about.team.members.7.name",
+                    role: "about.team.members.7.role",
                     img: "/team/kenji.jpg",
                   },
                 ].map((m, idx) => (
@@ -480,10 +473,10 @@ const AboutUsPage: React.FC = () => {
                     </div>
 
                     <div className="font-semibold text-gray-900 dark:text-gray-100">
-                      {m.name}
+                      {t(`${m.name}`)}
                     </div>
                     <div className="text-sm text-gray-500 dark:text-gray-300 mb-4">
-                      {m.role}
+                      {t(`${m.role}`)}
                     </div>
 
                     <div className="mt-auto w-full">
@@ -553,38 +546,13 @@ const AboutUsPage: React.FC = () => {
               id="testimonials"
               className="text-2xl text-center font-bold mb-6"
             >
-              What clients say
+              {t("about.testimonialsHeading")}
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  quote:
-                    "Their pragmatic approach reduced our operating costs and improved fulfilment times — delivered on time and on budget.",
-                  name: "Sara Williams",
-                  role: "COO, RetailCo",
-                },
-                {
-                  quote:
-                    "A fast, disciplined team that balanced strategy with execution — they made measurable improvements within months.",
-                  name: "Michael Chen",
-                  role: "Head of Technology, FinBank",
-                },
-                {
-                  quote:
-                    "They helped us prioritize the right initiatives and build internal capability so improvements stuck.",
-                  name: "Priya Nair",
-                  role: "VP Product, SaaSify",
-                },
-                {
-                  quote:
-                    "Clear governance, strong delivery and measurable outcomes — a truly collaborative partnership.",
-                  name: "Liam O'Connor",
-                  role: "CFO, LogisticsX",
-                },
-              ].map((t, i) => (
+              {(testimonials || []).map((tt, i) => (
                 <figure
-                  key={t.name}
+                  key={`${tt.name}-${i}`}
                   className="p-6 bg-white/60 dark:bg-gray-800/60 border-l-4 border-indigo-500/80 dark:border-indigo-400/60 rounded-lg hover:shadow-lg transition-shadow duration-200 flex flex-col justify-between"
                   data-aos="fade-up"
                   data-aos-delay={i * 100}
@@ -594,17 +562,17 @@ const AboutUsPage: React.FC = () => {
                       “
                     </div>
                     <blockquote className="text-gray-700 dark:text-gray-300 italic">
-                      {t.quote}
+                      {tt.quote}
                     </blockquote>
                   </div>
 
                   <figcaption className="mt-4 flex items-center justify-between text-sm text-gray-600 dark:text-gray-400">
                     <div>
                       <div className="font-semibold text-gray-900 dark:text-gray-100">
-                        {t.name}
+                        {tt.name}
                       </div>
                       <div className="text-xs text-gray-500 dark:text-gray-300">
-                        {t.role}
+                        {tt.role}
                       </div>
                     </div>
                   </figcaption>
@@ -622,18 +590,17 @@ const AboutUsPage: React.FC = () => {
         >
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 id="contact" className="text-2xl font-bold mb-4">
-              Let's work together
+              {contactHeading}
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              If you're ready to explore how we can help your organisation,
-              reach out for a complimentary discovery conversation.
+              {contactParagraph}
             </p>
 
             <a
               href="/contact-us"
               className="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md shadow"
             >
-              Book a discovery call
+              {contactButton}
             </a>
           </div>
         </section>
