@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import SiteHeadder from "@/components/SiteHeadder";
 import SiteFooter from "@/components/SiteFooter";
+import { useTranslation } from "react-i18next";
 
 const HROrganizationalDesign: React.FC = () => {
   // simple in-file counter component
@@ -50,13 +51,15 @@ const HROrganizationalDesign: React.FC = () => {
       </div>
     );
   };
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
-        <title>HR & Organizational design — Enkonix Insights</title>
+        <title>{t("hrOrganizationalDesign.pageTitle")}</title>
         <meta
           name="description"
-          content="HR and organizational design: align structure, roles and capabilities to strategy so teams can deliver with clarity and ownership."
+          content={t("hrOrganizationalDesign.metaDescription")}
         />
       </Head>
 
@@ -67,18 +70,17 @@ const HROrganizationalDesign: React.FC = () => {
         <section className="py-20 min-h-screen flex justify-center items-center bg-linear-to-r from-indigo-600 to-pink-500 text-white">
           <div className="max-w-5xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold">
-              HR & organizational design that unlocks performance
+              {t("hrOrganizationalDesign.hero.title")}
             </h1>
             <p className="mt-4 text-lg max-w-3xl mx-auto">
-              Align structure, roles and decision rights so teams move faster,
-              reduce handoffs and own outcomes.
+              {t("hrOrganizationalDesign.hero.paragraph")}
             </p>
             <div className="mt-6">
               <Link
                 href="/contact-us"
                 className="inline-block px-5 py-3 bg-white text-indigo-700 rounded-md font-semibold"
               >
-                Book a financial review
+                {t("hrOrganizationalDesign.hero.cta")}
               </Link>
             </div>
           </div>
@@ -89,20 +91,17 @@ const HROrganizationalDesign: React.FC = () => {
           <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl font-semibold">
-                Common people & structure problems
+                {t("hrOrganizationalDesign.overview.heading")}
               </h2>
               <p className="mt-4 text-gray-700 dark:text-gray-300">
-                Organisations often struggle with unclear roles, duplicated
-                responsibilities and slow decision-making. We help design simple
-                structures and operating models that reduce friction and improve
-                accountability.
+                {t("hrOrganizationalDesign.overview.paragraph")}
               </p>
 
               <ul className="mt-6 space-y-3 text-gray-600 dark:text-gray-400">
-                <li>• Overlapping roles and unclear decision rights</li>
-                <li>• Slow hiring and uneven capability distribution</li>
-                <li>• Missing performance metrics tied to outcomes</li>
-                <li>• Change fatigue from large, unfocused reorganisations</li>
+                <li>• {t("hrOrganizationalDesign.overview.bullets.1")}</li>
+                <li>• {t("hrOrganizationalDesign.overview.bullets.2")}</li>
+                <li>• {t("hrOrganizationalDesign.overview.bullets.3")}</li>
+                <li>• {t("hrOrganizationalDesign.overview.bullets.4")}</li>
               </ul>
             </div>
 
@@ -124,11 +123,10 @@ const HROrganizationalDesign: React.FC = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <h3 className="text-2xl font-semibold">
-                  How we design organisations
+                  {t("hrOrganizationalDesign.approach.heading")}
                 </h3>
                 <p className="mt-3 text-gray-700 dark:text-gray-300">
-                  We map current-state behaviours, design minimal changes to
-                  structure, and pilot new team models so improvements stick.
+                  {t("hrOrganizationalDesign.approach.paragraph")}
                 </p>
 
                 <div className="mt-8 grid sm:grid-cols-3 gap-4">
@@ -137,10 +135,11 @@ const HROrganizationalDesign: React.FC = () => {
                       1
                     </div>
                     <div>
-                      <div className="font-semibold">Discover</div>
+                      <div className="font-semibold">
+                        {t("hrOrganizationalDesign.approach.features.1.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Rapid people & process discovery to identify high-impact
-                        role and workflow changes.
+                        {t("hrOrganizationalDesign.approach.features.1.body")}
                       </div>
                     </div>
                   </div>
@@ -150,10 +149,11 @@ const HROrganizationalDesign: React.FC = () => {
                       2
                     </div>
                     <div>
-                      <div className="font-semibold">Define</div>
+                      <div className="font-semibold">
+                        {t("hrOrganizationalDesign.approach.features.2.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Clear role descriptions, accountability and performance
-                        metrics so teams can own outcomes.
+                        {t("hrOrganizationalDesign.approach.features.2.body")}
                       </div>
                     </div>
                   </div>
@@ -163,10 +163,11 @@ const HROrganizationalDesign: React.FC = () => {
                       3
                     </div>
                     <div>
-                      <div className="font-semibold">Deliver</div>
+                      <div className="font-semibold">
+                        {t("hrOrganizationalDesign.approach.features.3.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Short pilots that validate new team structures and hand
-                        back repeatable processes.
+                        {t("hrOrganizationalDesign.approach.features.3.body")}
                       </div>
                     </div>
                   </div>
@@ -178,29 +179,44 @@ const HROrganizationalDesign: React.FC = () => {
                   </div>
                   <div className="mt-4 flex items-center gap-6 overflow-auto">
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Week 1</div>
-                      <div className="font-semibold">People discovery</div>
+                      <div className="text-xs text-gray-500">
+                        {t("hrOrganizationalDesign.timeline.week1.label")}
+                      </div>
+                      <div className="font-semibold">
+                        {t("hrOrganizationalDesign.timeline.week1.title")}
+                      </div>
                     </div>
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Weeks 2–4</div>
-                      <div className="font-semibold">Design & pilot</div>
+                      <div className="text-xs text-gray-500">
+                        {t("hrOrganizationalDesign.timeline.week2.label")}
+                      </div>
+                      <div className="font-semibold">
+                        {t("hrOrganizationalDesign.timeline.week2.title")}
+                      </div>
                     </div>
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Weeks 5–8</div>
-                      <div className="font-semibold">Pilot & measure</div>
+                      <div className="text-xs text-gray-500">
+                        {t("hrOrganizationalDesign.timeline.week3.label")}
+                      </div>
+                      <div className="font-semibold">
+                        {t("hrOrganizationalDesign.timeline.week3.title")}
+                      </div>
                     </div>
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Week 9+</div>
-                      <div className="font-semibold">Scale</div>
+                      <div className="text-xs text-gray-500">
+                        {t("hrOrganizationalDesign.timeline.week4.label")}
+                      </div>
+                      <div className="font-semibold">
+                        {t("hrOrganizationalDesign.timeline.week4.title")}
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6">
                   <blockquote className="border-l-4 pl-4 italic text-gray-700 dark:text-gray-300">
-                    “We reduced cross-team handoffs and decisions became faster
-                    — the new structure was simpler and easier to run.” — Head
-                    of People
+                    {t("hrOrganizationalDesign.testimonial.quote")} —{" "}
+                    {t("hrOrganizationalDesign.testimonial.author")}
                   </blockquote>
                 </div>
               </div>
@@ -221,26 +237,28 @@ const HROrganizationalDesign: React.FC = () => {
         {/* Services — different style */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-6">
-            <h3 className="text-xl font-semibold">Services we offer</h3>
+            <h3 className="text-xl font-semibold">
+              {t("hrOrganizationalDesign.servicesHeading")}
+            </h3>
 
             {/* Stats row */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
                 <Counter to={25} suffix="%" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Reduction in cross-team handoffs
+                  {t("hrOrganizationalDesign.stats.reduction")}
                 </div>
               </div>
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
                 <Counter to={12} suffix="w" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Time to a piloted team model
+                  {t("hrOrganizationalDesign.stats.timeToPilot")}
                 </div>
               </div>
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
                 <Counter to={40} suffix="%" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Improvement in decision velocity (typical)
+                  {t("hrOrganizationalDesign.stats.improvement")}
                 </div>
               </div>
             </div>
@@ -249,9 +267,11 @@ const HROrganizationalDesign: React.FC = () => {
             <div className="mt-8 grid md:grid-cols-2 gap-6">
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Organisational design</div>
+                  <div className="font-semibold">
+                    {t("hrOrganizationalDesign.cards.organisationDesign.title")}
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Define clear roles, reporting lines and decision rights.
+                    {t("hrOrganizationalDesign.cards.organisationDesign.body")}
                   </div>
                 </div>
               </div>
@@ -259,10 +279,10 @@ const HROrganizationalDesign: React.FC = () => {
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
                   <div className="font-semibold">
-                    Talent & capability mapping
+                    {t("hrOrganizationalDesign.cards.talentMapping.title")}
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Map skills, gaps and target hiring profiles for key teams.
+                    {t("hrOrganizationalDesign.cards.talentMapping.body")}
                   </div>
                 </div>
               </div>
@@ -270,10 +290,10 @@ const HROrganizationalDesign: React.FC = () => {
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
                   <div className="font-semibold">
-                    Operating model & processes
+                    {t("hrOrganizationalDesign.cards.operatingModel.title")}
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Create simple operating rhythms and handbooks for teams.
+                    {t("hrOrganizationalDesign.cards.operatingModel.body")}
                   </div>
                 </div>
               </div>
@@ -281,10 +301,10 @@ const HROrganizationalDesign: React.FC = () => {
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
                   <div className="font-semibold">
-                    Change & adoption coaching
+                    {t("hrOrganizationalDesign.cards.coaching.title")}
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Help leaders embed new responsibilities and feedback loops.
+                    {t("hrOrganizationalDesign.cards.coaching.body")}
                   </div>
                 </div>
               </div>
@@ -292,24 +312,26 @@ const HROrganizationalDesign: React.FC = () => {
 
             <div className="mt-8 grid md:grid-cols-3 gap-6 items-start">
               <div className="md:col-span-2 rounded-lg p-6 bg-white dark:bg-gray-800 shadow">
-                <div className="font-semibold">Client testimonial</div>
+                <div className="font-semibold">
+                  {t("hrOrganizationalDesign.clientTestimonial.heading")}
+                </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-3">
-                  “We simplified roles, removed duplicated work and leaders
-                  became clearer about decisions — the result was faster
-                  delivery.”
+                  {t("hrOrganizationalDesign.clientTestimonial.body")}
                 </div>
                 <div className="mt-4 text-sm font-semibold">
-                  — Head of People
+                  {t("hrOrganizationalDesign.clientTestimonial.author")}
                 </div>
               </div>
 
               <div className="rounded-lg p-6 bg-white dark:bg-gray-800 border flex flex-col items-center justify-center">
-                <div className="text-sm text-gray-600">Ready to start?</div>
+                <div className="text-sm text-gray-600">
+                  {t("hrOrganizationalDesign.ready.heading")}
+                </div>
                 <Link
                   href="/contact-us"
                   className="mt-4 inline-block px-4 py-2 bg-indigo-600 text-white rounded-md"
                 >
-                  Book discovery
+                  {t("hrOrganizationalDesign.ready.book")}
                 </Link>
               </div>
             </div>
@@ -319,7 +341,9 @@ const HROrganizationalDesign: React.FC = () => {
         {/* Case studies — image-led cards (rendered from array) */}
         <section className="py-16 bg-gray-50 dark:bg-gray-800">
           <div className="max-w-6xl mx-auto px-6">
-            <h3 className="text-xl font-semibold">Case studies</h3>
+            <h3 className="text-xl font-semibold">
+              {t("hrOrganizationalDesign.caseStudies.heading")}
+            </h3>
 
             <div className="mt-6 grid md:grid-cols-3 gap-6">
               {[
@@ -373,11 +397,10 @@ const HROrganizationalDesign: React.FC = () => {
         <section className="py-20 bg-indigo-700 text-white">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-extrabold">
-              Ready to make strategy real?
+              {t("hrOrganizationalDesign.cta.heading")}
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-indigo-100">
-              Book a short discovery call and we'll sketch a practical 90-day
-              plan that starts delivering measurable outcomes quickly.
+              {t("hrOrganizationalDesign.cta.paragraph")}
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -385,13 +408,13 @@ const HROrganizationalDesign: React.FC = () => {
                 href="/contact-us"
                 className="inline-block px-6 py-3 bg-white text-indigo-700 rounded-md font-semibold"
               >
-                Book discovery
+                {t("hrOrganizationalDesign.cta.button")}
               </Link>
               <Link
                 href="/services"
                 className="inline-block px-6 py-3 border border-white/30 rounded-md text-white"
               >
-                See services
+                {t("hrOrganizationalDesign.cta.learnMore")}
               </Link>
             </div>
           </div>

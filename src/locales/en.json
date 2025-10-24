@@ -1107,5 +1107,107 @@
       "button": "Book discovery",
       "learnMore": "See services"
     }
+  },
+  "hrOrganizationalDesign": {
+    "pageTitle": "HR & Organizational design — Enkonix Insights",
+    "metaDescription": "HR and organizational design: align structure, roles and capabilities to strategy so teams can deliver with clarity and ownership.",
+    "hero": {
+      "title": "HR & organizational design that unlocks performance",
+      "paragraph": "Align structure, roles and decision rights so teams move faster, reduce handoffs and own outcomes.",
+      "cta": "Book a discovery"
+    },
+    "overview": {
+      "heading": "Common people & structure problems",
+      "paragraph": "Organisations often struggle with unclear roles, duplicated responsibilities and slow decision-making. We help design simple structures and operating models that reduce friction and improve accountability.",
+      "bullets": {
+        "1": "Overlapping roles and unclear decision rights",
+        "2": "Slow hiring and uneven capability distribution",
+        "3": "Missing performance metrics tied to outcomes",
+        "4": "Change fatigue from large, unfocused reorganisations"
+      }
+    },
+    "imageAlt": "Organizational overview",
+    "approach": {
+      "heading": "How we design organisations",
+      "paragraph": "We map current-state behaviours, design minimal changes to structure, and pilot new team models so improvements stick.",
+      "features": {
+        "1": {
+          "title": "Discover",
+          "body": "Rapid people & process discovery to identify high-impact role and workflow changes."
+        },
+        "2": {
+          "title": "Define",
+          "body": "Clear role descriptions, accountability and performance metrics so teams can own outcomes."
+        },
+        "3": {
+          "title": "Deliver",
+          "body": "Short pilots that validate new team structures and hand back repeatable processes."
+        }
+      }
+    },
+    "timeline": {
+      "week1": { "label": "Week 1", "title": "People discovery" },
+      "week2": { "label": "Weeks 2–4", "title": "Design & pilot" },
+      "week3": { "label": "Weeks 5–8", "title": "Pilot & measure" },
+      "week4": { "label": "Week 9+", "title": "Scale" }
+    },
+    "testimonial": {
+      "quote": "We simplified roles, removed duplicated work and leaders became clearer about decisions — the result was faster delivery.",
+      "author": "— Head of People"
+    },
+    "servicesHeading": "Services we offer",
+    "stats": {
+      "reduction": "Reduction in cross-team handoffs",
+      "timeToPilot": "Time to a piloted team model",
+      "improvement": "Improvement in decision velocity (typical)"
+    },
+    "cards": {
+      "organisationDesign": {
+        "title": "Organisational design",
+        "body": "Define clear roles, reporting lines and decision rights."
+      },
+      "talentMapping": {
+        "title": "Talent & capability mapping",
+        "body": "Map skills, gaps and target hiring profiles for key teams."
+      },
+      "operatingModel": {
+        "title": "Operating model & processes",
+        "body": "Create simple operating rhythms and handbooks for teams."
+      },
+      "coaching": {
+        "title": "Change & adoption coaching",
+        "body": "Help leaders embed new responsibilities and feedback loops."
+      }
+    },
+    "clientTestimonial": {
+      "heading": "Client testimonial",
+      "body": "We simplified roles, removed duplicated work and leaders became clearer about decisions — the result was faster delivery.",
+      "author": "— Head of People"
+    },
+    "ready": { "heading": "Ready to start?", "book": "Book discovery" },
+    "caseStudies": {
+      "heading": "Case studies",
+      "one": {
+        "alt": "Organisational redesign",
+        "title": "Tech scale-up — organisational redesign",
+        "desc": "Reworked reporting lines and cut decision latency for product teams."
+      },
+      "two": {
+        "alt": "Talent mapping",
+        "title": "Retail — talent & capability mapping",
+        "desc": "Mapped capability gaps and created targeted hiring plans."
+      },
+      "three": {
+        "alt": "Change adoption",
+        "title": "Logistics — change & adoption",
+        "desc": "Piloted a new operating rhythm and embedded leader routines."
+      }
+    },
+    "cta": {
+      "heading": "Ready to make strategy real?",
+      "paragraph": "Book a short discovery call and we'll sketch a practical 90-day plan that starts delivering measurable outcomes quickly.",
+      "button": "Book discovery",
+      "learnMore": "See services"
+    }
   }
 }
