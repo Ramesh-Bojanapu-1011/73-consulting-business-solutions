@@ -1209,5 +1209,98 @@
       "button": "Book discovery",
       "learnMore": "See services"
     }
+  },
+  "technologyConsulting": {
+    "pageTitle": "Technology & IT Consulting — Enkonix Insights",
+    "metaDescription": "Technology & IT consulting: build resilient platforms, modernise legacy systems and align engineering to business outcomes.",
+    "hero": {
+      "title": "Technology & IT consulting that moves the business forward",
+      "paragraph": "Modernise legacy systems, secure your platform, and align engineering to measurable business outcomes.",
+      "cta": "Book a technology review"
+    },
+    "overview": {
+      "heading": "Common technology challenges we solve",
+      "paragraph": "Many organisations are held back by fragile legacy systems, fragmented tooling and lack of engineering alignment to core business goals. We focus on pragmatic modernisation and measurable value delivery.",
+      "bullets": {
+        "1": "Legacy platforms that slow feature delivery",
+        "2": "Unclear ownership across infrastructure and apps",
+        "3": "Security and compliance gaps",
+        "4": "High operational toil and incident frequency"
+      }
+    },
+    "imageAlt": "Strategy overview",
+    "approach": {
+      "heading": "How we help technology teams deliver",
+      "paragraph": "We assess platform health, reduce technical debt and embed practices that increase deployment frequency and reliability.",
+      "features": {
+        "1": {
+          "title": "Assess",
+          "body": "Rapid platform and architecture health checks to identify high-impact technical risks."
+        },
+        "2": {
+          "title": "Plan",
+          "body": "Roadmaps that prioritise business impact and reduce risk during migration."
+        },
+        "3": {
+          "title": "Deliver",
+          "body": "Incremental migrations and automation that lower cost and improve reliability."
+        }
+      }
+    },
+    "testimonial": {
+      "quote": "We reduced incidents and increased release confidence — our platform is now stable enough to move faster.",
+      "author": "CTO"
+    },
+    "servicesHeading": "Services we offer",
+    "stats": {
+      "uptime": "Uptime improvement in our platform projects",
+      "timeToWin": "Typical time to first measurable reliability win",
+      "reduction": "Reduction in toil through automation (typical)"
+    },
+    "cards": {
+      "platformArchitecture": {
+        "title": "Platform architecture & modernisation",
+        "body": "Re-architect services to reduce coupling, enable independent delivery and lower operational risk."
+      },
+      "cloud": {
+        "title": "Cloud & infrastructure",
+        "body": "Design secure, cost-effective cloud platforms and migration plans."
+      },
+      "observability": {
+        "title": "Observability & SRE practices",
+        "body": "Implement monitoring, runbooks and automation to reduce incident impact."
+      },
+      "security": {
+        "title": "Security & compliance",
+        "body": "Threat modelling, compliance assessments and practical remediation plans."
+      }
+    },
+    "clientTestimonial": {
+      "heading": "Client testimonial",
+      "body": "Enkonix stabilised our platform and helped us ship features with confidence — the ops burden dropped significantly.",
+      "author": "— CTO, SaaS scale-up"
+    },
+    "ready": { "heading": "Ready to start?", "book": "Book discovery" },
+    "caseStudies": {
+      "heading": "Case studies",
+      "saas": {
+        "title": "SaaS — platform modernisation",
+        "desc": "Migrated core services to a modular architecture and reduced release risk."
+      },
+      "retail": {
+        "title": "Retail — cloud migration",
+        "desc": "Lifted-and-refactored workloads to cloud and optimised costs."
+      },
+      "logistics": {
+        "title": "Logistics — SRE & observability",
+        "desc": "Introduced monitoring, alerting and runbooks to reduce incident time-to-resolution."
+      }
+    },
+    "cta": {
+      "heading": "Ready to make strategy real?",
+      "paragraph": "Book a short discovery call and we'll sketch a practical 90-day plan that starts delivering measurable outcomes quickly.",
+      "button": "Book discovery",
+      "learnMore": "See services"
+    }
   }
 }

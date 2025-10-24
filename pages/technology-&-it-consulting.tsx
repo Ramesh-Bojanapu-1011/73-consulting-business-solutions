@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import SiteHeadder from "@/components/SiteHeadder";
 import SiteFooter from "@/components/SiteFooter";
+import { useTranslation } from "react-i18next";
 
 const TechnologyITConsulting: React.FC = () => {
   // simple in-file counter component
@@ -50,13 +51,15 @@ const TechnologyITConsulting: React.FC = () => {
       </div>
     );
   };
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
-        <title>Technology & IT Consulting — Enkonix Insights</title>
+        <title>{t("technologyConsulting.pageTitle")}</title>
         <meta
           name="description"
-          content="Technology & IT consulting: build resilient platforms, modernise legacy systems and align engineering to business outcomes."
+          content={t("technologyConsulting.metaDescription")}
         />
       </Head>
 
@@ -67,18 +70,17 @@ const TechnologyITConsulting: React.FC = () => {
         <section className="py-20 min-h-screen flex justify-center items-center bg-linear-to-r from-indigo-600 to-pink-500 text-white">
           <div className="max-w-5xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold">
-              Technology & IT consulting that moves the business forward
+              {t("technologyConsulting.hero.title")}
             </h1>
             <p className="mt-4 text-lg max-w-3xl mx-auto">
-              Modernise legacy systems, secure your platform, and align
-              engineering to measurable business outcomes.
+              {t("technologyConsulting.hero.paragraph")}
             </p>
             <div className="mt-6">
               <Link
                 href="/contact-us"
                 className="inline-block px-5 py-3 bg-white text-indigo-700 rounded-md font-semibold"
               >
-                Book a technology review
+                {t("technologyConsulting.hero.cta")}
               </Link>
             </div>
           </div>
@@ -89,20 +91,17 @@ const TechnologyITConsulting: React.FC = () => {
           <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl font-semibold">
-                Common technology challenges we solve
+                {t("technologyConsulting.overview.heading")}
               </h2>
               <p className="mt-4 text-gray-700 dark:text-gray-300">
-                Many organisations are held back by fragile legacy systems,
-                fragmentated tooling and lack of engineering alignment to core
-                business goals. We focus on pragmatic modernisation and
-                measurable value delivery.
+                {t("technologyConsulting.overview.paragraph")}
               </p>
 
               <ul className="mt-6 space-y-3 text-gray-600 dark:text-gray-400">
-                <li>• Legacy platforms that slow feature delivery</li>
-                <li>• Unclear ownership across infrastructure and apps</li>
-                <li>• Security and compliance gaps</li>
-                <li>• High operational toil and incident frequency</li>
+                <li>• {t("technologyConsulting.overview.bullets.1")}</li>
+                <li>• {t("technologyConsulting.overview.bullets.2")}</li>
+                <li>• {t("technologyConsulting.overview.bullets.3")}</li>
+                <li>• {t("technologyConsulting.overview.bullets.4")}</li>
               </ul>
             </div>
 
@@ -124,11 +123,10 @@ const TechnologyITConsulting: React.FC = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <h3 className="text-2xl font-semibold">
-                  How we help technology teams deliver
+                  {t("technologyConsulting.approach.heading")}
                 </h3>
                 <p className="mt-3 text-gray-700 dark:text-gray-300">
-                  We assess platform health, reduce technical debt and embed
-                  practices that increase deployment frequency and reliability.
+                  {t("technologyConsulting.approach.paragraph")}
                 </p>
 
                 <div className="mt-8 grid sm:grid-cols-3 gap-4">
@@ -137,10 +135,11 @@ const TechnologyITConsulting: React.FC = () => {
                       1
                     </div>
                     <div>
-                      <div className="font-semibold">Assess</div>
+                      <div className="font-semibold">
+                        {t("technologyConsulting.approach.features.1.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Rapid platform and architecture health checks to
-                        identify high-impact technical risks.
+                        {t("technologyConsulting.approach.features.1.body")}
                       </div>
                     </div>
                   </div>
@@ -150,10 +149,11 @@ const TechnologyITConsulting: React.FC = () => {
                       2
                     </div>
                     <div>
-                      <div className="font-semibold">Plan</div>
+                      <div className="font-semibold">
+                        {t("technologyConsulting.approach.features.2.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Roadmaps that prioritise business impact and reduce risk
-                        during migration.
+                        {t("technologyConsulting.approach.features.2.body")}
                       </div>
                     </div>
                   </div>
@@ -163,10 +163,11 @@ const TechnologyITConsulting: React.FC = () => {
                       3
                     </div>
                     <div>
-                      <div className="font-semibold">Deliver</div>
+                      <div className="font-semibold">
+                        {t("technologyConsulting.approach.features.3.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Incremental migrations and automation that lower cost
-                        and improve reliability.
+                        {t("technologyConsulting.approach.features.3.body")}
                       </div>
                     </div>
                   </div>
@@ -174,8 +175,8 @@ const TechnologyITConsulting: React.FC = () => {
 
                 <div className="mt-6">
                   <blockquote className="border-l-4 pl-4 italic text-gray-700 dark:text-gray-300">
-                    “We reduced incidents and increased release confidence — our
-                    platform is now stable enough to move faster.” — CTO
+                    {t("technologyConsulting.testimonial.quote")} —{" "}
+                    {t("technologyConsulting.testimonial.author")}
                   </blockquote>
                 </div>
               </div>
@@ -196,26 +197,28 @@ const TechnologyITConsulting: React.FC = () => {
         {/* Services — different style */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-6">
-            <h3 className="text-xl font-semibold">Services we offer</h3>
+            <h3 className="text-xl font-semibold">
+              {t("technologyConsulting.servicesHeading")}
+            </h3>
 
             {/* Stats row */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
                 <Counter to={99} suffix="%" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Uptime improvement in our platform projects
+                  {t("technologyConsulting.stats.uptime")}
                 </div>
               </div>
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
                 <Counter to={2} suffix="w" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Typical time to first measurable reliability win
+                  {t("technologyConsulting.stats.timeToWin")}
                 </div>
               </div>
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
                 <Counter to={60} suffix="%" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Reduction in toil through automation (typical)
+                  {t("technologyConsulting.stats.reduction")}
                 </div>
               </div>
             </div>
@@ -225,21 +228,10 @@ const TechnologyITConsulting: React.FC = () => {
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
                   <div className="font-semibold">
-                    Platform architecture & modernisation
+                    {t("technologyConsulting.cards.platformArchitecture.title")}
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Re-architect services to reduce coupling, enable independent
-                    delivery and lower operational risk.
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
-                <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Cloud & infrastructure</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Design secure, cost-effective cloud platforms and migration
-                    plans.
+                    {t("technologyConsulting.cards.platformArchitecture.body")}
                   </div>
                 </div>
               </div>
@@ -247,21 +239,32 @@ const TechnologyITConsulting: React.FC = () => {
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
                   <div className="font-semibold">
-                    Observability & SRE practices
+                    {t("technologyConsulting.cards.cloud.title")}
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Implement monitoring, runbooks and automation to reduce
-                    incident impact.
+                    {t("technologyConsulting.cards.cloud.body")}
                   </div>
                 </div>
               </div>
 
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Security & compliance</div>
+                  <div className="font-semibold">
+                    {t("technologyConsulting.cards.observability.title")}
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Threat modelling, compliance assessments and practical
-                    remediation plans.
+                    {t("technologyConsulting.cards.observability.body")}
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
+                <div className="border-l-4 border-indigo-600 p-6">
+                  <div className="font-semibold">
+                    {t("technologyConsulting.cards.security.title")}
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                    {t("technologyConsulting.cards.security.body")}
                   </div>
                 </div>
               </div>
@@ -269,23 +272,26 @@ const TechnologyITConsulting: React.FC = () => {
 
             <div className="mt-8 grid md:grid-cols-3 gap-6 items-start">
               <div className="md:col-span-2 rounded-lg p-6 bg-white dark:bg-gray-800 shadow">
-                <div className="font-semibold">Client testimonial</div>
+                <div className="font-semibold">
+                  {t("technologyConsulting.clientTestimonial.heading")}
+                </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-3">
-                  “Enkonix stabilised our platform and helped us ship features
-                  with confidence — the ops burden dropped significantly.”
+                  {t("technologyConsulting.clientTestimonial.body")}
                 </div>
                 <div className="mt-4 text-sm font-semibold">
-                  — CTO, SaaS scale-up
+                  {t("technologyConsulting.clientTestimonial.author")}
                 </div>
               </div>
 
               <div className="rounded-lg p-6 bg-white dark:bg-gray-800 border flex flex-col items-center justify-center">
-                <div className="text-sm text-gray-600">Ready to start?</div>
+                <div className="text-sm text-gray-600">
+                  {t("technologyConsulting.ready.heading")}
+                </div>
                 <Link
                   href="/contact-us"
                   className="mt-4 inline-block px-4 py-2 bg-indigo-600 text-white rounded-md"
                 >
-                  Book discovery
+                  {t("technologyConsulting.ready.book")}
                 </Link>
               </div>
             </div>
@@ -295,27 +301,29 @@ const TechnologyITConsulting: React.FC = () => {
         {/* Case studies — image-led cards (rendered from array) */}
         <section className="py-16 bg-gray-50 dark:bg-gray-800">
           <div className="max-w-6xl mx-auto px-6">
-            <h3 className="text-xl font-semibold">Case studies</h3>
+            <h3 className="text-xl font-semibold">
+              {t("technologyConsulting.caseStudies.heading")}
+            </h3>
 
             <div className="mt-6 grid md:grid-cols-3 gap-6">
               {[
                 {
                   img: "/clients/tech-platform.jpg",
                   alt: "Platform modernisation",
-                  title: "SaaS — platform modernisation",
-                  desc: "Migrated core services to a modular architecture and reduced release risk.",
+                  title: t("technologyConsulting.caseStudies.saas.title"),
+                  desc: t("technologyConsulting.caseStudies.saas.desc"),
                 },
                 {
                   img: "/clients/tech-cloud.jpg",
                   alt: "Cloud migration",
-                  title: "Retail — cloud migration",
-                  desc: "Lifted-and-refactored workloads to cloud and optimised costs.",
+                  title: t("technologyConsulting.caseStudies.retail.title"),
+                  desc: t("technologyConsulting.caseStudies.retail.desc"),
                 },
                 {
                   img: "/clients/tech-sre.jpg",
                   alt: "SRE & observability",
-                  title: "Logistics — SRE & observability",
-                  desc: "Introduced monitoring, alerting and runbooks to reduce incident time-to-resolution.",
+                  title: t("technologyConsulting.caseStudies.logistics.title"),
+                  desc: t("technologyConsulting.caseStudies.logistics.desc"),
                 },
               ].map((c) => (
                 <article
@@ -349,11 +357,10 @@ const TechnologyITConsulting: React.FC = () => {
         <section className="py-20 bg-indigo-700 text-white">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-extrabold">
-              Ready to make strategy real?
+              {t("technologyConsulting.cta.heading")}
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-indigo-100">
-              Book a short discovery call and we'll sketch a practical 90-day
-              plan that starts delivering measurable outcomes quickly.
+              {t("technologyConsulting.cta.paragraph")}
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -361,13 +368,13 @@ const TechnologyITConsulting: React.FC = () => {
                 href="/contact-us"
                 className="inline-block px-6 py-3 bg-white text-indigo-700 rounded-md font-semibold"
               >
-                Book discovery
+                {t("technologyConsulting.cta.button")}
               </Link>
               <Link
                 href="/services"
                 className="inline-block px-6 py-3 border border-white/30 rounded-md text-white"
               >
-                See services
+                {t("technologyConsulting.cta.learnMore")}
               </Link>
             </div>
           </div>
