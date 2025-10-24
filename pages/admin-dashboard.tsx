@@ -2,6 +2,7 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeadder from "@/components/SiteHeadder";
 import Head from "next/head";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import {
   CartesianGrid,
   Cell,
@@ -15,17 +16,6 @@ import {
   YAxis,
   ResponsiveContainer,
 } from "recharts";
-
-// Default data (used as fallback)
-const DEFAULT_WEEKLY = [
-  { name: "Mon", appointments: 120, consultations: 80, cancelled: 5 },
-  { name: "Tue", appointments: 150, consultations: 95, cancelled: 2 },
-  { name: "Wed", appointments: 170, consultations: 110, cancelled: 6 },
-  { name: "Thu", appointments: 140, consultations: 90, cancelled: 4 },
-  { name: "Fri", appointments: 190, consultations: 130, cancelled: 3 },
-  { name: "Sat", appointments: 80, consultations: 45, cancelled: 1 },
-  { name: "Sun", appointments: 60, consultations: 30, cancelled: 0 },
-];
 
 // helper to read JSON from localStorage safely
 const readLocal = <T,>(key: string, fallback: T): T => {
@@ -56,12 +46,7 @@ const ClientDate: React.FC = () => {
 };
 
 const adminDashboard: React.FC = () => {
-  const [weekly, setWeekly] = React.useState<typeof DEFAULT_WEEKLY | null>(
-    null,
-  );
-  const [pieData, setPieData] = React.useState<
-    Array<{ name: string; value: number }>
-  >([]);
+  const { t } = useTranslation();
   const [activityWeekly, setActivityWeekly] = React.useState<
     Array<{ day: string; logins: number; logouts: number }>
   >([]);
@@ -71,28 +56,6 @@ const adminDashboard: React.FC = () => {
 
   React.useEffect(() => {
     // load weekly data from localStorage or fallback
-    const fromLocal = readLocal("dashboard_weekly", DEFAULT_WEEKLY);
-    setWeekly(fromLocal);
-
-    // compute pie totals
-    const totalAppointments = fromLocal.reduce(
-      (s, d) => s + (d.appointments || 0),
-      0,
-    );
-    const totalConsultations = fromLocal.reduce(
-      (s, d) => s + (d.consultations || 0),
-      0,
-    );
-    const totalCancelled = fromLocal.reduce(
-      (s, d) => s + (d.cancelled || 0),
-      0,
-    );
-
-    setPieData([
-      { name: "Appointments", value: totalAppointments },
-      { name: "Consultations", value: totalConsultations },
-      { name: "Cancelled", value: totalCancelled },
-    ]);
 
     // load All_Users and compute last 7 days login/logout activity
     const users = readLocal<any[]>("All_Users", []);
@@ -140,29 +103,20 @@ const adminDashboard: React.FC = () => {
     ]);
   }, []);
 
-  // guard: render nothing (or a loader) server-side and until data is hydrated
-  if (!weekly) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-gray-500">Loading dashboard...</div>
-      </div>
-    );
-  }
-
   return (
     <>
       <Head>
-        <title>Admin Dashboard — Enkonix</title>
+        <title>{t("adminDashboard.pageTitle")}</title>
       </Head>
       <SiteHeadder />
 
       <div className=" max-w-screen  mx-auto min-h-screen bg-gray-100 dark:bg-gray-900 p-4 sm:p-6 text-gray-800 dark:text-gray-100">
         <header className="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 border-b border-gray-200 dark:border-gray-700 mb-6">
           <h1 className="text-3xl font-extrabold tracking-tight">
-            Dashboard Overview
+            {t("adminDashboard.heading")}
           </h1>
           <div className="text-sm text-gray-500 dark:text-gray-400 mt-2 sm:mt-0">
-            Current Date — <ClientDate />
+            {t("adminDashboard.currentDatePrefix")} <ClientDate />
           </div>
         </header>
 
@@ -171,7 +125,7 @@ const adminDashboard: React.FC = () => {
           {/* Card 1: Appointments (Primary Blue/Indigo) */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 p-5 border-l-4 border-blue-500">
             <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
-              Appointments
+              {t("adminDashboard.cards.appointments.title")}
             </div>
             <div className="text-3xl font-bold mt-1 text-blue-600 dark:text-blue-400">
               150
@@ -191,13 +145,15 @@ const adminDashboard: React.FC = () => {
                   d="M5 10l7-7m0 0l7 7m-7-7v18"
                 ></path>
               </svg>
-              +11% vs last week
+              {t("adminDashboard.cards.appointments.delta", {
+                percent: "+11%",
+              })}
             </div>
           </div>
           {/* Card 2: Consultations (Secondary Teal/Cyan) */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 p-5 border-l-4 border-teal-500">
             <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
-              Consultations
+              {t("adminDashboard.cards.consultations.title")}
             </div>
             <div className="text-3xl font-bold mt-1 text-teal-600 dark:text-teal-400">
               95
@@ -217,13 +173,15 @@ const adminDashboard: React.FC = () => {
                   d="M5 10l7-7m0 0l7 7m-7-7v18"
                 ></path>
               </svg>
-              -6.6% vs last week
+              {t("adminDashboard.cards.consultations.delta", {
+                percent: "-6.6%",
+              })}
             </div>
           </div>
           {/* Card 3: Cancelled (Warning Red) */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 p-5 border-l-4 border-red-500">
             <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
-              Cancelled
+              {t("adminDashboard.cards.cancelled.title")}
             </div>
             <div className="text-3xl font-bold mt-1 text-red-600 dark:text-red-400">
               3
@@ -243,13 +201,13 @@ const adminDashboard: React.FC = () => {
                   d="M5 10l7-7m0 0l7 7m-7-7v18"
                 ></path>
               </svg>
-              +0.9% vs last week
+              {t("adminDashboard.cards.cancelled.delta", { percent: "+0.9%" })}
             </div>
           </div>
           {/* Card 4: Urgent Resolve (Gold/Yellow) */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 p-5 border-l-4 border-yellow-500">
             <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
-              Urgent Resolve
+              {t("adminDashboard.cards.urgent.title")}
             </div>
             <div className="text-3xl font-bold mt-1 text-yellow-600 dark:text-yellow-400">
               5
@@ -269,7 +227,7 @@ const adminDashboard: React.FC = () => {
                   d="M5 10l7-7m0 0l7 7m-7-7v18"
                 ></path>
               </svg>
-              +0.1% vs last week
+              {t("adminDashboard.cards.urgent.delta", { percent: "+0.1%" })}
             </div>
           </div>
         </section>
@@ -279,7 +237,7 @@ const adminDashboard: React.FC = () => {
           {/* Line Chart */}
           <div className="col-span-1 lg:col-span-2 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-5 min-h-0">
             <h3 className="text-xl font-semibold mb-4 border-b pb-2 border-gray-100 dark:border-gray-700">
-              User activity (last 7 days)
+              {t("adminDashboard.charts.userActivity")}
             </h3>
             <div style={{ width: "100%", height: 300, minHeight: 0 }}>
               {/* Line chart for logins/logouts */}
@@ -314,7 +272,7 @@ const adminDashboard: React.FC = () => {
           {/* Pie Chart */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-5 min-h-0">
             <h3 className="text-xl font-semibold mb-4 border-b pb-2 border-gray-100 dark:border-gray-700">
-              Service Breakdown
+              {t("adminDashboard.charts.serviceBreakdown")}
             </h3>
             <div
               style={{
@@ -343,7 +301,9 @@ const adminDashboard: React.FC = () => {
                         nameKey="name"
                         paddingAngle={2}
                         label={(p) =>
-                          `${p.name ?? "Unknown"}: ${(Number(p.percent ?? 0) * 100).toFixed(0)}%`
+                          `${p.name ?? "Unknown"}: ${(
+                            Number(p.percent ?? 0) * 100
+                          ).toFixed(0)}%`
                         }
                       >
                         {usersPie.map((entry, index) => (
@@ -370,17 +330,27 @@ const adminDashboard: React.FC = () => {
         {/* APPOINTMENTS TABLE - Enhanced styling */}
         <section className="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
           <h3 className="text-xl font-semibold mb-4 border-b pb-2 border-gray-100 dark:border-gray-700">
-            Today's Appointments
+            {t("adminDashboard.appointments.title")}
           </h3>
           <div className="overflow-x-auto">
             <table className="w-full text-left table-auto">
               <thead className="text-sm font-semibold text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700">
                 <tr>
-                  <th className="py-3 px-2">Name</th>
-                  <th className="py-3 px-2">Status</th>
-                  <th className="py-3 px-2 hidden sm:table-cell">Date</th>
-                  <th className="py-3 px-2">Time</th>
-                  <th className="py-3 px-2 text-right">Actions</th>
+                  <th className="py-3 px-2">
+                    {t("adminDashboard.appointments.headers.name")}
+                  </th>
+                  <th className="py-3 px-2">
+                    {t("adminDashboard.appointments.headers.status")}
+                  </th>
+                  <th className="py-3 px-2 hidden sm:table-cell">
+                    {t("adminDashboard.appointments.headers.date")}
+                  </th>
+                  <th className="py-3 px-2">
+                    {t("adminDashboard.appointments.headers.time")}
+                  </th>
+                  <th className="py-3 px-2 text-right">
+                    {t("adminDashboard.appointments.headers.actions")}
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -412,7 +382,7 @@ const adminDashboard: React.FC = () => {
                     }:00 AM`}</td>
                     <td className="py-3 px-2 text-right">
                       <button className="px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full text-xs sm:text-sm font-medium shadow-md transition duration-150 whitespace-nowrap">
-                        View details
+                        {t("adminDashboard.appointments.viewDetails")}
                       </button>
                     </td>
                   </tr>

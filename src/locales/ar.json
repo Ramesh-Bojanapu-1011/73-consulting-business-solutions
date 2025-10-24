@@ -1299,5 +1299,43 @@
         "cta": "تحدث إلى خبير"
       }
     }
+  },
+  "adminDashboard": {
+    "pageTitle": "لوحة التحكم — إنكونيكس",
+    "heading": "نظرة عامة على لوحة التحكم",
+    "currentDatePrefix": "التاريخ الحالي —",
+    "cards": {
+      "appointments": {
+        "title": "المواعيد",
+        "delta": "{{percent}} مقارنة بالأسبوع الماضي"
+      },
+      "consultations": {
+        "title": "الاستشارات",
+        "delta": "{{percent}} مقارنة بالأسبوع الماضي"
+      },
+      "cancelled": {
+        "title": "تم الإلغاء",
+        "delta": "{{percent}} مقارنة بالأسبوع الماضي"
+      },
+      "urgent": {
+        "title": "الحالات العاجلة",
+        "delta": "{{percent}} مقارنة بالأسبوع الماضي"
+      }
+    },
+    "charts": {
+      "userActivity": "نشاط المستخدم (آخر 7 أيام)",
+      "serviceBreakdown": "تفاصيل الخدمات"
+    },
+    "appointments": {
+      "title": "مواعيد اليوم",
+      "headers": {
+        "name": "الاسم",
+        "status": "الحالة",
+        "date": "التاريخ",
+        "time": "الوقت",
+        "actions": "الإجراءات"
+      },
+      "viewDetails": "عرض التفاصيل"
+    }
   }
 }

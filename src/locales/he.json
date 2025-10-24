@@ -1290,5 +1290,43 @@
         "cta": "שוחחו עם מומחה"
       }
     }
+  },
+  "adminDashboard": {
+    "pageTitle": "לוח ניהול — אנקוניקס",
+    "heading": "סקירת לוח הניהול",
+    "currentDatePrefix": "תאריך נוכחי —",
+    "cards": {
+      "appointments": {
+        "title": "פגישות",
+        "delta": "{{percent}} לעומת השבוע שעבר"
+      },
+      "consultations": {
+        "title": "התייעצויות",
+        "delta": "{{percent}} לעומת השבוע שעבר"
+      },
+      "cancelled": {
+        "title": "בוטלו",
+        "delta": "{{percent}} לעומת השבוע שעבר"
+      },
+      "urgent": {
+        "title": "טיפול דחוף",
+        "delta": "{{percent}} לעומת השבוע שעבר"
+      }
+    },
+    "charts": {
+      "userActivity": "פעילות משתמשים (7 הימים האחרונים)",
+      "serviceBreakdown": "פילוח שירותים"
+    },
+    "appointments": {
+      "title": "פגישות היום",
+      "headers": {
+        "name": "שם",
+        "status": "סטטוס",
+        "date": "תאריך",
+        "time": "שעה",
+        "actions": "פעולות"
+      },
+      "viewDetails": "צפה בפרטים"
+    }
   }
 }

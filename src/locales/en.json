@@ -1302,5 +1302,43 @@
       "button": "Book discovery",
       "learnMore": "See services"
     }
+  },
+  "adminDashboard": {
+    "pageTitle": "Admin Dashboard — Enkonix",
+    "heading": "Dashboard Overview",
+    "currentDatePrefix": "Current Date —",
+    "cards": {
+      "appointments": {
+        "title": "Appointments",
+        "delta": "{{percent}} vs last week"
+      },
+      "consultations": {
+        "title": "Consultations",
+        "delta": "{{percent}} vs last week"
+      },
+      "cancelled": {
+        "title": "Cancelled",
+        "delta": "{{percent}} vs last week"
+      },
+      "urgent": {
+        "title": "Urgent Resolve",
+        "delta": "{{percent}} vs last week"
+      }
+    },
+    "charts": {
+      "userActivity": "User activity (last 7 days)",
+      "serviceBreakdown": "Service Breakdown"
+    },
+    "appointments": {
+      "title": "Today's Appointments",
+      "headers": {
+        "name": "Name",
+        "status": "Status",
+        "date": "Date",
+        "time": "Time",
+        "actions": "Actions"
+      },
+      "viewDetails": "View details"
+    }
   }
 }
