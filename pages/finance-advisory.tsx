@@ -108,11 +108,11 @@ const FinancialAdvisory: React.FC = () => {
 
             <div>
               <Image
-                src="/services/strategy-overview.jpg"
+                src="https://i.pinimg.com/736x/8c/c0/b3/8cc0b3c8f492357e13173579c4c3fbb9.jpg"
                 alt={t("financeAdvisory.imageAlt")}
                 width={640}
                 height={380}
-                className="rounded-md object-cover w-full h-56"
+                className="rounded-md object-cover w-full h-80"
               />
             </div>
           </div>
@@ -224,7 +224,7 @@ const FinancialAdvisory: React.FC = () => {
 
               <div className="hidden lg:block">
                 <Image
-                  src="/services/approach-visual.jpg"
+                  src="https://i.pinimg.com/736x/92/ed/23/92ed2345e6eb6475aff56df7fb1ec1bb.jpg"
                   alt="Approach"
                   width={720}
                   height={520}
@@ -349,19 +349,19 @@ const FinancialAdvisory: React.FC = () => {
             <div className="mt-6 grid md:grid-cols-3 gap-6">
               {[
                 {
-                  img: "/clients/finance-model.jpg",
+                  img: "https://i.pinimg.com/1200x/d5/5d/4d/d55d4d930c4604378a89da1eecbfd40f.jpg",
                   alt: t("financeAdvisory.caseStudies.market.alt"),
                   title: t("financeAdvisory.caseStudies.market.title"),
                   desc: t("financeAdvisory.caseStudies.market.desc"),
                 },
                 {
-                  img: "/clients/finance-forecast.jpg",
+                  img: "https://i.pinimg.com/1200x/78/60/d8/7860d8c1b252a253fffd371a29f6e282.jpg",
                   alt: t("financeAdvisory.caseStudies.retail.alt"),
                   title: t("financeAdvisory.caseStudies.retail.title"),
                   desc: t("financeAdvisory.caseStudies.retail.desc"),
                 },
                 {
-                  img: "/clients/finance-pricing.jpg",
+                  img: "https://i.pinimg.com/736x/e9/0a/0f/e90a0f3afc41773f1eee7259d81e61f5.jpg",
                   alt: t("financeAdvisory.caseStudies.saas.alt"),
                   title: t("financeAdvisory.caseStudies.saas.title"),
                   desc: t("financeAdvisory.caseStudies.saas.desc"),
