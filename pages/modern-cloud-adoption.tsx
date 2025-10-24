@@ -34,7 +34,7 @@ const Post: React.FC = () => {
 
             <div className="mt-6 text-sm opacity-90">
               {`Enkonix • ${t("blog.posts.modernCloudAdoption.date")} • ${t(
-                "blog.posts.modernCloudAdoption.readingMinutes"
+                "blog.posts.modernCloudAdoption.readingMinutes",
               )} ${t("blog.readingUnit")}`}
             </div>
           </div>
@@ -60,7 +60,7 @@ const Post: React.FC = () => {
                   <span className="inline-block">•</span>
                   <span className="inline-block ml-3">
                     {`${t("blog.posts.modernCloudAdoption.readingMinutes")} ${t(
-                      "blog.readingUnit"
+                      "blog.readingUnit",
                     )}`}
                   </span>
                 </div>
@@ -78,7 +78,9 @@ const Post: React.FC = () => {
 
               <div className="rounded-lg border border-gray-100 dark:border-gray-700 bg-sky-50 dark:bg-gray-800/40 p-4 mb-6">
                 <div className="font-semibold text-sky-700 dark:text-sky-300">
-                  {t("blog.postContent.modernCloudAdoption.quickSummary.heading")}
+                  {t(
+                    "blog.postContent.modernCloudAdoption.quickSummary.heading",
+                  )}
                 </div>
                 <div className="text-sm text-gray-700 dark:text-gray-300 mt-2">
                   {t("blog.postContent.modernCloudAdoption.quickSummary.body")}
@@ -93,7 +95,8 @@ const Post: React.FC = () => {
                 {t("blog.postContent.modernCloudAdoption.blockquote")}
               </blockquote>
 
-              <h5 className="text-lg font-semibold">{t("blog.postContent.modernCloudAdoption.stepsHeading")}
+              <h5 className="text-lg font-semibold">
+                {t("blog.postContent.modernCloudAdoption.stepsHeading")}
               </h5>
               <ol className="list-decimal pl-6 space-y-6">
                 <li>
@@ -182,7 +185,9 @@ const Post: React.FC = () => {
                   EA
                 </div>
                 <div>
-                  <div className="font-semibold">{t("blog.sidebar.enkonix.title")}</div>
+                  <div className="font-semibold">
+                    {t("blog.sidebar.enkonix.title")}
+                  </div>
                   <div className="text-sm text-gray-500">
                     {t("blog.sidebar.enkonix.role")}
                   </div>

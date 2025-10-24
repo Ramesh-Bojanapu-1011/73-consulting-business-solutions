@@ -562,8 +562,9 @@
         "title": "Building data-driven decision making in mid-market firms",
         "excerpt": "Start small: focus on one decision, instrument carefully, and scale insights across the organisation.",
         "date": "2025-07-30",
+        "imageAlt": "Data-driven decisions",
         "author": "Sofia Gomez",
-        "readingMinutes": "5"
+        "readingMinutes": "7"
       }
     },
     "related": {
@@ -602,8 +603,7 @@
           }
         },
         "cta": "Book a discovery call"
-      }
-      ,
+      },
       "modernCloudAdoption": {
         "quickSummary": {
           "heading": "In short",
@@ -636,13 +636,48 @@
         },
         "postscript": "If you want, we can sketch a pilot for your top use-case and deliver a 6-week proof of value.",
         "cta": "Request a pilot"
+      },
+      "dataDrivenDecisionMaking": {
+        "quickSummary": {
+          "heading": "In short",
+          "body": "Start small: pick a repeatable decision, instrument the right signal, assign an owner and iterate. This creates momentum without heavy upfront investment."
+        },
+        "lead": "Mid-market firms don't need a data science factory to make better decisions. The goal is repeatability: consistent signals, simple metrics and clear ownership.",
+        "blockquote": "Reliable data + clear ownership = faster, less risky decisions.",
+        "stepsHeading": "Five steps to get started",
+        "steps": {
+          "1": {
+            "title": "Pick a high-value decision",
+            "body": "Find a recurring decision that impacts revenue, cost or retention and that your teams make often — for example, campaign budget allocation or pricing changes."
+          },
+          "2": {
+            "title": "Define a single metric",
+            "body": "Agree on one clear metric that represents success for the decision. Keep it simple and measurable."
+          },
+          "3": {
+            "title": "Instrument minimal, accurate data",
+            "body": "Collect only what's necessary, add validation rules and make the data accessible to the team that acts on it."
+          },
+          "4": {
+            "title": "Create a weekly feedback loop",
+            "body": "Deliver short dashboards or alerts focused on the metric, trend and a suggested action — not a long report."
+          },
+          "5": {
+            "title": "Turn outcomes into templates",
+            "body": "When a pattern works, create a template pipeline, dashboard and runbook so other teams can reuse the approach."
+          }
+        },
+        "postscript": "We can help map your first three decisions and deliver a 6–8 week pilot that demonstrates impact and builds capability.",
+        "cta": "Start a pilot"
       }
     },
     "tags": {
       "strategy": "Strategy",
       "execution": "Execution",
       "cloud": "Cloud",
-      "security": "Security"
+      "security": "Security",
+      "data": "Data",
+      "operations": "Operations"
     },
     "author": {
       "jane": {
@@ -658,6 +693,12 @@
         "title": "Enkonix Advisors",
         "role": "Cloud & Platform team",
         "blurb": "We help teams adopt cloud platforms with pragmatic delivery and strong guardrails — small pilots that scale.",
+        "cta": "Talk to an expert"
+      },
+      "dataDriven": {
+        "title": "Enkonix Advisors",
+        "role": "Data & Insights",
+        "blurb": "Practical help to build measurement, analytics and operational ownership so insights become decisions.",
         "cta": "Talk to an expert"
       }
     }
