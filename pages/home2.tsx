@@ -188,7 +188,7 @@ const Home2 = () => {
               <div className="flex justify-center">
                 <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="/hero-team.jpg"
+                    src="https://i.pinimg.com/736x/7f/44/ba/7f44baa6755dda1ff7ade1e8a6e60fd2.jpg"
                     alt="Approach"
                     width={700}
                     height={480}

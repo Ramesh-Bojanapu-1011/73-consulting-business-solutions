@@ -291,8 +291,6 @@ const HomePage = () => {
                       <div className="absolute inset-0 pointer-events-none bg-indigo-900/40 dark:bg-indigo-50/70" />
                     </div>
                   </div>
-
-                   
                 </div>
               </div>
             </div>
