@@ -48,7 +48,7 @@ const Post: React.FC = () => {
           <div className="lg:col-span-2">
             <article className="prose prose-lg dark:prose-invert bg-white dark:bg-gray-800 rounded-xl p-8 shadow">
               <Image
-                src="/blog/strategy-execution-hero.jpg"
+                src="https://i.pinimg.com/736x/5d/f6/e6/5df6e61a18ba632f97aca7195475ceba.jpg"
                 alt="Strategy"
                 width={1200}
                 height={520}

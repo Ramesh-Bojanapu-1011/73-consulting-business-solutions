@@ -122,7 +122,7 @@ const ContactUs: React.FC = () => {
               <div className="rounded-lg min-h-full overflow-hidden">
                 <div className="relative    bg-gray-100 dark:bg-gray-800 rounded-lg">
                   <Image
-                    src="/images/contact-office.jpg"
+                    src="https://i.pinimg.com/736x/d1/59/cb/d159cbe4f6ba5a6599217f693e4459ac.jpg"
                     alt="Office"
                     width={600}
                     height={550}

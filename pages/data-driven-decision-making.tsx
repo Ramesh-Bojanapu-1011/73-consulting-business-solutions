@@ -45,11 +45,11 @@ const Post: React.FC = () => {
           <div className="lg:col-span-2">
             <article className="prose prose-lg dark:prose-invert bg-white dark:bg-gray-800 rounded-xl p-8 shadow">
               <Image
-                src="/blog/data-decision-hero.jpg"
+                src="https://i.pinimg.com/736x/1a/33/24/1a33245927c9634ac7b45da6ac02c30e.jpg"
                 alt={t("blog.posts.dataDrivenDecisionMaking.imageAlt")}
                 width={1200}
                 height={520}
-                className="rounded-md mb-6 object-cover w-full h-64"
+                className="rounded-md mb-6 object-cover w-full h-80"
               />
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">

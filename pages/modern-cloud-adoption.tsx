@@ -45,7 +45,7 @@ const Post: React.FC = () => {
           <div className="lg:col-span-2">
             <article className="prose prose-lg dark:prose-invert bg-white dark:bg-gray-800 rounded-xl p-8 shadow">
               <Image
-                src="/blog/cloud-illustration.jpg"
+                src="https://i.pinimg.com/1200x/40/8e/c4/408ec41ea6b4e865fa4571f224ca535a.jpg"
                 alt={t("blog.posts.modernCloudAdoption.imageAlt")}
                 width={1200}
                 height={520}
