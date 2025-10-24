@@ -377,7 +377,7 @@ const StrategyAndPlanning: React.FC = () => {
                       fill
                       className="object-cover opacity-40 hover:opacity-60 transition"
                     />
-                     
+
                     <div className="absolute left-4 bottom-4 right-4    ">
                       <div className="font-semibold text-lg drop-shadow">
                         {c.title}

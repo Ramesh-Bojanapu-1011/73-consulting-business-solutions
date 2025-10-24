@@ -106,11 +106,11 @@ const OperationsOptimization: React.FC = () => {
 
             <div>
               <Image
-                src="/services/strategy-overview.jpg"
+                src="https://i.pinimg.com/736x/43/e7/19/43e7196aecf4a948516af4cf604c6c99.jpg"
                 alt={t("operationsOptimization.imageAlt")}
                 width={640}
                 height={380}
-                className="rounded-md object-cover w-full h-56"
+                className="rounded-md object-cover w-full h-80"
               />
             </div>
           </div>
@@ -222,7 +222,7 @@ const OperationsOptimization: React.FC = () => {
 
               <div className="hidden lg:block">
                 <Image
-                  src="/services/approach-visual.jpg"
+                  src="https://i.pinimg.com/1200x/f4/1e/af/f41eaf81f765d1e6f6aa2f998abf3c1e.jpg"
                   alt="Approach"
                   width={720}
                   height={520}
@@ -347,13 +347,13 @@ const OperationsOptimization: React.FC = () => {
             <div className="mt-6 grid md:grid-cols-3 gap-6">
               {[
                 {
-                  img: "/clients/ops-reconcile.jpg",
+                  img: "https://i.pinimg.com/736x/b7/07/4e/b7074e49448b132e7b69c0efc46d2001.jpg",
                   alt: "Reconciliation automation",
                   title: t("operationsOptimization.caseStudies.retail.title"),
                   desc: t("operationsOptimization.caseStudies.retail.desc"),
                 },
                 {
-                  img: "/clients/ops-monitor.jpg",
+                  img: "https://i.pinimg.com/1200x/94/19/f3/9419f3276943e11eab7ec294bb4898cc.jpg",
                   alt: "Monitoring platform",
                   title: t(
                     "operationsOptimization.caseStudies.logistics.title",
@@ -361,7 +361,7 @@ const OperationsOptimization: React.FC = () => {
                   desc: t("operationsOptimization.caseStudies.logistics.desc"),
                 },
                 {
-                  img: "/clients/ops-runbook.jpg",
+                  img: "https://i.pinimg.com/736x/f1/cd/66/f1cd66d53d6c5555c43ccb0a4596c4f8.jpg",
                   alt: "Runbooks and automation",
                   title: t("operationsOptimization.caseStudies.payments.title"),
                   desc: t("operationsOptimization.caseStudies.payments.desc"),
