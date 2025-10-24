@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import AOS from "aos";
+import { useTranslation } from "react-i18next";
 
 import SiteHeadder from "@/components/SiteHeadder";
 import SiteFooter from "@/components/SiteFooter";
@@ -12,44 +13,47 @@ const BlogPage: React.FC = () => {
     AOS.init({});
   }, []);
 
+  const { t } = useTranslation();
+
   const blogs = [
     {
       slug: "aligning-strategy-with-execution",
-      title: "Aligning strategy with execution: a practical playbook",
-      excerpt:
-        "How to translate high-level strategy into quarterly priorities, decision frameworks and measurable outcomes.",
-      date: "2025-09-10",
-      author: "Jane Miller",
+      title: t("blog.posts.aligningStrategy.title"),
+      excerpt: t("blog.posts.aligningStrategy.excerpt"),
+      date: t("blog.posts.aligningStrategy.date"),
+      author: t("blog.posts.aligningStrategy.author"),
       image: "/blog/strategy-execution.jpg",
-      readingMinutes: 6,
+      readingMinutes: Number(t("blog.posts.aligningStrategy.readingMinutes")),
     },
     {
       slug: "modern-cloud-adoption",
-      title: "Modern cloud adoption without the usual risks",
-      excerpt:
-        "A pragmatic approach to cloud migration that balances speed, cost and operational resilience.",
-      date: "2025-08-22",
-      author: "Arun Patel",
+      title: t("blog.posts.modernCloudAdoption.title"),
+      excerpt: t("blog.posts.modernCloudAdoption.excerpt"),
+      date: t("blog.posts.modernCloudAdoption.date"),
+      author: t("blog.posts.modernCloudAdoption.author"),
       image: "/blog/cloud-adoption.jpg",
-      readingMinutes: 7,
+      readingMinutes: Number(
+        t("blog.posts.modernCloudAdoption.readingMinutes"),
+      ),
     },
     {
       slug: "data-driven-decision-making",
-      title: "Building data-driven decision making in mid-market firms",
-      excerpt:
-        "Start small: focus on one decision, instrument carefully, and scale insights across the organisation.",
-      date: "2025-07-30",
-      author: "Sofia Gomez",
+      title: t("blog.posts.dataDrivenDecisionMaking.title"),
+      excerpt: t("blog.posts.dataDrivenDecisionMaking.excerpt"),
+      date: t("blog.posts.dataDrivenDecisionMaking.date"),
+      author: t("blog.posts.dataDrivenDecisionMaking.author"),
       image: "/blog/data-driven.jpg",
-      readingMinutes: 5,
+      readingMinutes: Number(
+        t("blog.posts.dataDrivenDecisionMaking.readingMinutes"),
+      ),
     },
   ];
 
   const techFeatures = [
     {
       key: "cloud-migration",
-      title: "Cloud migration",
-      desc: "Minimise risk during migration with a phased approach.",
+      title: t("blog.technology.features.cloud-migration.title"),
+      desc: t("blog.technology.features.cloud-migration.desc"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -144,8 +148,8 @@ const BlogPage: React.FC = () => {
     },
     {
       key: "security-ops",
-      title: "Security & ops",
-      desc: "Operational patterns to secure and run platforms.",
+      title: t("blog.technology.features.security-ops.title"),
+      desc: t("blog.technology.features.security-ops.desc"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -167,8 +171,8 @@ const BlogPage: React.FC = () => {
     },
     {
       key: "platform-eng",
-      title: "Platform engineering",
-      desc: "Automation and tooling for repeatable delivery.",
+      title: t("blog.technology.features.platform-eng.title"),
+      desc: t("blog.technology.features.platform-eng.desc"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -197,8 +201,8 @@ const BlogPage: React.FC = () => {
     },
     {
       key: "resilience-cost",
-      title: "Resilience & cost",
-      desc: "Improve availability while optimising spend.",
+      title: t("blog.technology.features.resilience-cost.title"),
+      desc: t("blog.technology.features.resilience-cost.desc"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -228,11 +232,8 @@ const BlogPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Insights — Consulting / Business Solutions</title>
-        <meta
-          name="description"
-          content="Articles and thinking on strategy, cloud, analytics and operations for business leaders."
-        />
+        <title>{t("blog.title")} — Consulting / Business Solutions</title>
+        <meta name="description" content={t("blog.description")} />
       </Head>
 
       <SiteHeadder />
@@ -241,18 +242,17 @@ const BlogPage: React.FC = () => {
         {/* Hero */}
         <section className="py-20 bg-linear-to-r min-h-screen flex justify-center items-center from-indigo-600 to-pink-500 text-white">
           <div className="max-w-6xl mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-extrabold">Insights</h1>
-            <p className="mt-4 max-w-2xl mx-auto">
-              Thought leadership and practical playbooks on consulting, cloud,
-              analytics and business operations.
-            </p>
+            <h1 className="text-4xl md:text-5xl font-extrabold">
+              {t("blog.heroTitle")}
+            </h1>
+            <p className="mt-4 max-w-2xl mx-auto">{t("blog.heroParagraph")}</p>
           </div>
         </section>
 
         {/* Featured posts */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold mb-6">Latest posts</h2>
+            <h2 className="text-2xl font-bold mb-6">{t("blog.latestPosts")}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {blogs.map((b) => (
@@ -288,7 +288,7 @@ const BlogPage: React.FC = () => {
                         href={`/${b.slug}`}
                         className="inline-flex items-center gap-2 px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-sm"
                       >
-                        Read
+                        {t("blog.read")}
                         <svg
                           width="14"
                           height="14"
@@ -318,10 +318,11 @@ const BlogPage: React.FC = () => {
                 <div className="flex items-start gap-4">
                   <div className="w-1 h-14 bg-indigo-600 rounded" aria-hidden />
                   <div>
-                    <h3 className="text-2xl font-bold">Consulting playbooks</h3>
+                    <h3 className="text-2xl font-bold">
+                      {t("blog.playbooks.heading")}
+                    </h3>
                     <p className="text-gray-700 dark:text-gray-300 mt-3">
-                      Practical frameworks we use when advising clients — from
-                      prioritisation to delivery governance.
+                      {t("blog.playbooks.paragraph")}
                     </p>
                   </div>
                 </div>
@@ -332,9 +333,11 @@ const BlogPage: React.FC = () => {
                       1
                     </div>
                     <div>
-                      <div className="font-semibold">Rapid assessment</div>
+                      <div className="font-semibold">
+                        {t("blog.playbooks.items.1.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-300">
-                        Structured diagnostics to identify quick wins.
+                        {t("blog.playbooks.items.1.desc")}
                       </div>
                     </div>
                   </li>
@@ -345,10 +348,10 @@ const BlogPage: React.FC = () => {
                     </div>
                     <div>
                       <div className="font-semibold">
-                        Roadmap & prioritisation
+                        {t("blog.playbooks.items.2.title")}
                       </div>
                       <div className="text-sm text-gray-600 dark:text-gray-300">
-                        Decision frameworks that align leadership.
+                        {t("blog.playbooks.items.2.desc")}
                       </div>
                     </div>
                   </li>
@@ -358,9 +361,11 @@ const BlogPage: React.FC = () => {
                       3
                     </div>
                     <div>
-                      <div className="font-semibold">Capability build</div>
+                      <div className="font-semibold">
+                        {t("blog.playbooks.items.3.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-300">
-                        Playbooks, training and governance to sustain change.
+                        {t("blog.playbooks.items.3.desc")}
                       </div>
                     </div>
                   </li>
@@ -371,7 +376,7 @@ const BlogPage: React.FC = () => {
                     href="/contact-us"
                     className="inline-block px-6 py-3 bg-indigo-600 text-white rounded-md"
                   >
-                    Book a workshop
+                    {t("blog.playbooks.cta")}
                   </Link>
                 </div>
               </div>
@@ -416,10 +421,11 @@ const BlogPage: React.FC = () => {
                 <div className="flex items-start gap-4">
                   <div className="w-1 h-14 bg-indigo-600 rounded" aria-hidden />
                   <div>
-                    <h3 className="text-2xl font-bold">Technology & cloud</h3>
+                    <h3 className="text-2xl font-bold">
+                      {t("blog.technology.heading")}
+                    </h3>
                     <p className="text-gray-700 dark:text-gray-300 mt-3">
-                      Patterns for platform modernisation, cloud migration and
-                      operational resilience.
+                      {t("blog.technology.paragraph")}
                     </p>
                   </div>
                 </div>
@@ -454,7 +460,7 @@ const BlogPage: React.FC = () => {
                     href="/contact-us"
                     className="inline-block px-6 py-3 bg-indigo-600 text-white rounded-md"
                   >
-                    Talk to our cloud team
+                    {t("blog.technology.cta")}
                   </Link>
                 </div>
               </div>
@@ -467,10 +473,11 @@ const BlogPage: React.FC = () => {
           <div className="  mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-2xl font-bold">Meet our clients</h3>
+                <h3 className="text-2xl font-bold">
+                  {t("blog.clients.heading")}
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 max-w-xl">
-                  We partner with growth-focused organisations across industries
-                  — here are a few we've helped scale.
+                  {t("blog.clients.paragraph")}
                 </p>
               </div>
               <div className="hidden sm:flex gap-4">
@@ -478,7 +485,7 @@ const BlogPage: React.FC = () => {
                   href="/contact-us"
                   className="px-4 py-2 bg-indigo-600 text-white rounded-md"
                 >
-                  Work with us
+                  {t("blog.clients.workWithUs")}
                 </Link>
               </div>
             </div>
@@ -551,12 +558,10 @@ const BlogPage: React.FC = () => {
         <section className="py-20 bg-indigo-600 text-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-extrabold">
-              Ready to accelerate change?
+              {t("blog.cta.heading")}
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-indigo-100">
-              We help organisations align strategy to delivery, modernise
-              platforms and build operating capability. Let's talk about your
-              priorities.
+              {t("blog.cta.paragraph")}
             </p>
 
             <div className="mt-8 flex items-center justify-center gap-4">
@@ -564,13 +569,13 @@ const BlogPage: React.FC = () => {
                 href="/contact-us"
                 className="px-6 py-3 bg-white text-indigo-600 rounded-md font-semibold"
               >
-                Book a discovery call
+                {t("blog.cta.bookDiscovery")}
               </Link>
               <Link
                 href="/services"
                 className="px-6 py-3 border border-white/30 rounded-md text-white"
               >
-                Explore services
+                {t("blog.cta.exploreServices")}
               </Link>
             </div>
           </div>

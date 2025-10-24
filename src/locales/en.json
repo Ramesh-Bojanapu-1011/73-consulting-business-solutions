@@ -367,18 +367,125 @@
       }
     },
     "testimonials": {
-      "t1": { "quote": "Working with luminix was a game-changer for our company. Extremely recommended for businesses looking for transformative solutions.", "name": "Bonsey Johnson", "role": "Businessman" },
-      "t2": { "quote": "Our experience was characterized by a results-driven approach that really made a difference. They are a reliable partner for driving success.", "name": "Daniel Turner", "role": "Founder@ XYZ Company" },
-      "t3": { "quote": "Working with luminix was a game-changer for our company. Extremely recommended for businesses looking for transformative solutions.", "name": "Michael Ramirez", "role": "Director Of ZuBaz" },
-      "t4": { "quote": "As CEO of Business Industries, I must appreciate the outstanding service. Our company grew as a result of their strategic direction.", "name": "Khairul Basr", "role": "CEO @Company" },
-      "t5": { "quote": "What impressed us the most about them was their commitment to transparent communication. A trusted navigating complex business landscapes.", "name": "Rick Ferrari", "role": "Manager" },
-      "t6": { "quote": "Working with luminix was a game-changer for our company. Extremely recommended for businesses looking for transformative solutions.", "name": "Harry McKendy", "role": "Businessman" }
+      "t1": {
+        "quote": "Working with luminix was a game-changer for our company. Extremely recommended for businesses looking for transformative solutions.",
+        "name": "Bonsey Johnson",
+        "role": "Businessman"
+      },
+      "t2": {
+        "quote": "Our experience was characterized by a results-driven approach that really made a difference. They are a reliable partner for driving success.",
+        "name": "Daniel Turner",
+        "role": "Founder@ XYZ Company"
+      },
+      "t3": {
+        "quote": "Working with luminix was a game-changer for our company. Extremely recommended for businesses looking for transformative solutions.",
+        "name": "Michael Ramirez",
+        "role": "Director Of ZuBaz"
+      },
+      "t4": {
+        "quote": "As CEO of Business Industries, I must appreciate the outstanding service. Our company grew as a result of their strategic direction.",
+        "name": "Khairul Basr",
+        "role": "CEO @Company"
+      },
+      "t5": {
+        "quote": "What impressed us the most about them was their commitment to transparent communication. A trusted navigating complex business landscapes.",
+        "name": "Rick Ferrari",
+        "role": "Manager"
+      },
+      "t6": {
+        "quote": "Working with luminix was a game-changer for our company. Extremely recommended for businesses looking for transformative solutions.",
+        "name": "Harry McKendy",
+        "role": "Businessman"
+      }
     },
     "contact": {
       "heading": "Ready to get started?",
       "paragraph": "Book a complimentary discovery conversation to explore how we can help.",
       "button": "Book a discovery call"
     }
+  },
+  "blog": {
+    "title": "Insights",
+    "description": "Articles and thinking on strategy, cloud, analytics and operations for business leaders.",
+    "heroTitle": "Insights",
+    "heroParagraph": "Thought leadership and practical playbooks on consulting, cloud, analytics and business operations.",
+    "latestPosts": "Latest posts",
+    "read": "Read",
+    "playbooks": {
+      "heading": "Consulting playbooks",
+      "paragraph": "Practical frameworks we use when advising clients — from prioritisation to delivery governance.",
+      "items": {
+        "1": {
+          "title": "Rapid assessment",
+          "desc": "Structured diagnostics to identify quick wins."
+        },
+        "2": {
+          "title": "Roadmap & prioritisation",
+          "desc": "Decision frameworks that align leadership."
+        },
+        "3": {
+          "title": "Capability build",
+          "desc": "Playbooks, training and governance to sustain change."
+        }
+      },
+      "cta": "Book a workshop"
+    },
+    "technology": {
+      "heading": "Technology & cloud",
+      "paragraph": "Patterns for platform modernisation, cloud migration and operational resilience.",
+      "cta": "Talk to our cloud team",
+      "features": {
+        "cloud-migration": {
+          "title": "Cloud migration",
+          "desc": "Minimise risk during migration with a phased approach."
+        },
+        "security-ops": {
+          "title": "Security & ops",
+          "desc": "Operational patterns to secure and run platforms."
+        },
+        "platform-eng": {
+          "title": "Platform engineering",
+          "desc": "Automation and tooling for repeatable delivery."
+        },
+        "resilience-cost": {
+          "title": "Resilience & cost",
+          "desc": "Improve availability while optimising spend."
+        }
+      }
+    },
+    "clients": {
+      "heading": "Meet our clients",
+      "paragraph": "We partner with growth-focused organisations across industries — here are a few we've helped scale.",
+      "workWithUs": "Work with us"
+    },
+    "cta": {
+      "heading": "Ready to accelerate change?",
+      "paragraph": "We help organisations align strategy to delivery, modernise platforms and build operating capability. Let's talk about your priorities.",
+      "bookDiscovery": "Book a discovery call",
+      "exploreServices": "Explore services"
+    },
+    "posts": {
+      "aligningStrategy": {
+        "title": "Aligning strategy with execution: a practical playbook",
+        "excerpt": "How to translate high-level strategy into quarterly priorities, decision frameworks and measurable outcomes.",
+        "date": "2025-09-10",
+        "author": "Jane Miller",
+        "readingMinutes": "6"
+      },
+      "modernCloudAdoption": {
+        "title": "Modern cloud adoption without the usual risks",
+        "excerpt": "A pragmatic approach to cloud migration that balances speed, cost and operational resilience.",
+        "date": "2025-08-22",
+        "author": "Arun Patel",
+        "readingMinutes": "7"
+      },
+      "dataDrivenDecisionMaking": {
+        "title": "Building data-driven decision making in mid-market firms",
+        "excerpt": "Start small: focus on one decision, instrument carefully, and scale insights across the organisation.",
+        "date": "2025-07-30",
+        "author": "Sofia Gomez",
+        "readingMinutes": "5"
+      }
+    }
   }
-
 }
