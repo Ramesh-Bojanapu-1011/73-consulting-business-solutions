@@ -36,6 +36,9 @@
     "contact": "Contact Us",
     "copyright": "© {{year}} Consulting / Business Solutions — All rights reserved."
   },
+  "common": {
+    "learnMore": "Learn more"
+  },
   "home1": {
     "title": "Revolutionizing Your Business with Cutting Edge IT Solutions",
     "subtitleBadge": "Our Integrated IT Solutions",
@@ -344,6 +347,38 @@
         "title": "Technology & IT Consulting",
         "short": "Architect, build and secure platforms with pragmatic engineering and ops practices."
       }
+    },
+    "testimonialsHeading": "Hear what our happy clients say",
+    "caseStudies": {
+      "retailco": {
+        "title": "RetailCo: Fulfilment optimisation",
+        "tag": "Operations",
+        "summary": "Reduced operating costs and improved fulfilment times through process redesign and automation."
+      },
+      "finbank": {
+        "title": "FinBank: Tech transformation",
+        "tag": "Technology",
+        "summary": "Delivered a cloud migration and platform re-architecture to improve scalability and reduce TCO."
+      },
+      "saasify": {
+        "title": "SaaSify: Product & ops",
+        "tag": "Product",
+        "summary": "Helped prioritise initiatives and build delivery capability to accelerate feature throughput."
+      }
+    },
+    "testimonials": {
+      "t1": { "quote": "Working with luminix was a game-changer for our company. Extremely recommended for businesses looking for transformative solutions.", "name": "Bonsey Johnson", "role": "Businessman" },
+      "t2": { "quote": "Our experience was characterized by a results-driven approach that really made a difference. They are a reliable partner for driving success.", "name": "Daniel Turner", "role": "Founder@ XYZ Company" },
+      "t3": { "quote": "Working with luminix was a game-changer for our company. Extremely recommended for businesses looking for transformative solutions.", "name": "Michael Ramirez", "role": "Director Of ZuBaz" },
+      "t4": { "quote": "As CEO of Business Industries, I must appreciate the outstanding service. Our company grew as a result of their strategic direction.", "name": "Khairul Basr", "role": "CEO @Company" },
+      "t5": { "quote": "What impressed us the most about them was their commitment to transparent communication. A trusted navigating complex business landscapes.", "name": "Rick Ferrari", "role": "Manager" },
+      "t6": { "quote": "Working with luminix was a game-changer for our company. Extremely recommended for businesses looking for transformative solutions.", "name": "Harry McKendy", "role": "Businessman" }
+    },
+    "contact": {
+      "heading": "Ready to get started?",
+      "paragraph": "Book a complimentary discovery conversation to explore how we can help.",
+      "button": "Book a discovery call"
     }
   }
+
 }

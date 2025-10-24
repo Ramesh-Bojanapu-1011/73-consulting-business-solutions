@@ -139,46 +139,40 @@ const ServicesPage: React.FC = () => {
   const approachFeatures = [
     {
       id: 1,
-      title: "Diagnose & prioritise",
-      body: "Rapid assessments to identify the highest-impact opportunities and align leadership on outcomes.",
+      // titles and bodies are provided via i18n keys (services.approach.features.[id])
     },
     {
       id: 2,
-      title: "Deliver & scale",
-      body: "Cross-functional squads deliver MVPs and scale capabilities through tooling and automation.",
+      // titles and bodies are provided via i18n keys (services.approach.features.[id])
     },
     {
       id: 3,
-      title: "Embed & sustain",
-      body: "Build capability through training, playbooks and governance to lock in benefits.",
+      // titles and bodies are provided via i18n keys (services.approach.features.[id])
     },
   ];
 
   const caseStudies = [
     {
       id: "retailco",
-      title: "RetailCo: Fulfilment optimisation",
-      tag: "Operations",
-      summary:
-        "Reduced operating costs and improved fulfilment times through process redesign and automation.",
+      title: t("services.caseStudies.retailco.title"),
+      tag: t("services.caseStudies.retailco.tag"),
+      summary: t("services.caseStudies.retailco.summary"),
       image: "/services/case-retail.jpg",
       href: "/case-studies/retailco-fulfilment",
     },
     {
       id: "finbank",
-      title: "FinBank: Tech transformation",
-      tag: "Technology",
-      summary:
-        "Delivered a cloud migration and platform re-architecture to improve scalability and reduce TCO.",
+      title: t("services.caseStudies.finbank.title"),
+      tag: t("services.caseStudies.finbank.tag"),
+      summary: t("services.caseStudies.finbank.summary"),
       image: "/services/case-finbank.jpg",
       href: "/case-studies/finbank-tech",
     },
     {
       id: "saasify",
-      title: "SaaSify: Product & ops",
-      tag: "Product",
-      summary:
-        "Helped prioritise initiatives and build delivery capability to accelerate feature throughput.",
+      title: t("services.caseStudies.saasify.title"),
+      tag: t("services.caseStudies.saasify.tag"),
+      summary: t("services.caseStudies.saasify.summary"),
       image: "/services/case-saasify.jpg",
       href: "/case-studies/saasify-product-ops",
     },
@@ -187,50 +181,44 @@ const ServicesPage: React.FC = () => {
   const testimonials = [
     {
       id: "t1",
-      quote:
-        "Working with luminix was a game-changer for our company. Extremely recommended for businesses looking for transformative solutions.",
-      name: "Bonsey Johnson",
-      role: "Businessman",
+      quote: t("services.testimonials.t1.quote"),
+      name: t("services.testimonials.t1.name"),
+      role: t("services.testimonials.t1.role"),
       avatar: "/team/bonsey.jpg",
     },
     {
       id: "t2",
-      quote:
-        "Our experience was characterized by a results-driven approach that really made a difference. They are a reliable partner for driving success.",
-      name: "Daniel Turner",
-      role: "Founder@ XYZ Company",
+      quote: t("services.testimonials.t2.quote"),
+      name: t("services.testimonials.t2.name"),
+      role: t("services.testimonials.t2.role"),
       avatar: "/team/daniel.jpg",
     },
     {
       id: "t3",
-      quote:
-        "Working with luminix was a game-changer for our company. Extremely recommended for businesses looking for transformative solutions.",
-      name: "Michael Ramirez",
-      role: "Director Of ZuBaz",
+      quote: t("services.testimonials.t3.quote"),
+      name: t("services.testimonials.t3.name"),
+      role: t("services.testimonials.t3.role"),
       avatar: "/team/michael.jpg",
     },
     {
       id: "t4",
-      quote:
-        "As CEO of Business Industries, I must appreciate the outstanding service. Our company grew as a result of their strategic direction.",
-      name: "Khairul Basr",
-      role: "CEO @Company",
+      quote: t("services.testimonials.t4.quote"),
+      name: t("services.testimonials.t4.name"),
+      role: t("services.testimonials.t4.role"),
       avatar: "/team/khairul.jpg",
     },
     {
       id: "t5",
-      quote:
-        "What impressed us the most about them was their commitment to transparent communication. A trusted navigating complex business landscapes.",
-      name: "Rick Ferrari",
-      role: "Manager",
+      quote: t("services.testimonials.t5.quote"),
+      name: t("services.testimonials.t5.name"),
+      role: t("services.testimonials.t5.role"),
       avatar: "/team/rick.jpg",
     },
     {
       id: "t6",
-      quote:
-        "Working with luminix was a game-changer for our company. Extremely recommended for businesses looking for transformative solutions.",
-      name: "Harry McKendy",
-      role: "Businessman",
+      quote: t("services.testimonials.t6.quote"),
+      name: t("services.testimonials.t6.name"),
+      role: t("services.testimonials.t6.role"),
       avatar: "/team/harry.jpg",
     },
   ];
@@ -238,11 +226,8 @@ const ServicesPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Services — Consulting / Business Solutions</title>
-        <meta
-          name="description"
-          content="Our services: strategy, technology, finance, data and change management."
-        />
+        <title>{t("services.title")} — Consulting / Business Solutions</title>
+        <meta name="description" content={t("services.description")} />
       </Head>
 
       <SiteHeadder />
@@ -304,7 +289,7 @@ const ServicesPage: React.FC = () => {
                         href={`/${s.slug}`}
                         className="inline-block px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
                       >
-                        Learn more
+                        {t("common.learnMore")}
                       </Link>
                     </div>
                   </div>
@@ -378,7 +363,7 @@ const ServicesPage: React.FC = () => {
         <section className="py-16 bg-white dark:bg-gray-900">
           <div className="  mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Hear what our happy clients say
+              {t("services.testimonialsHeading")}
             </h2>
 
             <div className="relative">
@@ -518,16 +503,13 @@ const ServicesPage: React.FC = () => {
         {/* Contact CTA */}
         <section className="py-16 bg-gray-50 dark:bg-gray-800">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">Ready to get started?</h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
-              Book a complimentary discovery conversation to explore how we can
-              help.
-            </p>
+            <h2 className="text-2xl font-bold mb-4">{t("services.contact.heading")}</h2>
+            <p className="text-gray-700 dark:text-gray-300 mb-6">{t("services.contact.paragraph")}</p>
             <Link
               href="/contact-us"
               className="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md shadow"
             >
-              Book a discovery call
+              {t("services.contact.button")}
             </Link>
           </div>
         </section>
