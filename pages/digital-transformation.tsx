@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import SiteHeadder from "@/components/SiteHeadder";
 import SiteFooter from "@/components/SiteFooter";
+import { useTranslation } from "react-i18next";
 
 const DigitalTransformation: React.FC = () => {
   // simple in-file counter component
@@ -50,13 +51,14 @@ const DigitalTransformation: React.FC = () => {
       </div>
     );
   };
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>Digital transformation — Enkonix Insights</title>
+        <title>{t("digitalTransformation.pageTitle")}</title>
         <meta
           name="description"
-          content="Digital transformation for mid-market firms: practical cloud adoption, data foundations and repeatable delivery patterns to accelerate value."
+          content={t("digitalTransformation.metaDescription")}
         />
       </Head>
 
@@ -67,19 +69,17 @@ const DigitalTransformation: React.FC = () => {
         <section className="py-20 min-h-screen flex justify-center items-center bg-linear-to-r from-indigo-600 to-pink-500 text-white">
           <div className="max-w-5xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold">
-              Digital transformation that actually delivers
+              {t("digitalTransformation.hero.title")}
             </h1>
             <p className="mt-4 text-lg max-w-3xl mx-auto">
-              Practical cloud adoption, stronger data foundations and repeatable
-              delivery patterns so mid-market firms convert investment into
-              measurable value.
+              {t("digitalTransformation.hero.paragraph")}
             </p>
             <div className="mt-6">
               <Link
                 href="/contact-us"
                 className="inline-block px-5 py-3 bg-white text-indigo-700 rounded-md font-semibold"
               >
-                Start a transformation conversation
+                {t("digitalTransformation.hero.cta")}
               </Link>
             </div>
           </div>
@@ -90,32 +90,24 @@ const DigitalTransformation: React.FC = () => {
           <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl font-semibold">
-                Why digital transformation stalls
+                {t("digitalTransformation.overview.heading")}
               </h2>
               <p className="mt-4 text-gray-700 dark:text-gray-300">
-                Transformation projects often fail to deliver because teams
-                chase technology without clear outcomes, lack data that supports
-                decisions, or adopt cloud patterns that aren't aligned to
-                business priorities. We focus on the smallest changes that
-                unlock predictable, measurable value.
+                {t("digitalTransformation.overview.paragraph")}
               </p>
 
               <ul className="mt-6 space-y-3 text-gray-600 dark:text-gray-400">
-                <li>
-                  • Technology-first roadmaps with no clear business metrics
-                </li>
-                <li>• Data scattered across teams and systems</li>
-                <li>• Siloed delivery that doesn't embed operational change</li>
-                <li>
-                  • Premature scale without an effective pilot and feedback loop
-                </li>
+                <li>• {t("digitalTransformation.overview.bullets.1")}</li>
+                <li>• {t("digitalTransformation.overview.bullets.2")}</li>
+                <li>• {t("digitalTransformation.overview.bullets.3")}</li>
+                <li>• {t("digitalTransformation.overview.bullets.4")}</li>
               </ul>
             </div>
 
             <div>
               <Image
                 src="/services/strategy-overview.jpg"
-                alt="Strategy overview"
+                alt={t("digitalTransformation.imageAlt")}
                 width={640}
                 height={380}
                 className="rounded-md object-cover w-full h-56"
@@ -130,12 +122,10 @@ const DigitalTransformation: React.FC = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <h3 className="text-2xl font-semibold">
-                  How we make transformation stick
+                  {t("digitalTransformation.approach.heading")}
                 </h3>
                 <p className="mt-3 text-gray-700 dark:text-gray-300">
-                  We combine outcome-focused discovery, pragmatic engineering
-                  patterns and short pilots to prove value quickly. That creates
-                  the case and capability to scale safely.
+                  {t("digitalTransformation.approach.paragraph")}
                 </p>
 
                 <div className="mt-8 grid sm:grid-cols-3 gap-4">
@@ -144,10 +134,11 @@ const DigitalTransformation: React.FC = () => {
                       1
                     </div>
                     <div>
-                      <div className="font-semibold">Discover</div>
+                      <div className="font-semibold">
+                        {t("digitalTransformation.approach.features.1.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Targeted discovery to identify high-impact use cases and
-                        the smallest viable changes.
+                        {t("digitalTransformation.approach.features.1.body")}
                       </div>
                     </div>
                   </div>
@@ -157,10 +148,11 @@ const DigitalTransformation: React.FC = () => {
                       2
                     </div>
                     <div>
-                      <div className="font-semibold">Define</div>
+                      <div className="font-semibold">
+                        {t("digitalTransformation.approach.features.2.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Clear success metrics, owners and acceptance criteria so
-                        pilots can be evaluated objectively.
+                        {t("digitalTransformation.approach.features.2.body")}
                       </div>
                     </div>
                   </div>
@@ -170,10 +162,11 @@ const DigitalTransformation: React.FC = () => {
                       3
                     </div>
                     <div>
-                      <div className="font-semibold">Deliver</div>
+                      <div className="font-semibold">
+                        {t("digitalTransformation.approach.features.3.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Short, measurable pilots that validate value and create
-                        reusable delivery patterns.
+                        {t("digitalTransformation.approach.features.3.body")}
                       </div>
                     </div>
                   </div>
@@ -181,33 +174,48 @@ const DigitalTransformation: React.FC = () => {
 
                 <div className="mt-8">
                   <div className="text-sm text-gray-600 dark:text-gray-400">
-                    Typical engagement phases
+                    {t("digitalTransformation.timeline.badge")}
                   </div>
                   <div className="mt-4 flex items-center gap-6 overflow-auto">
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Week 1</div>
-                      <div className="font-semibold">Discovery</div>
+                      <div className="text-xs text-gray-500">
+                        {t("digitalTransformation.timeline.week1.label")}
+                      </div>
+                      <div className="font-semibold">
+                        {t("digitalTransformation.timeline.week1.title")}
+                      </div>
                     </div>
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Weeks 2–4</div>
-                      <div className="font-semibold">Prototype & validate</div>
+                      <div className="text-xs text-gray-500">
+                        {t("digitalTransformation.timeline.week2.label")}
+                      </div>
+                      <div className="font-semibold">
+                        {t("digitalTransformation.timeline.week2.title")}
+                      </div>
                     </div>
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Weeks 5–8</div>
-                      <div className="font-semibold">Pilot & measure</div>
+                      <div className="text-xs text-gray-500">
+                        {t("digitalTransformation.timeline.week3.label")}
+                      </div>
+                      <div className="font-semibold">
+                        {t("digitalTransformation.timeline.week3.title")}
+                      </div>
                     </div>
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Week 9+</div>
-                      <div className="font-semibold">Scale</div>
+                      <div className="text-xs text-gray-500">
+                        {t("digitalTransformation.timeline.week4.label")}
+                      </div>
+                      <div className="font-semibold">
+                        {t("digitalTransformation.timeline.week4.title")}
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6">
                   <blockquote className="border-l-4 pl-4 italic text-gray-700 dark:text-gray-300">
-                    “The pilot proved out our assumptions and within two months
-                    we were already seeing a measurable uplift in customer
-                    retention.” — CTO, SaaS provider
+                    {t("digitalTransformation.testimonial.quote")} —{" "}
+                    {t("digitalTransformation.testimonial.author")}
                   </blockquote>
                 </div>
               </div>
@@ -228,26 +236,28 @@ const DigitalTransformation: React.FC = () => {
         {/* Services — different style */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-6">
-            <h3 className="text-xl font-semibold">Services we offer</h3>
+            <h3 className="text-xl font-semibold">
+              {t("digitalTransformation.servicesHeading")}
+            </h3>
 
             {/* Stats row */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
                 <Counter to={30} suffix="%" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Typical reduction in lead time to deploy
+                  {t("digitalTransformation.stats.reduction")}
                 </div>
               </div>
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
                 <Counter to={10} suffix="w" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Pilot to measurable benefit (typical)
+                  {t("digitalTransformation.stats.payback")}
                 </div>
               </div>
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
                 <Counter to={2} suffix="x" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Faster time-to-value vs traditional projects
+                  {t("digitalTransformation.stats.timeToValue")}
                 </div>
               </div>
             </div>
@@ -256,20 +266,11 @@ const DigitalTransformation: React.FC = () => {
             <div className="mt-8 grid md:grid-cols-2 gap-6">
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Cloud strategy & roadmap</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Pragmatic cloud adoption plans that prioritise quick wins
-                    and minimise migration risk.
+                  <div className="font-semibold">
+                    {t("digitalTransformation.cards.cloudStrategy.title")}
                   </div>
-                </div>
-              </div>
-
-              <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
-                <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Data foundations</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Build a single source of truth and analytics patterns that
-                    unlock actionable insights.
+                    {t("digitalTransformation.cards.cloudStrategy.body")}
                   </div>
                 </div>
               </div>
@@ -277,11 +278,10 @@ const DigitalTransformation: React.FC = () => {
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
                   <div className="font-semibold">
-                    Delivery & platform engineering
+                    {t("digitalTransformation.cards.dataFoundations.title")}
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Implement repeatable platform patterns and CI/CD to make
-                    pilots low-cost and safe to run.
+                    {t("digitalTransformation.cards.dataFoundations.body")}
                   </div>
                 </div>
               </div>
@@ -289,10 +289,21 @@ const DigitalTransformation: React.FC = () => {
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
                   <div className="font-semibold">
-                    Change & adoption coaching
+                    {t("digitalTransformation.cards.delivery.title")}
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Practical coaching to ensure new ways of working stick.
+                    {t("digitalTransformation.cards.delivery.body")}
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
+                <div className="border-l-4 border-indigo-600 p-6">
+                  <div className="font-semibold">
+                    {t("digitalTransformation.cards.changeCoaching.title")}
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                    {t("digitalTransformation.cards.changeCoaching.body")}
                   </div>
                 </div>
               </div>
@@ -300,22 +311,26 @@ const DigitalTransformation: React.FC = () => {
 
             <div className="mt-8 grid md:grid-cols-3 gap-6 items-start">
               <div className="md:col-span-2 rounded-lg p-6 bg-white dark:bg-gray-800 shadow">
-                <div className="font-semibold">Client testimonial</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 mt-3">
-                  “Enkonix helped us run a lightweight pilot, prove the business
-                  case and scale a platform pattern that reduced time-to-onboard
-                  by 40%.”
+                <div className="font-semibold">
+                  {t("digitalTransformation.clientTestimonial.heading")}
                 </div>
-                <div className="mt-4 text-sm font-semibold">— CTO, Fintech</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 mt-3">
+                  {t("digitalTransformation.clientTestimonial.body")}
+                </div>
+                <div className="mt-4 text-sm font-semibold">
+                  {t("digitalTransformation.clientTestimonial.author")}
+                </div>
               </div>
 
               <div className="rounded-lg p-6 bg-white dark:bg-gray-800 border flex flex-col items-center justify-center">
-                <div className="text-sm text-gray-600">Ready to start?</div>
+                <div className="text-sm text-gray-600">
+                  {t("digitalTransformation.ready.heading")}
+                </div>
                 <Link
                   href="/contact-us"
                   className="mt-4 inline-block px-4 py-2 bg-indigo-600 text-white rounded-md"
                 >
-                  Book discovery
+                  {t("digitalTransformation.ready.book")}
                 </Link>
               </div>
             </div>
@@ -325,27 +340,29 @@ const DigitalTransformation: React.FC = () => {
         {/* Case studies — image-led cards (rendered from array) */}
         <section className="py-16 bg-gray-50 dark:bg-gray-800">
           <div className="max-w-6xl mx-auto px-6">
-            <h3 className="text-xl font-semibold">Case studies</h3>
+            <h3 className="text-xl font-semibold">
+              {t("digitalTransformation.caseStudies.heading")}
+            </h3>
 
             <div className="mt-6 grid md:grid-cols-3 gap-6">
               {[
                 {
                   img: "/clients/saas-pilot.jpg",
                   alt: "SaaS pilot",
-                  title: "SaaS provider — pilot to scale",
-                  desc: "Validated a revenue-focused experiment and reduced onboarding time by 40%.",
+                  title: t("digitalTransformation.caseStudies.saas.title"),
+                  desc: t("digitalTransformation.caseStudies.saas.desc"),
                 },
                 {
                   img: "/clients/retail-forecast.jpg",
                   alt: "Retail forecasting",
-                  title: "Retail chain — forecasting platform",
-                  desc: "Built a single forecasting model that cut planning time and improved margin predictions.",
+                  title: t("digitalTransformation.caseStudies.retail.title"),
+                  desc: t("digitalTransformation.caseStudies.retail.desc"),
                 },
                 {
                   img: "/clients/fintech-onboard.jpg",
                   alt: "Fintech onboarding",
-                  title: "Fintech — faster onboarding",
-                  desc: "Short pilots and repeatable platform patterns reduced onboarding friction and time-to-live.",
+                  title: t("digitalTransformation.caseStudies.fintech.title"),
+                  desc: t("digitalTransformation.caseStudies.fintech.desc"),
                 },
               ].map((c) => (
                 <article
@@ -379,11 +396,10 @@ const DigitalTransformation: React.FC = () => {
         <section className="py-20 bg-indigo-700 text-white">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-extrabold">
-              Ready to make strategy real?
+              {t("digitalTransformation.cta.heading")}
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-indigo-100">
-              Book a short discovery call and we'll sketch a practical 90-day
-              plan that starts delivering measurable outcomes quickly.
+              {t("digitalTransformation.cta.paragraph")}
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -391,13 +407,13 @@ const DigitalTransformation: React.FC = () => {
                 href="/contact-us"
                 className="inline-block px-6 py-3 bg-white text-indigo-700 rounded-md font-semibold"
               >
-                Book discovery
+                {t("digitalTransformation.cta.button")}
               </Link>
               <Link
                 href="/services"
                 className="inline-block px-6 py-3 border border-white/30 rounded-md text-white"
               >
-                See services
+                {t("digitalTransformation.cta.learnMore")}
               </Link>
             </div>
           </div>

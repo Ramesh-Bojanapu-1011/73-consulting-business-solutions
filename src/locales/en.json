@@ -506,6 +506,106 @@
       "learnMore": "Learn more"
     }
   },
+  "digitalTransformation": {
+    "pageTitle": "Digital transformation — Enkonix Insights",
+    "metaDescription": "Digital transformation for mid-market firms: practical cloud adoption, data foundations and repeatable delivery patterns to accelerate value.",
+    "hero": {
+      "title": "Digital transformation that actually delivers",
+      "paragraph": "Practical cloud adoption, stronger data foundations and repeatable delivery patterns so mid-market firms convert investment into measurable value.",
+      "cta": "Start a transformation conversation"
+    },
+    "overview": {
+      "heading": "Why digital transformation stalls",
+      "paragraph": "Transformation projects often fail to deliver because teams chase technology without clear outcomes, lack data that supports decisions, or adopt cloud patterns that aren't aligned to business priorities. We focus on the smallest changes that unlock predictable, measurable value.",
+      "bullets": {
+        "1": "Technology-first roadmaps with no clear business metrics",
+        "2": "Data scattered across teams and systems",
+        "3": "Siloed delivery that doesn't embed operational change",
+        "4": "Premature scale without an effective pilot and feedback loop"
+      }
+    },
+    "imageAlt": "Strategy overview",
+    "approach": {
+      "heading": "How we make transformation stick",
+      "paragraph": "We combine outcome-focused discovery, pragmatic engineering patterns and short pilots to prove value quickly. That creates the case and capability to scale safely.",
+      "features": {
+        "1": {
+          "title": "Discover",
+          "body": "Targeted discovery to identify high-impact use cases and the smallest viable changes."
+        },
+        "2": {
+          "title": "Define",
+          "body": "Clear success metrics, owners and acceptance criteria so pilots can be evaluated objectively."
+        },
+        "3": {
+          "title": "Deliver",
+          "body": "Short, measurable pilots that validate value and create reusable delivery patterns."
+        }
+      }
+    },
+    "timeline": {
+      "badge": "Typical engagement phases",
+      "week1": { "label": "Week 1", "title": "Discovery" },
+      "week2": { "label": "Weeks 2–4", "title": "Prototype & validate" },
+      "week3": { "label": "Weeks 5–8", "title": "Pilot & measure" },
+      "week4": { "label": "Week 9+", "title": "Scale" }
+    },
+    "testimonial": {
+      "quote": "The pilot proved out our assumptions and within two months we were already seeing a measurable uplift in customer retention.",
+      "author": "CTO, SaaS provider"
+    },
+    "servicesHeading": "Services we offer",
+    "stats": {
+      "reduction": "Typical reduction in lead time to deploy",
+      "payback": "Pilot to measurable benefit (typical)",
+      "timeToValue": "Faster time-to-value vs traditional projects"
+    },
+    "cards": {
+      "cloudStrategy": {
+        "title": "Cloud strategy & roadmap",
+        "body": "Pragmatic cloud adoption plans that prioritise quick wins and minimise migration risk."
+      },
+      "dataFoundations": {
+        "title": "Data foundations",
+        "body": "Build a single source of truth and analytics patterns that unlock actionable insights."
+      },
+      "delivery": {
+        "title": "Delivery & platform engineering",
+        "body": "Implement repeatable platform patterns and CI/CD to make pilots low-cost and safe to run."
+      },
+      "changeCoaching": {
+        "title": "Change & adoption coaching",
+        "body": "Practical coaching to ensure new ways of working stick."
+      }
+    },
+    "clientTestimonial": {
+      "heading": "Client testimonial",
+      "body": "Enkonix helped us run a lightweight pilot, prove the business case and scale a platform pattern that reduced time-to-onboard by 40%.",
+      "author": "— CTO, Fintech"
+    },
+    "ready": { "heading": "Ready to start?", "book": "Book discovery" },
+    "caseStudies": {
+      "heading": "Case studies",
+      "saas": {
+        "title": "SaaS provider — pilot to scale",
+        "desc": "Validated a revenue-focused experiment and reduced onboarding time by 40%."
+      },
+      "retail": {
+        "title": "Retail chain — forecasting platform",
+        "desc": "Built a single forecasting model that cut planning time and improved margin predictions."
+      },
+      "fintech": {
+        "title": "Fintech — faster onboarding",
+        "desc": "Short pilots and repeatable platform patterns reduced onboarding friction and time-to-live."
+      }
+    },
+    "cta": {
+      "heading": "Ready to make strategy real?",
+      "paragraph": "Book a short discovery call and we'll sketch a practical 90-day plan that starts delivering measurable outcomes quickly.",
+      "button": "Book discovery",
+      "learnMore": "See services"
+    }
+  },
   "contact": {
     "title": "Contact us",
     "description": "Get in touch — book a discovery call, request a proposal, or find our offices.",
