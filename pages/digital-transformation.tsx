@@ -106,11 +106,11 @@ const DigitalTransformation: React.FC = () => {
 
             <div>
               <Image
-                src="/services/strategy-overview.jpg"
+                src="https://i.pinimg.com/1200x/0f/4c/8b/0f4c8b1985f01fce7fbe4eb269ad03c9.jpg"
                 alt={t("digitalTransformation.imageAlt")}
                 width={640}
                 height={380}
-                className="rounded-md object-cover w-full h-56"
+                className="rounded-md object-cover w-full h-100"
               />
             </div>
           </div>
@@ -222,7 +222,7 @@ const DigitalTransformation: React.FC = () => {
 
               <div className="hidden lg:block">
                 <Image
-                  src="/services/approach-visual.jpg"
+                  src="https://i.pinimg.com/1200x/ce/e0/46/cee046827a898afc7f802458810b9aa4.jpg"
                   alt="Approach"
                   width={720}
                   height={520}
@@ -347,19 +347,19 @@ const DigitalTransformation: React.FC = () => {
             <div className="mt-6 grid md:grid-cols-3 gap-6">
               {[
                 {
-                  img: "/clients/saas-pilot.jpg",
+                  img: "https://i.pinimg.com/736x/49/40/6f/49406f1fb7bf3769cb322f3ba2692732.jpg",
                   alt: "SaaS pilot",
                   title: t("digitalTransformation.caseStudies.saas.title"),
                   desc: t("digitalTransformation.caseStudies.saas.desc"),
                 },
                 {
-                  img: "/clients/retail-forecast.jpg",
+                  img: "https://i.pinimg.com/736x/30/b9/9e/30b99e3d6614366d8fcb63ece3d05fb7.jpg",
                   alt: "Retail forecasting",
                   title: t("digitalTransformation.caseStudies.retail.title"),
                   desc: t("digitalTransformation.caseStudies.retail.desc"),
                 },
                 {
-                  img: "/clients/fintech-onboard.jpg",
+                  img: "https://i.pinimg.com/1200x/77/30/40/773040094de0d025255b679e44df9e6e.jpg",
                   alt: "Fintech onboarding",
                   title: t("digitalTransformation.caseStudies.fintech.title"),
                   desc: t("digitalTransformation.caseStudies.fintech.desc"),
