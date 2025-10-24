@@ -22,7 +22,8 @@ const BlogPage: React.FC = () => {
       excerpt: t("blog.posts.aligningStrategy.excerpt"),
       date: t("blog.posts.aligningStrategy.date"),
       author: t("blog.posts.aligningStrategy.author"),
-      image: "/blog/strategy-execution.jpg",
+      image:
+        "https://i.pinimg.com/1200x/ec/5a/e9/ec5ae9a3394e4e2ea97c4c4c62ca2d90.jpg",
       readingMinutes: Number(t("blog.posts.aligningStrategy.readingMinutes")),
     },
     {
@@ -31,7 +32,8 @@ const BlogPage: React.FC = () => {
       excerpt: t("blog.posts.modernCloudAdoption.excerpt"),
       date: t("blog.posts.modernCloudAdoption.date"),
       author: t("blog.posts.modernCloudAdoption.author"),
-      image: "/blog/cloud-adoption.jpg",
+      image:
+        "https://i.pinimg.com/1200x/40/8e/c4/408ec41ea6b4e865fa4571f224ca535a.jpg",
       readingMinutes: Number(
         t("blog.posts.modernCloudAdoption.readingMinutes"),
       ),
@@ -42,7 +44,8 @@ const BlogPage: React.FC = () => {
       excerpt: t("blog.posts.dataDrivenDecisionMaking.excerpt"),
       date: t("blog.posts.dataDrivenDecisionMaking.date"),
       author: t("blog.posts.dataDrivenDecisionMaking.author"),
-      image: "/blog/data-driven.jpg",
+      image:
+        "https://i.pinimg.com/736x/94/8d/39/948d394ec9c7040198b4d05fc4f78e5a.jpg",
       readingMinutes: Number(
         t("blog.posts.dataDrivenDecisionMaking.readingMinutes"),
       ),
@@ -387,7 +390,7 @@ const BlogPage: React.FC = () => {
               >
                 <div className="w-full max-w-md rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="/blog/playbook-illustration.jpg"
+                    src="https://i.pinimg.com/1200x/e7/32/4b/e7324bcd2be8bf3ed767315e3c93eca4.jpg"
                     alt="Playbooks"
                     width={720}
                     height={480}
@@ -409,11 +412,11 @@ const BlogPage: React.FC = () => {
               >
                 <div className="w-full max-w-md rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="/blog/cloud-illustration.jpg"
+                    src="https://i.pinimg.com/736x/cd/13/c9/cd13c9f376265bf5689348298c839687.jpg"
                     alt="Cloud"
                     width={720}
                     height={480}
-                    className="object-cover w-full h-64 lg:h-80"
+                    className="object-cover w-full h-64 lg:h-100"
                   />
                 </div>
               </div>
@@ -493,28 +496,28 @@ const BlogPage: React.FC = () => {
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
               {[
                 {
-                  logo: "/clients/logo-a.svg",
+                  logo: "https://randomuser.me/api/portraits/women/44.jpg",
                   quote:
                     "They helped us reduce cloud costs by 30% while improving availability.",
                   name: "Emma R",
                   org: "Fintech Co",
                 },
                 {
-                  logo: "/clients/logo-b.svg",
+                  logo: "https://randomuser.me/api/portraits/women/45.jpg",
                   quote:
                     "A pragmatic roadmap that the whole leadership team could align behind.",
                   name: "Liam H",
                   org: "Retailer X",
                 },
                 {
-                  logo: "/clients/logo-c.svg",
+                  logo: "https://randomuser.me/api/portraits/women/35.jpg",
                   quote:
                     "Delivered the transformation with minimal operational disruption.",
                   name: "Priya S",
                   org: "HealthTech Ltd",
                 },
                 {
-                  logo: "/clients/logo-d.svg",
+                  logo: "https://randomuser.me/api/portraits/men/35.jpg",
                   quote: "Practical and outcomes-focused — delivered quickly.",
                   name: "Owen K",
                   org: "Logistics Co",
@@ -533,7 +536,7 @@ const BlogPage: React.FC = () => {
                             alt={c.org}
                             width={64}
                             height={32}
-                            className="object-contain"
+                            className="object-cover object-center   rounded-full"
                           />
                         </div>
                       </div>
