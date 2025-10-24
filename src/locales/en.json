@@ -404,6 +404,108 @@
       "button": "Book a discovery call"
     }
   },
+  "strategyPlanning": {
+    "pageTitle": "Strategy & Planning — Enkonix Insights",
+    "metaDescription": "Strategy and planning services: how we help mid-market firms align strategy, portfolios and delivery to accelerate outcomes.",
+    "hero": {
+      "title": "Strategy & Planning",
+      "paragraph": "Align strategy, delivery and budgets so your organisation consistently converts intent into measurable outcomes.",
+      "cta": "Book a strategy call"
+    },
+    "overview": {
+      "heading": "Overview & common challenges",
+      "paragraph": "Mid-market firms often struggle with unclear priorities, fragmented data and governance, and difficulty turning strategy into a predictable delivery rhythm. We help teams simplify the problem and create repeatable patterns.",
+      "bullets": {
+        "1": "Conflicting priorities across functions",
+        "2": "Lack of measurable outcomes tied to strategy",
+        "3": "Governance that slows decisions",
+        "4": "Delivery teams disconnected from strategic intent"
+      }
+    },
+    "imageAlt": "Strategy overview",
+    "approach": {
+      "heading": "Our approach — practical & measurable",
+      "paragraph": "We run focused discovery, create lightweight decision frameworks and deliver fast pilots that embed new behaviours.",
+      "features": {
+        "1": {
+          "title": "Discover",
+          "body": "Rapid interviews and data checks to find high-impact decisions."
+        },
+        "2": {
+          "title": "Define",
+          "body": "Clear metrics, owners and acceptance criteria for each decision."
+        },
+        "3": {
+          "title": "Deliver",
+          "body": "Short pilots that prove value and create reusable templates."
+        }
+      }
+    },
+    "timeline": {
+      "week1": { "label": "Week 1", "title": "Discovery" },
+      "week2": { "label": "Week 2–4", "title": "Prototype" },
+      "week3": { "label": "Week 5–8", "title": "Pilot" },
+      "week4": { "label": "Week 9+", "title": "Scale" }
+    },
+    "testimonial": {
+      "quote": "We landed a single decision model that reduced monthly forecasting effort by 50%.",
+      "author": "Retail Director"
+    },
+    "servicesHeading": "Services we offer",
+    "stats": {
+      "reduction": "Avg. reduction in decision time",
+      "payback": "Pilot to payback (typical)",
+      "timeToValue": "Faster time-to-value vs projects"
+    },
+    "cards": {
+      "strategyArticulation": {
+        "title": "Strategy articulation",
+        "body": "Facilitated workshops to align leaders, set measurable themes and a clear 90-day plan."
+      },
+      "portfolioPrioritisation": {
+        "title": "Portfolio prioritisation",
+        "body": "Scoring and trade-off frameworks to prioritise initiatives by value and risk."
+      },
+      "decisionOps": {
+        "title": "Decision ops & governance",
+        "body": "Design simple governance with clear owners and time-boxed escalation."
+      },
+      "executionCoaching": {
+        "title": "Execution coaching",
+        "body": "Embed coaches to help teams convert priorities into measurable outcomes."
+      }
+    },
+    "clientTestimonial": {
+      "heading": "Client testimonial",
+      "body": "Enkonix helped us align our leadership, focus on the right metrics and cut decision time by half — the pilot paid for itself in 8 weeks.",
+      "author": "Head of Product, Retailer"
+    },
+    "ready": { "heading": "Ready to start?", "book": "Book discovery" },
+    "caseStudies": {
+      "heading": "Case studies",
+      "retail": {
+        "alt": "Retail seasonal planning",
+        "title": "Retail chain — seasonal planning",
+        "desc": "Reduced planning cycle by 40% and improved forecast accuracy with a single decision model for inventory and promotions."
+      },
+      "saas": {
+        "alt": "SaaS roadmap",
+        "title": "SaaS provider — prioritised roadmap",
+        "desc": "Reprioritised product backlog to focus on revenue-driving experiments and reduced time-to-value for customers."
+      },
+      "manufacturing": {
+        "alt": "Manufacturing efficiency",
+        "title": "Manufacturer — faster planning cycles",
+        "desc": "Shortened planning cycles and improved cross-functional alignment, unlocking faster response to demand changes."
+      }
+    },
+    "cta": {
+      "heading": "Want to learn more?",
+      "paragraph": "Book a strategy call and we’ll share frameworks and patterns that have worked for similar organisations.",
+      "button": "Book a strategy call",
+      "learnMore": "Learn more"
+    }
+  },
   "contact": {
     "title": "Contact us",
     "description": "Get in touch — book a discovery call, request a proposal, or find our offices.",

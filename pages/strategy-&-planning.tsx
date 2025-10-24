@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import SiteHeadder from "@/components/SiteHeadder";
 import SiteFooter from "@/components/SiteFooter";
+import { useTranslation } from "react-i18next";
 
 const StrategyAndPlanning: React.FC = () => {
   // simple in-file counter component
@@ -50,13 +51,15 @@ const StrategyAndPlanning: React.FC = () => {
       </div>
     );
   };
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
-        <title>Strategy & Planning — Enkonix Insights</title>
+        <title>{t("strategyPlanning.pageTitle")}</title>
         <meta
           name="description"
-          content="Strategy and planning services: how we help mid-market firms align strategy, portfolios and delivery to accelerate outcomes."
+          content={t("strategyPlanning.metaDescription")}
         />
       </Head>
 
@@ -67,18 +70,17 @@ const StrategyAndPlanning: React.FC = () => {
         <section className="py-20 min-h-screen flex justify-center items-center bg-linear-to-r from-indigo-600 to-pink-500 text-white">
           <div className="max-w-5xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold">
-              Strategy & Planning
+              {t("strategyPlanning.hero.title")}
             </h1>
             <p className="mt-4 text-lg max-w-3xl mx-auto">
-              Align strategy, delivery and budgets so your organisation
-              consistently converts intent into measurable outcomes.
+              {t("strategyPlanning.hero.paragraph")}
             </p>
             <div className="mt-6">
               <Link
                 href="/contact-us"
                 className="inline-block px-5 py-3 bg-white text-indigo-700 rounded-md font-semibold"
               >
-                Book a strategy call
+                {t("strategyPlanning.hero.cta")}
               </Link>
             </div>
           </div>
@@ -89,27 +91,24 @@ const StrategyAndPlanning: React.FC = () => {
           <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl font-semibold">
-                Overview & common challenges
+                {t("strategyPlanning.overview.heading")}
               </h2>
               <p className="mt-4 text-gray-700 dark:text-gray-300">
-                Mid-market firms often struggle with unclear priorities,
-                fragmented data and governance, and difficulty turning strategy
-                into a predictable delivery rhythm. We help teams simplify the
-                problem and create repeatable patterns.
+                {t("strategyPlanning.overview.paragraph")}
               </p>
 
               <ul className="mt-6 space-y-3   text-gray-600 dark:text-gray-400">
-                <li>• Conflicting priorities across functions</li>
-                <li>• Lack of measurable outcomes tied to strategy</li>
-                <li>• Governance that slows decisions</li>
-                <li>• Delivery teams disconnected from strategic intent</li>
+                <li>• {t("strategyPlanning.overview.bullets.1")}</li>
+                <li>• {t("strategyPlanning.overview.bullets.2")}</li>
+                <li>• {t("strategyPlanning.overview.bullets.3")}</li>
+                <li>• {t("strategyPlanning.overview.bullets.4")}</li>
               </ul>
             </div>
 
             <div>
               <Image
                 src="/services/strategy-overview.jpg"
-                alt="Strategy overview"
+                alt={t("strategyPlanning.imageAlt")}
                 width={640}
                 height={380}
                 className="rounded-md object-cover w-full h-56"
@@ -124,11 +123,10 @@ const StrategyAndPlanning: React.FC = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <h3 className="text-2xl font-semibold">
-                  Our approach — practical & measurable
+                  {t("strategyPlanning.approach.heading")}
                 </h3>
                 <p className="mt-3 text-gray-700 dark:text-gray-300">
-                  We run focused discovery, create lightweight decision
-                  frameworks and deliver fast pilots that embed new behaviours.
+                  {t("strategyPlanning.approach.paragraph")}
                 </p>
 
                 <div className="mt-8 grid sm:grid-cols-3 gap-4">
@@ -137,10 +135,11 @@ const StrategyAndPlanning: React.FC = () => {
                       1
                     </div>
                     <div>
-                      <div className="font-semibold">Discover</div>
+                      <div className="font-semibold">
+                        {t("strategyPlanning.approach.features.1.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Rapid interviews and data checks to find high-impact
-                        decisions.
+                        {t("strategyPlanning.approach.features.1.body")}
                       </div>
                     </div>
                   </div>
@@ -150,10 +149,11 @@ const StrategyAndPlanning: React.FC = () => {
                       2
                     </div>
                     <div>
-                      <div className="font-semibold">Define</div>
+                      <div className="font-semibold">
+                        {t("strategyPlanning.approach.features.2.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Clear metrics, owners and acceptance criteria for each
-                        decision.
+                        {t("strategyPlanning.approach.features.2.body")}
                       </div>
                     </div>
                   </div>
@@ -163,10 +163,11 @@ const StrategyAndPlanning: React.FC = () => {
                       3
                     </div>
                     <div>
-                      <div className="font-semibold">Deliver</div>
+                      <div className="font-semibold">
+                        {t("strategyPlanning.approach.features.3.title")}
+                      </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Short pilots that prove value and create reusable
-                        templates.
+                        {t("strategyPlanning.approach.features.3.body")}
                       </div>
                     </div>
                   </div>
@@ -178,28 +179,44 @@ const StrategyAndPlanning: React.FC = () => {
                   </div>
                   <div className="mt-4 flex items-center gap-6 overflow-auto">
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Week 1</div>
-                      <div className="font-semibold">Discovery</div>
+                      <div className="text-xs text-gray-500">
+                        {t("strategyPlanning.timeline.week1.label")}
+                      </div>
+                      <div className="font-semibold">
+                        {t("strategyPlanning.timeline.week1.title")}
+                      </div>
                     </div>
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Week 2–4</div>
-                      <div className="font-semibold">Prototype</div>
+                      <div className="text-xs text-gray-500">
+                        {t("strategyPlanning.timeline.week2.label")}
+                      </div>
+                      <div className="font-semibold">
+                        {t("strategyPlanning.timeline.week2.title")}
+                      </div>
                     </div>
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Week 5–8</div>
-                      <div className="font-semibold">Pilot</div>
+                      <div className="text-xs text-gray-500">
+                        {t("strategyPlanning.timeline.week3.label")}
+                      </div>
+                      <div className="font-semibold">
+                        {t("strategyPlanning.timeline.week3.title")}
+                      </div>
                     </div>
                     <div className="shrink-0 text-center">
-                      <div className="text-xs text-gray-500">Week 9+</div>
-                      <div className="font-semibold">Scale</div>
+                      <div className="text-xs text-gray-500">
+                        {t("strategyPlanning.timeline.week4.label")}
+                      </div>
+                      <div className="font-semibold">
+                        {t("strategyPlanning.timeline.week4.title")}
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6">
                   <blockquote className="border-l-4 pl-4 italic text-gray-700 dark:text-gray-300">
-                    “We landed a single decision model that reduced monthly
-                    forecasting effort by 50%.” — Retail Director
+                    {t("strategyPlanning.testimonial.quote")} —{" "}
+                    {t("strategyPlanning.testimonial.author")}
                   </blockquote>
                 </div>
               </div>
@@ -220,26 +237,28 @@ const StrategyAndPlanning: React.FC = () => {
         {/* Services — different style */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-6">
-            <h3 className="text-xl font-semibold">Services we offer</h3>
+            <h3 className="text-xl font-semibold">
+              {t("strategyPlanning.servicesHeading")}
+            </h3>
 
             {/* Stats row */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
                 <Counter to={50} suffix="%" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Avg. reduction in decision time
+                  {t("strategyPlanning.stats.reduction")}
                 </div>
               </div>
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
                 <Counter to={8} suffix="w" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Pilot to payback (typical)
+                  {t("strategyPlanning.stats.payback")}
                 </div>
               </div>
               <div className="p-4 bg-white shadow-2xl dark:bg-gray-800 rounded-lg text-center">
                 <Counter to={3} suffix="x" />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Faster time-to-value vs projects
+                  {t("strategyPlanning.stats.timeToValue")}
                 </div>
               </div>
             </div>
@@ -248,40 +267,44 @@ const StrategyAndPlanning: React.FC = () => {
             <div className="mt-8 grid md:grid-cols-2 gap-6">
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Strategy articulation</div>
+                  <div className="font-semibold">
+                    {t("strategyPlanning.cards.strategyArticulation.title")}
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Facilitated workshops to align leaders, set measurable
-                    themes and a clear 90-day plan.
+                    {t("strategyPlanning.cards.strategyArticulation.body")}
                   </div>
                 </div>
               </div>
 
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Portfolio prioritisation</div>
+                  <div className="font-semibold">
+                    {t("strategyPlanning.cards.portfolioPrioritisation.title")}
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Scoring and trade-off frameworks to prioritise initiatives
-                    by value and risk.
+                    {t("strategyPlanning.cards.portfolioPrioritisation.body")}
                   </div>
                 </div>
               </div>
 
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Decision ops & governance</div>
+                  <div className="font-semibold">
+                    {t("strategyPlanning.cards.decisionOps.title")}
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Design simple governance with clear owners and time-boxed
-                    escalation.
+                    {t("strategyPlanning.cards.decisionOps.body")}
                   </div>
                 </div>
               </div>
 
               <div className="rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow">
                 <div className="border-l-4 border-indigo-600 p-6">
-                  <div className="font-semibold">Execution coaching</div>
+                  <div className="font-semibold">
+                    {t("strategyPlanning.cards.executionCoaching.title")}
+                  </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Embed coaches to help teams convert priorities into
-                    measurable outcomes.
+                    {t("strategyPlanning.cards.executionCoaching.body")}
                   </div>
                 </div>
               </div>
@@ -289,24 +312,26 @@ const StrategyAndPlanning: React.FC = () => {
 
             <div className="mt-8 grid md:grid-cols-3 gap-6 items-start">
               <div className="md:col-span-2 rounded-lg p-6 bg-white dark:bg-gray-800 shadow">
-                <div className="font-semibold">Client testimonial</div>
+                <div className="font-semibold">
+                  {t("strategyPlanning.clientTestimonial.heading")}
+                </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-3">
-                  “Enkonix helped us align our leadership, focus on the right
-                  metrics and cut decision time by half — the pilot paid for
-                  itself in 8 weeks.”
+                  {t("strategyPlanning.clientTestimonial.body")}
                 </div>
                 <div className="mt-4 text-sm font-semibold">
-                  — Head of Product, Retailer
+                  {t("strategyPlanning.clientTestimonial.author")}
                 </div>
               </div>
 
               <div className="rounded-lg p-6 bg-white dark:bg-gray-800 border flex flex-col items-center justify-center">
-                <div className="text-sm text-gray-600">Ready to start?</div>
+                <div className="text-sm text-gray-600">
+                  {t("strategyPlanning.ready.heading")}
+                </div>
                 <Link
                   href="/contact-us"
                   className="mt-4 inline-block px-4 py-2 bg-indigo-600 text-white rounded-md"
                 >
-                  Book discovery
+                  {t("strategyPlanning.ready.book")}
                 </Link>
               </div>
             </div>
@@ -316,27 +341,29 @@ const StrategyAndPlanning: React.FC = () => {
         {/* Case studies — image-led cards (rendered from array) */}
         <section className="py-16 bg-gray-50 dark:bg-gray-800">
           <div className="max-w-6xl mx-auto px-6">
-            <h3 className="text-xl font-semibold">Case studies</h3>
+            <h3 className="text-xl font-semibold">
+              {t("strategyPlanning.caseStudies.heading")}
+            </h3>
 
             <div className="mt-6 grid md:grid-cols-3 gap-6">
               {[
                 {
                   img: "/clients/retail-season.jpg",
-                  alt: "Retail seasonal planning",
-                  title: "Retail chain — seasonal planning",
-                  desc: "Reduced planning cycle by 40% and improved forecast accuracy with a single decision model for inventory and promotions.",
+                  alt: t("strategyPlanning.caseStudies.retail.alt"),
+                  title: t("strategyPlanning.caseStudies.retail.title"),
+                  desc: t("strategyPlanning.caseStudies.retail.desc"),
                 },
                 {
                   img: "/clients/saas-roadmap.jpg",
-                  alt: "SaaS roadmap",
-                  title: "SaaS provider — prioritised roadmap",
-                  desc: "Reprioritised product backlog to focus on revenue-driving experiments and reduced time-to-value for customers.",
+                  alt: t("strategyPlanning.caseStudies.saas.alt"),
+                  title: t("strategyPlanning.caseStudies.saas.title"),
+                  desc: t("strategyPlanning.caseStudies.saas.desc"),
                 },
                 {
                   img: "/clients/manufacturing-efficiency.jpg",
-                  alt: "Manufacturing efficiency",
-                  title: "Manufacturer — faster planning cycles",
-                  desc: "Shortened planning cycles and improved cross-functional alignment, unlocking faster response to demand changes.",
+                  alt: t("strategyPlanning.caseStudies.manufacturing.alt"),
+                  title: t("strategyPlanning.caseStudies.manufacturing.title"),
+                  desc: t("strategyPlanning.caseStudies.manufacturing.desc"),
                 },
               ].map((c) => (
                 <article
@@ -370,11 +397,10 @@ const StrategyAndPlanning: React.FC = () => {
         <section className="py-20 bg-indigo-700 text-white">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-extrabold">
-              Ready to make strategy real?
+              {t("strategyPlanning.cta.heading")}
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-indigo-100">
-              Book a short discovery call and we'll sketch a practical 90-day
-              plan that starts delivering measurable outcomes quickly.
+              {t("strategyPlanning.cta.paragraph")}
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -382,13 +408,13 @@ const StrategyAndPlanning: React.FC = () => {
                 href="/contact-us"
                 className="inline-block px-6 py-3 bg-white text-indigo-700 rounded-md font-semibold"
               >
-                Book discovery
+                {t("strategyPlanning.cta.button")}
               </Link>
               <Link
                 href="/services"
                 className="inline-block px-6 py-3 border border-white/30 rounded-md text-white"
               >
-                See services
+                {t("strategyPlanning.cta.learnMore")}
               </Link>
             </div>
           </div>
