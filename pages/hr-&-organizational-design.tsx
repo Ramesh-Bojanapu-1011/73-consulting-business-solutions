@@ -107,11 +107,11 @@ const HROrganizationalDesign: React.FC = () => {
 
             <div>
               <Image
-                src="/services/strategy-overview.jpg"
+                src="https://i.pinimg.com/1200x/57/6a/b3/576ab3dee58dcac7a6c036095e2831ac.jpg"
                 alt="Strategy overview"
                 width={640}
                 height={380}
-                className="rounded-md object-cover w-full h-56"
+                className="rounded-md object-cover object-top w-full h-80"
               />
             </div>
           </div>
@@ -223,7 +223,7 @@ const HROrganizationalDesign: React.FC = () => {
 
               <div className="hidden lg:block">
                 <Image
-                  src="/services/approach-visual.jpg"
+                  src="https://i.pinimg.com/736x/14/33/32/143332d0bfa2a3d52fc3d6cc3a5bd01d.jpg"
                   alt="Approach"
                   width={720}
                   height={520}
@@ -348,19 +348,19 @@ const HROrganizationalDesign: React.FC = () => {
             <div className="mt-6 grid md:grid-cols-3 gap-6">
               {[
                 {
-                  img: "/clients/hr-structure.jpg",
+                  img: "https://i.pinimg.com/1200x/7c/21/b6/7c21b65e6c9178e4b910f2533a7d48d7.jpg",
                   alt: "Organisational redesign",
                   title: "Tech scale-up — organisational redesign",
                   desc: "Reworked reporting lines and cut decision latency for product teams.",
                 },
                 {
-                  img: "/clients/hr-talent.jpg",
+                  img: "https://i.pinimg.com/736x/9b/e8/9d/9be89d7283ba97ccc6f9749d96819af8.jpg",
                   alt: "Talent mapping",
                   title: "Retail — talent & capability mapping",
                   desc: "Mapped capability gaps and created targeted hiring plans.",
                 },
                 {
-                  img: "/clients/hr-change.jpg",
+                  img: "https://i.pinimg.com/736x/52/9c/7b/529c7b5641af88e3b65a2618dad3520f.jpg",
                   alt: "Change adoption",
                   title: "Logistics — change & adoption",
                   desc: "Piloted a new operating rhythm and embedded leader routines.",
@@ -375,10 +375,10 @@ const HROrganizationalDesign: React.FC = () => {
                       src={c.img}
                       alt={c.alt}
                       fill
-                      className="object-cover"
+                      className="object-cover opacity-40 hover:opacity-60 transition"
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent"></div>
-                    <div className="absolute left-4 bottom-4 right-4 text-white">
+
+                    <div className="absolute left-4 bottom-4 right-4    ">
                       <div className="font-semibold text-lg drop-shadow">
                         {c.title}
                       </div>
