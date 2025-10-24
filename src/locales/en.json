@@ -554,6 +554,7 @@
         "title": "Modern cloud adoption without the usual risks",
         "excerpt": "A pragmatic approach to cloud migration that balances speed, cost and operational resilience.",
         "date": "2025-08-22",
+        "imageAlt": "Cloud adoption",
         "author": "Arun Patel",
         "readingMinutes": "7"
       },
@@ -602,10 +603,46 @@
         },
         "cta": "Book a discovery call"
       }
+      ,
+      "modernCloudAdoption": {
+        "quickSummary": {
+          "heading": "In short",
+          "body": "Practical steps to adopt cloud platforms with limited disruption — plan for cost, automate governance and pilot at pace."
+        },
+        "lead": "Cloud offers speed and agility, but poor planning introduces cost, security and operational risks. This guide shows a low-friction adoption path that protects your business while enabling rapid value delivery.",
+        "blockquote": "Pilot small, automate fast, and measure what matters — not everything.",
+        "stepsHeading": "Five pragmatic steps",
+        "steps": {
+          "1": {
+            "title": "Set outcome-based pilots",
+            "body": "Pick a narrow, valuable use-case (e.g., an analytics pipeline or a customer-facing microservice). Define clear success metrics and a 6–12 week timescale."
+          },
+          "2": {
+            "title": "Automate governance early",
+            "body": "Use IaC and policy-as-code to enforce baseline security, permissions and cost controls from day one."
+          },
+          "3": {
+            "title": "Measure cost and risk continuously",
+            "body": "Track spend per pilot, set budget alerts and run post-mortems for expensive resources. Treat cost as a first-class metric."
+          },
+          "4": {
+            "title": "Teach teams by doing",
+            "body": "Embed platform engineers with product teams during pilots so knowledge and ownership transfer naturally."
+          },
+          "5": {
+            "title": "Plan the roll‑out, not the lift",
+            "body": "Move from pilot to scaled adoption with a runway: template projects, shared platform services and a clear migration roadmap."
+          }
+        },
+        "postscript": "If you want, we can sketch a pilot for your top use-case and deliver a 6-week proof of value.",
+        "cta": "Request a pilot"
+      }
     },
     "tags": {
       "strategy": "Strategy",
-      "execution": "Execution"
+      "execution": "Execution",
+      "cloud": "Cloud",
+      "security": "Security"
     },
     "author": {
       "jane": {
@@ -614,6 +651,14 @@
         "role": "Author • Principal Consultant",
         "bio": "Jane leads strategy and operational transformation engagements with a focus on measurable outcomes and fast delivery.",
         "cta": "Work with Jane"
+      }
+    },
+    "sidebar": {
+      "enkonix": {
+        "title": "Enkonix Advisors",
+        "role": "Cloud & Platform team",
+        "blurb": "We help teams adopt cloud platforms with pragmatic delivery and strong guardrails — small pilots that scale.",
+        "cta": "Talk to an expert"
       }
     }
   }
