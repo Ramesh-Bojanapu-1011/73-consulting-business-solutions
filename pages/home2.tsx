@@ -6,6 +6,7 @@ import Image from "next/image";
 import SiteHeadder from "@/components/SiteHeadder";
 import SiteFooter from "@/components/SiteFooter";
 import Marquee from "react-fast-marquee";
+import { useTranslation } from "react-i18next";
 
 const Home2 = () => {
   React.useEffect(() => {
@@ -13,13 +14,13 @@ const Home2 = () => {
   }, []);
 
   const services = [
-    "Strategy & Consulting",
-    "Cloud Migration",
-    "Data Engineering",
-    "AI & Machine Learning",
-    "Managed Services",
-    "Cybersecurity",
+    // replaced with translation-driven values below
   ];
+
+  const { t } = useTranslation();
+  const servicesTranslated = t("home2.services.items", {
+    returnObjects: true,
+  }) as string[];
 
   // simple animated counter that starts when element is visible
   const Counter: React.FC<{
@@ -85,11 +86,10 @@ const Home2 = () => {
         <section className="py-24 min-h-screen bg-linear-to-r from-indigo-600 to-pink-500 text-white flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold">
-              Smarter Consulting. Faster Results.
+              {t("home2.title")}
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg">
-              We partner with organizations to modernize technology, optimize
-              operations, and unlock new growth with data-driven solutions.
+              {t("home2.heroParagraph")}
             </p>
 
             <div className="mt-8 flex justify-center gap-4">
@@ -97,13 +97,13 @@ const Home2 = () => {
                 href="/contact-us"
                 className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow"
               >
-                Talk to an expert
+                {t("home2.cta.talk")}
               </Link>
               <Link
                 href="/services"
                 className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full"
               >
-                Explore services
+                {t("home2.cta.explore")}
               </Link>
             </div>
           </div>
@@ -114,15 +114,15 @@ const Home2 = () => {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-8">
               <div className="text-sm font-medium text-indigo-600">
-                OUR SERVICES
+                {t("home2.services.badge")}
               </div>
               <h2 className="text-3xl md:text-4xl font-extrabold">
-                How we help organizations
+                {t("home2.services.heading")}
               </h2>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((s) => (
+              {(servicesTranslated || []).map((s) => (
                 <div
                   key={s}
                   className="transform hover:-translate-y-1 transition-shadow"
@@ -137,8 +137,7 @@ const Home2 = () => {
                       <div>
                         <div className="font-semibold text-indigo-600">{s}</div>
                         <p className="mt-2 text-gray-600 dark:text-gray-300 text-sm">
-                          Short description explaining the value and typical
-                          outcomes for this service offering.
+                          {t("home2.services.description")}
                         </p>
                       </div>
                     </div>
@@ -154,31 +153,21 @@ const Home2 = () => {
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-extrabold">Our Approach</h3>
+                <h3 className="text-2xl font-extrabold">
+                  {t("home2.approach.title")}
+                </h3>
                 <p className="mt-4 text-gray-600 dark:text-gray-300">
-                  We combine domain expertise and modern engineering practices
-                  to deliver measurable outcomes — fast.
+                  {t("home2.approach.paragraph")}
                 </p>
 
                 {(() => {
-                  const steps = [
-                    {
-                      title: "Discovery",
-                      desc: "Understand needs and define success metrics.",
-                    },
-                    {
-                      title: "Design & Prototype",
-                      desc: "Rapid prototypes to validate assumptions.",
-                    },
-                    {
-                      title: "Scale & Operate",
-                      desc: "Deliver production-ready systems with SRE practices.",
-                    },
-                  ];
+                  const steps = t("home2.approach.steps", {
+                    returnObjects: true,
+                  }) as Array<{ title: string; desc: string }> | undefined;
 
                   return (
                     <ul className="mt-6 space-y-4">
-                      {steps.map((st, idx) => (
+                      {(steps || []).map((st, idx) => (
                         <li key={idx} className="flex items-start gap-3">
                           <div className="shrink-0 w-9 h-9 bg-indigo-600 text-white rounded-full flex items-center justify-center">
                             {idx + 1}
@@ -216,14 +205,13 @@ const Home2 = () => {
           <div className="max-w-6xl mx-auto px-6 text-center">
             <div className="mb-8">
               <div className="text-sm font-medium text-indigo-600">
-                CASE STUDIES
+                {t("home2.case.badge")}
               </div>
               <h3 className="text-3xl font-extrabold mt-2">
-                Proven outcomes, measurable impact
+                {t("home2.case.heading")}
               </h3>
               <p className="mt-3 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-                We focus on delivering business value. A few metrics that show
-                how we help clients scale.
+                {t("home2.case.paragraph")}
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -231,11 +219,15 @@ const Home2 = () => {
                 {
                   value: 120,
                   suffix: "+",
-                  label: "Projects Delivered",
+                  label: t("home2.case.stats.projects"),
                   accent: true,
                 },
-                { value: 98, suffix: "%", label: "Client Satisfaction" },
-                { value: "24/7", label: "Global Support" },
+                {
+                  value: 98,
+                  suffix: "%",
+                  label: t("home2.case.stats.satisfaction"),
+                },
+                { value: "24/7", label: t("home2.case.stats.support") },
               ].map((stat, i) => (
                 <div
                   key={i}
@@ -266,10 +258,10 @@ const Home2 = () => {
         <section className="py-16 bg-gray-50 dark:bg-gray-800">
           <div className="  mx-auto px-6 text-center">
             <div className="text-sm font-medium text-orange-500">
-              TECHNOLOGY
+              {t("home2.tech.badge")}
             </div>
             <h3 className="mt-2 text-2xl font-extrabold">
-              We work with modern platforms
+              {t("home2.tech.heading")}
             </h3>
 
             <Marquee
@@ -627,16 +619,18 @@ const Home2 = () => {
         {/* Contact CTA */}
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <h3 className="text-2xl font-extrabold">Ready to transform?</h3>
+            <h3 className="text-2xl font-extrabold">
+              {t("home2.contact.title")}
+            </h3>
             <p className="mt-2 text-gray-600 dark:text-gray-300">
-              Book a free consultation and roadmap session with our specialists.
+              {t("home2.contact.paragraph")}
             </p>
             <div className="mt-6">
               <Link
                 href="/contact-us"
                 className="inline-block bg-linear-to-r from-orange-400 to-orange-600 text-white px-8 py-3 rounded-full shadow"
               >
-                Get Started
+                {t("home2.contact.cta")}
               </Link>
             </div>
           </div>

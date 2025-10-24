@@ -116,6 +116,64 @@
       "ariaLabel": "Technology logos"
     }
   },
+  "home2": {
+    "title": "Smarter Consulting. Faster Results.",
+    "heroParagraph": "We partner with organizations to modernize technology, optimize operations, and unlock new growth with data-driven solutions.",
+    "cta": {
+      "talk": "Talk to an expert",
+      "explore": "Explore services"
+    },
+    "services": {
+      "badge": "OUR SERVICES",
+      "heading": "How we help organizations",
+      "items": [
+        "Strategy & Consulting",
+        "Cloud Migration",
+        "Data Engineering",
+        "AI & Machine Learning",
+        "Managed Services",
+        "Cybersecurity"
+      ],
+      "description": "Short description explaining the value and typical outcomes for this service offering."
+    },
+    "approach": {
+      "title": "Our Approach",
+      "paragraph": "We combine domain expertise and modern engineering practices to deliver measurable outcomes — fast.",
+      "steps": [
+        {
+          "title": "Discovery",
+          "desc": "Understand needs and define success metrics."
+        },
+        {
+          "title": "Design & Prototype",
+          "desc": "Rapid prototypes to validate assumptions."
+        },
+        {
+          "title": "Scale & Operate",
+          "desc": "Deliver production-ready systems with SRE practices."
+        }
+      ]
+    },
+    "case": {
+      "badge": "CASE STUDIES",
+      "heading": "Proven outcomes, measurable impact",
+      "paragraph": "We focus on delivering business value. A few metrics that show how we help clients scale.",
+      "stats": {
+        "projects": "Projects Delivered",
+        "satisfaction": "Client Satisfaction",
+        "support": "Global Support"
+      }
+    },
+    "tech": {
+      "badge": "TECHNOLOGY",
+      "heading": "We work with modern platforms"
+    },
+    "contact": {
+      "title": "Ready to transform?",
+      "paragraph": "Book a free consultation and roadmap session with our specialists.",
+      "cta": "Get Started"
+    }
+  },
   "index": {
     "title": "Consulting / Business Solutions",
     "description": "Consulting and business transformation services",
