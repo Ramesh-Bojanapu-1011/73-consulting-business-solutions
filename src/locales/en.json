@@ -904,5 +904,105 @@
         "cta": "Talk to an expert"
       }
     }
+  },
+  "operationsOptimization": {
+    "pageTitle": "Operations optimization — Enkonix Insights",
+    "metaDescription": "Operations optimisation for mid-market firms: streamline workflows, add observability and automate repeatable tasks to reduce cost and risk.",
+    "hero": {
+      "title": "Operations optimization for mid-market leaders",
+      "paragraph": "Streamline operations, reduce handoffs and embed automated processes so teams deliver faster with less risk.",
+      "cta": "Book an ops optimisation call"
+    },
+    "overview": {
+      "heading": "Operational friction we solve",
+      "paragraph": "Inefficient handoffs, manual reconciliation processes and poor observability increase cost and slow outcomes. We optimise workflows, automate repeatable tasks and surface the right telemetry so teams can act faster.",
+      "bullets": {
+        "1": "Manual reconciliation and frequent operational fire-drills",
+        "2": "Poor visibility into performance and cost drivers",
+        "3": "High operational overhead from one-off engineering work",
+        "4": "Lack of clear SLAs and runbooks for critical flows"
+      }
+    },
+    "imageAlt": "Strategy overview",
+    "approach": {
+      "heading": "Our ops-first approach",
+      "paragraph": "We run focused operational discovery, design reliable automation patterns and deliver small pilots that reduce cycle time and operational cost.",
+      "features": {
+        "1": {
+          "title": "Discover",
+          "body": "Targeted operational discovery to identify high-impact workflow improvements."
+        },
+        "2": {
+          "title": "Define",
+          "body": "Clear operational KPIs, owners and escalation paths so improvements are measurable."
+        },
+        "3": {
+          "title": "Deliver",
+          "body": "Short pilots that automate manual steps and reduce mean-time-to-recover."
+        }
+      }
+    },
+    "timeline": {
+      "badge": "Typical engagement phases",
+      "week1": { "label": "Week 1", "title": "Ops discovery" },
+      "week2": { "label": "Weeks 2–4", "title": "Automate & validate" },
+      "week3": { "label": "Weeks 5–8", "title": "Pilot & measure" },
+      "week4": { "label": "Week 9+", "title": "Scale" }
+    },
+    "testimonial": {
+      "quote": "Automating a handful of reconciliation tasks saved our ops team dozens of hours each week.",
+      "author": "Head of Ops, Retailer"
+    },
+    "servicesHeading": "Services we offer",
+    "stats": {
+      "reduction": "Typical reduction in manual effort",
+      "incidentReduction": "Decrease in incident frequency after baseline fixes",
+      "timeToWin": "Typical time to a measurable cost or performance win"
+    },
+    "cards": {
+      "processMapping": {
+        "title": "Process mapping & efficiency",
+        "body": "Map end-to-end workflows to remove waste and unnecessary handoffs."
+      },
+      "observability": {
+        "title": "Observability & monitoring",
+        "body": "Implement telemetry, alerts and dashboards that surface problems before they escalate."
+      },
+      "automation": {
+        "title": "Automation & runbooks",
+        "body": "Automate repeatable operational tasks and provide runbooks to reduce cognitive load."
+      },
+      "maturity": {
+        "title": "Ops maturity & training",
+        "body": "Build skills and processes so the improvements are sustained."
+      }
+    },
+    "clientTestimonial": {
+      "heading": "Client testimonial",
+      "body": "By automating our nightly reconciliation and adding observability we reduced incidents and freed 30% of our engineers' time.",
+      "author": "— Head of Ops, Payments"
+    },
+    "ready": { "heading": "Ready to start?", "book": "Book discovery" },
+    "caseStudies": {
+      "heading": "Case studies",
+      "retail": {
+        "title": "Retail — reconciliation automation",
+        "desc": "Automated nightly reconciliation to remove manual effort and reduce errors."
+      },
+      "logistics": {
+        "title": "Logistics — improved observability",
+        "desc": "Implemented observability and alerts that reduced incident time-to-detect."
+      },
+      "payments": {
+        "title": "Payments — runbooks & automation",
+        "desc": "Created runbooks and automated routine ops to reduce mean time to recover."
+      }
+    },
+    "cta": {
+      "heading": "Ready to make strategy real?",
+      "paragraph": "Book a short discovery call and we'll sketch a practical 90-day plan that starts delivering measurable outcomes quickly.",
+      "button": "Book discovery",
+      "learnMore": "See services"
+    }
   }
 }
