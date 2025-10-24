@@ -107,11 +107,11 @@ const StrategyAndPlanning: React.FC = () => {
 
             <div>
               <Image
-                src="/services/strategy-overview.jpg"
+                src="https://i.pinimg.com/736x/89/77/a9/8977a96e3a046e4c64ca0b8415fa1af4.jpg"
                 alt={t("strategyPlanning.imageAlt")}
                 width={640}
                 height={380}
-                className="rounded-md object-cover w-full h-56"
+                className="rounded-md object-cover w-full h-80"
               />
             </div>
           </div>
@@ -223,7 +223,7 @@ const StrategyAndPlanning: React.FC = () => {
 
               <div className="hidden lg:block">
                 <Image
-                  src="/services/approach-visual.jpg"
+                  src="https://i.pinimg.com/736x/59/8b/ea/598bea4050ad83b51c98d63bc218dfb8.jpg"
                   alt="Approach"
                   width={720}
                   height={520}
@@ -348,19 +348,19 @@ const StrategyAndPlanning: React.FC = () => {
             <div className="mt-6 grid md:grid-cols-3 gap-6">
               {[
                 {
-                  img: "/clients/retail-season.jpg",
+                  img: "https://i.pinimg.com/736x/b5/d3/35/b5d335364d7430e7471ede05ff941c32.jpg",
                   alt: t("strategyPlanning.caseStudies.retail.alt"),
                   title: t("strategyPlanning.caseStudies.retail.title"),
                   desc: t("strategyPlanning.caseStudies.retail.desc"),
                 },
                 {
-                  img: "/clients/saas-roadmap.jpg",
+                  img: "https://i.pinimg.com/1200x/dd/e8/90/dde89038f51ea4511084e5378472965c.jpg",
                   alt: t("strategyPlanning.caseStudies.saas.alt"),
                   title: t("strategyPlanning.caseStudies.saas.title"),
                   desc: t("strategyPlanning.caseStudies.saas.desc"),
                 },
                 {
-                  img: "/clients/manufacturing-efficiency.jpg",
+                  img: "https://i.pinimg.com/736x/cc/3e/02/cc3e029425916e367afbe5c5827d13bd.jpg",
                   alt: t("strategyPlanning.caseStudies.manufacturing.alt"),
                   title: t("strategyPlanning.caseStudies.manufacturing.title"),
                   desc: t("strategyPlanning.caseStudies.manufacturing.desc"),
@@ -375,10 +375,10 @@ const StrategyAndPlanning: React.FC = () => {
                       src={c.img}
                       alt={c.alt}
                       fill
-                      className="object-cover"
+                      className="object-cover opacity-40 hover:opacity-60 transition"
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent"></div>
-                    <div className="absolute left-4 bottom-4 right-4 text-white">
+                     
+                    <div className="absolute left-4 bottom-4 right-4    ">
                       <div className="font-semibold text-lg drop-shadow">
                         {c.title}
                       </div>
