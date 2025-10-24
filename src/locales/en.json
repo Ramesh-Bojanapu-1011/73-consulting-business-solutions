@@ -1004,5 +1004,108 @@
       "button": "Book discovery",
       "learnMore": "See services"
     }
+  },
+  "financeAdvisory": {
+    "pageTitle": "Financial advisory — Enkonix Insights",
+    "metaDescription": "Financial advisory for mid-market firms: actionable planning, cost-to-value analysis and operating models to improve profitability and predictability.",
+    "hero": {
+      "title": "Financial advisory for growth and resilience",
+      "paragraph": "Practical FP&A, cashflow modelling and cost-to-value analysis tailored to mid-market businesses to improve profitability and forecasting.",
+      "cta": "Book a financial review"
+    },
+    "overview": {
+      "heading": "Where finance teams need pragmatic help",
+      "paragraph": "Finance leaders often lack timely insight into product or operational value, spend too much time on manual models, and struggle to translate cost into business decisions. We build lightweight models and processes designed for clarity and action.",
+      "bullets": {
+        "1": "Manual forecasting and slow close cycles",
+        "2": "Limited visibility into cost-to-serve and unit economics",
+        "3": "Difficulty aligning finance to product and ops decisions",
+        "4": "Ad-hoc scenario planning without reusable models"
+      }
+    },
+    "imageAlt": "Financial overview",
+    "approach": {
+      "heading": "How our advisory helps",
+      "paragraph": "We focus on models and processes that finance teams can operate and hand over: fast-value pilots, repeatable FP&A templates and clear decision-support for leadership.",
+      "features": {
+        "1": {
+          "title": "Discover",
+          "body": "Rapid financial discovery to prioritise high-impact cost and revenue levers."
+        },
+        "2": {
+          "title": "Define",
+          "body": "Clear metrics and ownership so scenario models drive decisions."
+        },
+        "3": {
+          "title": "Deliver",
+          "body": "Short pilots that validate assumptions and produce reusable FP&A templates."
+        }
+      }
+    },
+    "timeline": {
+      "badge": "Typical engagement phases",
+      "week1": { "label": "Week 1", "title": "Finance discovery" },
+      "week2": { "label": "Weeks 2–4", "title": "Model & validate" },
+      "week3": { "label": "Weeks 5–8", "title": "Pilot & measure" },
+      "week4": { "label": "Week 9+", "title": "Scale" }
+    },
+    "testimonial": {
+      "quote": "The scenarios helped the board see the impact of pricing changes and we reallocated budget to the highest ROI experiments.",
+      "author": "CFO, Marketplace"
+    },
+    "servicesHeading": "Services we offer",
+    "stats": {
+      "improvement": "Typical improvement in forecast accuracy",
+      "timeToModel": "Time to a working FP&A model",
+      "runRate": "Typical early run-rate improvement we help unlock"
+    },
+    "cards": {
+      "fpna": {
+        "title": "FP&A & forecasting",
+        "body": "Build repeatable forecasting processes and scenario models."
+      },
+      "unitEconomics": {
+        "title": "Unit economics & pricing",
+        "body": "Understand margins at the customer, product and channel level."
+      },
+      "costToValue": {
+        "title": "Cost-to-value analysis",
+        "body": "Quantify the ROI of initiatives and prioritise by impact."
+      },
+      "handover": {
+        "title": "Finance handover & training",
+        "body": "Upskill finance teams and handover sustainable models."
+      }
+    },
+    "clientTestimonial": {
+      "heading": "Client testimonial",
+      "body": "The scenario models made it easy to compare options and reallocate budget — we saw early margin improvements within the quarter.",
+      "author": "CFO, Marketplace"
+    },
+    "ready": { "heading": "Ready to start?", "book": "Book discovery" },
+    "caseStudies": {
+      "heading": "Case studies",
+      "market": {
+        "alt": "Financial model",
+        "title": "Marketplace — scenario modelling",
+        "desc": "Developed scenario models that clarified pricing and reallocation choices."
+      },
+      "retail": {
+        "alt": "Improved forecasting",
+        "title": "Retail — improved forecasting",
+        "desc": "Introduced rolling forecasts and automation to shorten the cycle."
+      },
+      "saas": {
+        "alt": "Pricing optimisation",
+        "title": "SaaS — pricing optimisation",
+        "desc": "Quantified unit economics and redesigned pricing tiers to improve ARPU."
+      }
+    },
+    "cta": {
+      "heading": "Ready to make strategy real?",
+      "paragraph": "Book a short discovery call and we'll sketch a practical 90-day plan that starts delivering measurable outcomes quickly.",
+      "button": "Book discovery",
+      "learnMore": "See services"
+    }
   }
 }
