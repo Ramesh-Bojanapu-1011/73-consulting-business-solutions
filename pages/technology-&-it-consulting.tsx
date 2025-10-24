@@ -107,11 +107,11 @@ const TechnologyITConsulting: React.FC = () => {
 
             <div>
               <Image
-                src="/services/strategy-overview.jpg"
+                src="https://i.pinimg.com/1200x/f9/a4/0a/f9a40a1eec428a3e79c4f9101f2c7629.jpg"
                 alt="Strategy overview"
                 width={640}
                 height={380}
-                className="rounded-md object-cover w-full h-56"
+                className="rounded-md object-cover w-full h-80"
               />
             </div>
           </div>
@@ -183,7 +183,7 @@ const TechnologyITConsulting: React.FC = () => {
 
               <div className="hidden lg:block">
                 <Image
-                  src="/services/approach-visual.jpg"
+                  src="https://i.pinimg.com/736x/ee/89/fd/ee89fd0683c6447f4516798844283016.jpg"
                   alt="Approach"
                   width={720}
                   height={520}
@@ -308,19 +308,19 @@ const TechnologyITConsulting: React.FC = () => {
             <div className="mt-6 grid md:grid-cols-3 gap-6">
               {[
                 {
-                  img: "/clients/tech-platform.jpg",
+                  img: "https://i.pinimg.com/1200x/76/6e/bd/766ebd5336ec62afa06586a0b8b21717.jpg",
                   alt: "Platform modernisation",
                   title: t("technologyConsulting.caseStudies.saas.title"),
                   desc: t("technologyConsulting.caseStudies.saas.desc"),
                 },
                 {
-                  img: "/clients/tech-cloud.jpg",
+                  img: "https://i.pinimg.com/736x/d1/eb/8f/d1eb8f3e2355f0483a50618f571b37c8.jpg",
                   alt: "Cloud migration",
                   title: t("technologyConsulting.caseStudies.retail.title"),
                   desc: t("technologyConsulting.caseStudies.retail.desc"),
                 },
                 {
-                  img: "/clients/tech-sre.jpg",
+                  img: "https://i.pinimg.com/1200x/7f/ac/88/7fac88cb509a67348a7b82c0c161067a.jpg",
                   alt: "SRE & observability",
                   title: t("technologyConsulting.caseStudies.logistics.title"),
                   desc: t("technologyConsulting.caseStudies.logistics.desc"),
