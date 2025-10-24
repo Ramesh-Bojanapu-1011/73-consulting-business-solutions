@@ -139,7 +139,7 @@ const AboutUsPage: React.FC = () => {
               <div className="lg:col-span-6 flex justify-center lg:justify-start">
                 <div className="relative w-full max-w-md">
                   {/* large circular crop */}
-                  <div className="overflow-hidden rounded-full w-96 h-96   mx-auto lg:mx-0">
+                  <div className="overflow-hidden rounded-full md:w-96 md:h-96   mx-auto lg:mx-0">
                     <Image
                       src="https://images.pexels.com/photos/6930545/pexels-photo-6930545.jpeg"
                       alt="Team working"
@@ -297,7 +297,7 @@ const AboutUsPage: React.FC = () => {
                 <div className="relative w-full h-full flex items-center justify-center">
                   <div className="hidden min-[769px]:block absolute -top-40 right-0 size-64  rounded-lg overflow-hidden shadow-lg">
                     <Image
-                      src="/team/sofia.jpg"
+                      src="/about-team1.jpg"
                       alt="Team 1"
                       width={640}
                       height={400}
@@ -308,7 +308,7 @@ const AboutUsPage: React.FC = () => {
                   <div className="min-[769px]:absolute -top-7 left-14  size-56   bg-white rounded-xl p-2 shadow-lg">
                     <div className="w-full h-full overflow-hidden rounded-lg border-4 border-white">
                       <Image
-                        src="/team/lena.jpg"
+                        src="/about-team2.jpg"
                         alt="Team 2"
                         width={400}
                         height={400}
@@ -410,42 +410,42 @@ const AboutUsPage: React.FC = () => {
                   {
                     name: "about.team.members.0.name",
                     role: "about.team.members.0.role",
-                    img: "/team/aisha.jpg",
+                    img: "https://randomuser.me/api/portraits/women/81.jpg",
                   },
                   {
                     name: "about.team.members.1.name",
                     role: "about.team.members.1.role",
-                    img: "/team/rahul.jpg",
+                    img: "https://randomuser.me/api/portraits/men/82.jpg",
                   },
                   {
                     name: "about.team.members.2.name",
                     role: "about.team.members.2.role",
-                    img: "/team/lena.jpg",
+                    img: "https://randomuser.me/api/portraits/women/83.jpg",
                   },
                   {
                     name: "about.team.members.3.name",
                     role: "about.team.members.3.role",
-                    img: "/team/carlos.jpg",
+                    img: "https://randomuser.me/api/portraits/men/84.jpg",
                   },
                   {
                     name: "about.team.members.4.name",
                     role: "about.team.members.4.role",
-                    img: "/team/maya.jpg",
+                    img: "https://randomuser.me/api/portraits/women/85.jpg",
                   },
                   {
                     name: "about.team.members.5.name",
                     role: "about.team.members.5.role",
-                    img: "/team/omar.jpg",
+                    img: "https://randomuser.me/api/portraits/men/86.jpg",
                   },
                   {
                     name: "about.team.members.6.name",
                     role: "about.team.members.6.role",
-                    img: "/team/sofia.jpg",
+                    img: "https://randomuser.me/api/portraits/women/87.jpg",
                   },
                   {
                     name: "about.team.members.7.name",
                     role: "about.team.members.7.role",
-                    img: "/team/kenji.jpg",
+                    img: "https://randomuser.me/api/portraits/men/88.jpg",
                   },
                 ].map((m, idx) => (
                   <div
@@ -464,7 +464,7 @@ const AboutUsPage: React.FC = () => {
                       <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-white dark:border-gray-800 shadow-lg z-10">
                         <Image
                           src={m.img}
-                          alt={m.name}
+                          alt={t(`${m.name}`)}
                           width={112}
                           height={112}
                           className="object-cover filter grayscale contrast-95 opacity-95"
