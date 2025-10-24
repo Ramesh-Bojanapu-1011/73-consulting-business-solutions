@@ -214,7 +214,9 @@ const ContactUs: React.FC = () => {
         {/* Other ways to reach us */}
         <section className="py-16 ">
           <div className="max-w-6xl mx-auto px-6">
-            <h3 className="text-xl font-semibold">{t("contact.otherWays.heading")}</h3>
+            <h3 className="text-xl font-semibold">
+              {t("contact.otherWays.heading")}
+            </h3>
 
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
               {[
@@ -357,7 +359,9 @@ const ContactUs: React.FC = () => {
 
                   <div className="flex-1">
                     <div className="font-semibold text-lg">{c.title}</div>
-                    <div className="ml-4 flex shrink-0 self-center">{c.subtitle}</div>
+                    <div className="ml-4 flex shrink-0 self-center">
+                      {c.subtitle}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -373,12 +377,18 @@ const ContactUs: React.FC = () => {
               <div>
                 <div className="inline-flex items-center gap-3 px-3 py-1 rounded-full bg-white dark:bg-gray-900 shadow-sm">
                   <div className="w-2 h-2 rounded-full bg-black dark:bg-white" />
-                  <div className="text-sm font-medium">{t("contact.faq.badge")}</div>
+                  <div className="text-sm font-medium">
+                    {t("contact.faq.badge")}
+                  </div>
                 </div>
 
-                <h2 className="mt-6 text-4xl font-extrabold leading-tight">{t("contact.faq.heading")}</h2>
+                <h2 className="mt-6 text-4xl font-extrabold leading-tight">
+                  {t("contact.faq.heading")}
+                </h2>
 
-                <p className="mt-4 text-gray-700 dark:text-gray-300 max-w-lg">{t("contact.faq.paragraph")}</p>
+                <p className="mt-4 text-gray-700 dark:text-gray-300 max-w-lg">
+                  {t("contact.faq.paragraph")}
+                </p>
 
                 <div className="mt-8">
                   <a
@@ -472,7 +482,7 @@ const ContactUs: React.FC = () => {
           >
             <div className="fixed inset-0 bg-black/40" onClick={closeModal} />
 
-              <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg max-w-md w-full p-6 mx-auto">
+            <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg max-w-md w-full p-6 mx-auto">
               <button
                 onClick={closeModal}
                 aria-label="Close"
@@ -481,8 +491,12 @@ const ContactUs: React.FC = () => {
                 ×
               </button>
 
-              <h3 className="text-lg font-semibold">{t("contact.success.title")}</h3>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{t("contact.success.paragraph")}</p>
+              <h3 className="text-lg font-semibold">
+                {t("contact.success.title")}
+              </h3>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                {t("contact.success.paragraph")}
+              </p>
 
               <div className="mt-4 text-right">
                 <button
@@ -499,8 +513,12 @@ const ContactUs: React.FC = () => {
         {/* Bottom CTA */}
         <section className="py-20 bg-indigo-700 text-white">
           <div className="max-w-6xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-extrabold">{t("contact.cta.heading")}</h2>
-            <p className="mt-4 max-w-2xl mx-auto text-indigo-100">{t("contact.cta.paragraph")}</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold">
+              {t("contact.cta.heading")}
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-indigo-100">
+              {t("contact.cta.paragraph")}
+            </p>
             <div className="mt-8">
               <a
                 href="#form"

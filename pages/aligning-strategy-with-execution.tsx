@@ -4,15 +4,20 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteHeadder from "@/components/SiteHeadder";
 import SiteFooter from "@/components/SiteFooter";
+import { useTranslation } from "react-i18next";
 
 const Post: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
-        <title>Aligning strategy with execution — Insights</title>
+        <title>
+          {t("blog.posts.aligningStrategy.title")} — {t("blog.title")}
+        </title>
         <meta
           name="description"
-          content="How to translate high-level strategy into quarterly priorities, decision frameworks and measurable outcomes."
+          content={t("blog.posts.aligningStrategy.excerpt")}
         />
       </Head>
 
@@ -23,15 +28,17 @@ const Post: React.FC = () => {
         <section className="py-20 bg-linear-to-r from-indigo-600 to-pink-500 text-white">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold">
-              Aligning strategy with execution: a practical playbook
+              {t("blog.posts.aligningStrategy.title")}
             </h1>
             <p className="mt-4 text-lg max-w-2xl mx-auto">
-              How to translate high-level strategy into quarterly priorities,
-              decision frameworks and measurable outcomes.
+              {t("blog.posts.aligningStrategy.excerpt")}
             </p>
 
             <div className="mt-6 text-sm opacity-90">
-              Jane Miller • Sep 10, 2025 • 8 min read
+              {t("blog.posts.aligningStrategy.author")} •{" "}
+              {t("blog.posts.aligningStrategy.date")} •{" "}
+              {t("blog.posts.aligningStrategy.readingMinutes")}{" "}
+              {t("blog.readingUnit", "min read")}
             </div>
           </div>
         </section>
@@ -50,17 +57,22 @@ const Post: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
                 <div>
-                  <span className="inline-block mr-3">Sep 10, 2025</span>
+                  <span className="inline-block mr-3">
+                    {t("blog.posts.aligningStrategy.date")}
+                  </span>
                   <span className="inline-block">•</span>
-                  <span className="inline-block ml-3">8 min read</span>
+                  <span className="inline-block ml-3">
+                    {t("blog.posts.aligningStrategy.readingMinutes")}{" "}
+                    {t("blog.readingUnit")}
+                  </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="flex gap-2">
                     <span className="inline-block px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">
-                      Strategy
+                      {t("blog.tags.strategy")}
                     </span>
                     <span className="inline-block px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">
-                      Execution
+                      {t("blog.tags.execution")}
                     </span>
                   </div>
                 </div>
@@ -68,108 +80,54 @@ const Post: React.FC = () => {
 
               <div className="rounded-lg border border-gray-100 dark:border-gray-700 bg-indigo-50 dark:bg-gray-800/40 p-4 mb-6">
                 <div className="font-semibold text-indigo-700 dark:text-indigo-300">
-                  Quick summary
+                  {t("blog.postContent.aligningStrategy.quickSummary.heading")}
                 </div>
                 <div className="text-sm text-gray-700 dark:text-gray-300 mt-2">
-                  A compact playbook to convert strategy into measurable
-                  quarterly outcomes — focus on decisions, rapid assessment, and
-                  fast feedback loops.
+                  {t("blog.postContent.aligningStrategy.quickSummary.body")}
                 </div>
               </div>
 
               <p className="lead">
-                Many organisations struggle to convert strategy into tangible
-                outcomes because work often stops at vision-setting. This
-                playbook gives a short, practical approach you can use
-                immediately.
+                {t("blog.postContent.aligningStrategy.lead")}
               </p>
 
               <blockquote className="border-l-4 pl-4 italic text-lg text-gray-700 dark:text-gray-300 my-6">
-                “Focus on one strategic decision at a time — it forces clarity
-                and aligns effort.”
+                {t("blog.postContent.aligningStrategy.blockquote")}
               </blockquote>
 
               <ol className="list-decimal pl-6 space-y-6">
-                <li>
-                  <p className="text-lg font-semibold">
-                    Start with the decision
-                  </p>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
-                    Identify the single decision that will change the trajectory
-                    of your business and make success metrics explicit.
-                  </p>
-                </li>
-
-                <li>
-                  <p className="text-lg font-semibold">
-                    Snapshot the current state
-                  </p>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
-                    Run a 2–4 week rapid assessment: interviews, data pulls and
-                    dependency mapping.
-                  </p>
-                </li>
-
-                <li>
-                  <p className="text-lg font-semibold">
-                    Design a focused roadmap
-                  </p>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
-                    Choose 3–5 quarterly objectives, assign owners, and link
-                    each objective to a measurable outcome.
-                  </p>
-                </li>
-
-                <li>
-                  <p className="text-lg font-semibold">
-                    Establish fast feedback loops
-                  </p>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
-                    Instrument early and track weekly signals so you can iterate
-                    quickly.
-                  </p>
-                </li>
-
-                <li>
-                  <p className="text-lg font-semibold">
-                    Organise governance for speed
-                  </p>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
-                    Use short tactical cadences and time-boxed decision points
-                    to maintain momentum.
-                  </p>
-                </li>
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <li key={i}>
+                    <p className="text-lg font-semibold">
+                      {t(`blog.postContent.aligningStrategy.steps.${i}.title`)}
+                    </p>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                      {t(`blog.postContent.aligningStrategy.steps.${i}.body`)}
+                    </p>
+                  </li>
+                ))}
               </ol>
-
-              <div className="mt-6">
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  If you'd like, we can adapt this playbook to your context —
-                  book a short discovery call to run a tailored rapid
-                  assessment.
-                </p>
-              </div>
 
               <div className="mt-8">
                 <Link
                   href="/contact-us"
                   className="inline-block px-5 py-3 bg-indigo-600 text-white rounded-md"
                 >
-                  Book a discovery call
+                  {t("blog.postContent.aligningStrategy.cta")}
                 </Link>
               </div>
-
               <hr className="my-8 border-gray-100 dark:border-gray-700" />
 
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Related posts
+                  {t("blog.related.heading")}
                 </div>
                 <div>
                   <Link
                     href="/blog"
                     className="text-sm text-indigo-600 hover:underline"
                   >
-                    See all insights
+                    {t("blog.related.seeAll")}
                   </Link>
                 </div>
               </div>
@@ -180,19 +138,20 @@ const Post: React.FC = () => {
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center text-white font-semibold">
-                  JM
+                  {t("blog.author.jane.initials")}
                 </div>
                 <div>
-                  <div className="font-semibold">Jane Miller</div>
+                  <div className="font-semibold">
+                    {t("blog.author.jane.name")}
+                  </div>
                   <div className="text-sm text-gray-500">
-                    Author • Principal Consultant
+                    {t("blog.author.jane.role")}
                   </div>
                 </div>
               </div>
 
               <div className="mt-4 text-sm text-gray-600 dark:text-gray-300">
-                Jane leads strategy and operational transformation engagements
-                with a focus on measurable outcomes and fast delivery.
+                {t("blog.author.jane.bio")}
               </div>
 
               <div className="mt-6">
@@ -200,7 +159,7 @@ const Post: React.FC = () => {
                   href="/contact-us"
                   className="inline-block px-4 py-2 bg-indigo-600 text-white rounded-md"
                 >
-                  Work with Jane
+                  {t("blog.author.jane.cta")}
                 </Link>
               </div>
             </div>

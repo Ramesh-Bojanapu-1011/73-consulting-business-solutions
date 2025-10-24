@@ -564,6 +564,57 @@
         "author": "Sofia Gomez",
         "readingMinutes": "5"
       }
+    },
+    "related": {
+      "heading": "Related posts",
+      "seeAll": "See all insights"
+    },
+    "readingUnit": "min read",
+    "postContent": {
+      "aligningStrategy": {
+        "quickSummary": {
+          "heading": "Quick summary",
+          "body": "A compact playbook to convert strategy into measurable quarterly outcomes — focus on decisions, rapid assessment, and fast feedback loops."
+        },
+        "lead": "Many organisations struggle to convert strategy into tangible outcomes because work often stops at vision-setting. This playbook gives a short, practical approach you can use immediately.",
+        "blockquote": "Focus on one strategic decision at a time — it forces clarity and aligns effort.",
+        "steps": {
+          "1": {
+            "title": "Start with the decision",
+            "body": "Identify the single decision that will change the trajectory of your business and make success metrics explicit."
+          },
+          "2": {
+            "title": "Snapshot the current state",
+            "body": "Run a 2–4 week rapid assessment: interviews, data pulls and dependency mapping."
+          },
+          "3": {
+            "title": "Design a focused roadmap",
+            "body": "Choose 3–5 quarterly objectives, assign owners, and link each objective to a measurable outcome."
+          },
+          "4": {
+            "title": "Establish fast feedback loops",
+            "body": "Instrument early and track weekly signals so you can iterate quickly."
+          },
+          "5": {
+            "title": "Organise governance for speed",
+            "body": "Use short tactical cadences and time-boxed decision points to maintain momentum."
+          }
+        },
+        "cta": "Book a discovery call"
+      }
+    },
+    "tags": {
+      "strategy": "Strategy",
+      "execution": "Execution"
+    },
+    "author": {
+      "jane": {
+        "initials": "JM",
+        "name": "Jane Miller",
+        "role": "Author • Principal Consultant",
+        "bio": "Jane leads strategy and operational transformation engagements with a focus on measurable outcomes and fast delivery.",
+        "cta": "Work with Jane"
+      }
     }
   }
 }
